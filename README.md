@@ -1,6 +1,7 @@
 # [Flutter][]'s website ![Flutter logo][]
 
 [![Build Status][]][Repo on Travis]
+[![Netlify Status][]][Repo on Netlify]
 
 ## Issues, bugs, and requests
 
@@ -237,3 +238,5 @@ Also check out the site-shared
 [Repo on Travis]: https://travis-ci.org/flutter/website
 [rvm]: https://rvm.io/rvm/install#installation
 [this repo]: https://github.com/flutter/website
+[Netlify Status]: https://api.netlify.com/api/v1/badges/c2329679-dfdf-4467-8a41-d5430cead699/deploy-status
+[Repo on Netlify]: https://app.netlify.com/sites/quizzical-banach-2b10e8/deploys
