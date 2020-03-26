@@ -24,11 +24,12 @@
   featured: true
   title: Toàn bộ mã nguồn và PR trên Github
   description: >
-    Các PR sau khi được merge sẽ ngay lập tức được build và deploy.
+    Các PR sau khi tạo sẽ có bản preview.
+    Các PR sau khi được merge sẽ được build và deploy.
     Hiện nay repo của dự án đang nằm ở https://github.com/truongsinh/website,
     nhưng đội đang cố gắng liên lạc để đưa dự án về https://github.com/fluttervn/website
   logo_src: community/logo-github.png
-  screen_src: community/screen-github.png
+  screen_src: vn-t9n/screen-github.jpg
   screen_class: border-top border-light p-3 shadow
   learn_more_cta: Xem mã nguồn
   learn_more_link: https://github.com/truongsinh/website
