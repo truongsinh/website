@@ -17,8 +17,8 @@
   logo_src: vn-t9n/logo-gg-sheet.png
   screen_src: vn-t9n/screen-gg-sheet.png
   screen_class: border-top border-light p-3 shadow
-  learn_more_cta: Xem mã nguồn
-  learn_more_link: https://github.com/truongsinh/website
+  learn_more_cta: Request access
+  learn_more_link: https://docs.google.com/spreadsheets/d/1csigk2BkPmfrknchb9tsdseuAWt5h4n8Hk2Y1WjvgtM
 
 - name: Github
   featured: true
