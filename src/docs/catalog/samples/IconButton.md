@@ -1,13 +1,11 @@
 ---
-title: IconButton Sample Apps
-description: Examples that use IconButtons.
+title: Các ứng dụng mẫu cho IconButton
+description: Ví dụ sử dụng IconButton.
 deprecated: true
 ---
 
-All of the sample apps listed here use the Flutter IconButton class in
-an interesting way. The [Sample App Catalog](/docs/catalog/samples) page lists
-all of the sample apps.
-
+Toàn bộ các ứng dụng mẫu được liệt kê ở trang [danh mục ứng dụng mẫu](/docs/catalog/samples). Tất cả những ứng dụng mẫu ở đây đều tận dụng được lớp IconButton.
+<!-- All of the sample apps listed here use the Flutter IconButton class in an interesting way. The Sample App Catalog page lists all of the sample apps. -->
 <div class="container-fluid">
   <div class="lavish-table-row-mb">
     <a href="/docs/catalog/samples/basic-app-bar">
@@ -17,13 +15,16 @@ all of the sample apps.
    </a>
     <div class="col-lg-9">
       <p>
-        A typical AppBar with a title, actions, and an overflow dropdown menu.
+	Một ứng dụng thường gặp với một AppBar bao gồm title, các actions và một overflow dropdown menu.  
+	<!-- A typical AppBar with a title, actions, and an overflow dropdown menu. -->
       </p>
       <p>
-        This app features the following classes: AppBar, IconButton, PopupMenuButton, Scaffold.
+        Ứng dụng này sử dụng bao gồm các lớp: AppBar, IconButton, PopupMenuButton và Scaffold.
+	<!-- This app features the following classes: AppBar, IconButton, PopupMenuButton, Scaffold. -->
       </p>
       <p>
-        <a href="/docs/catalog/samples/basic-app-bar">Learn more</a>.
+        <a href="/docs/catalog/samples/basic-app-bar">Tìm hiểu thêm</a>.
+       <!-- <a href="/docs/catalog/samples/basic-app-bar">Learn more</a>. -->
       </p>
     </div>
   </div>
