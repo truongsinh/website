@@ -1,5 +1,5 @@
 ---
-title: AppBar với Bottom widget tùy chỉnh
+title: AppBar với widget dưới cùng tùy chỉnh
 description: Một ví dụ sử dụng Bottom widget cho AppBar.
 deprecated: true
 ---
