@@ -1,10 +1,10 @@
 ---
-title: AppBar with a custom bottom widget
-description: An example that uses an AppBar at the bottom of the page.
+title: AppBar với Bottom widget tùy chỉnh
+description: Một ví dụ sử dụng Bottom widget cho AppBar.
 deprecated: true
 ---
 
-Any widget with a PreferredSize can appear at the bottom of an AppBar.
+Bất kỳ widget nào có sử dụng lớp PreferredSize đều có thể xuất hiện ở dưới cùng của AppBar.
 
 <p>
   <div class="container-fluid">
@@ -23,19 +23,14 @@ Any widget with a PreferredSize can appear at the bottom of an AppBar.
   </div>
 </p>
 
-Typically an AppBar's bottom widget is a TabBar however any widget with a
-PreferredSize can be used. In this app, the app bar's bottom widget is a
-TabPageSelector that displays the relative position of the selected page
-in the app's TabBarView. The arrow buttons in the toolbar part of the app
-bar and they select the previous or the next page.
+Thông thường thì widget được sử dụng ở dưới cùng của AppBar là TabBar; tuy nhiên có thể thay thế nó bằng bất kỳ widget nào có chứa lớp PreferredSize. Trong ứng dụng này, widget được sử dụng là TabPageSelector, dùng để hiển thị vị trí tương đối của trang đang chọn trong TabBarView của ứng dụng so với các trang còn lại. Mũi tên trên thanh công cụ (một phần của AppBar) giúp người sử dụng chọn trang trước hoặc trang kế tiếp.
 
-Try this app out by creating a new project with `flutter create` and
-replacing the contents of `lib/main.dart` with the following code.
+Khám phá ứng dụng sau đây bằng cách tạo một project mới với `flutter create` và thay thế nội dụng trong file `lib/main.dart` thành mã nguồn dưới đây.
 
 ```dart
 // Copyright 2017 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
+// Việc sử dụng mã nguồn này được quản lý bởi giấy phép BSD.
+// Xem thêm tại tập tin LICENSE.
 
 import 'package:flutter/material.dart';
 
@@ -159,9 +154,9 @@ void main() {
 }
 ```
 
-## See also
+## Xem thêm
 
-* The [Components-Tabs]({{site.material}}/guidelines/components/tabs.html)
-  section of the [Material Design]({{site.material}}) specification.
-* The source code in
+* [Components-Tabs]({{site.material}}/guidelines/components/tabs.html)
+  trong trang về [Material Design]({{site.material}}).
+* Mã nguồn ở
   [examples/catalog/lib/app_bar_bottom.dart]({{site.repo.flutter}}/tree/{{site.branch}}/examples/catalog/lib/animated_list.dart).
