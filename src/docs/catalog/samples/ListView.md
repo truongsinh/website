@@ -18,7 +18,7 @@ Những ứng dụng mẫu dưới đây sử dụng lớp Flutter ListView theo
         ExpansionTiles có thể được dùng để tạo ra danh sách có 2 hoặc nhiều cấp..
       </p>
       <p>
-        Các lớp có trong ứng dụng: ExpansionTile, ListView.: ExpansionTile, ListView.
+        Các lớp có trong ứng dụng: ExpansionTile, ListView.
       </p>
       <p>
         <a href="/docs/catalog/samples/expansion-tile-sample">Xem thêm</a>.
