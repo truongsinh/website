@@ -4,7 +4,7 @@ description: Các ví dụ sử dụng ListView.
 deprecated: true
 ---
 
-Những ứng dụng mẫu dưới đây sử dụng lớp Flutter ListView theo nhiều cách khác nhau. Tham khảo danh sách đầy đủ các ứng dụng mẫu tại [Sample App Catalog](/docs/catalog/samples).
+Những ứng dụng mẫu dưới đây sử dụng lớp Flutter ListView theo nhiều cách khác nhau. Tham khảo danh sách đầy đủ các ứng dụng mẫu tại [đây](/docs/catalog/samples).
 
 <div class="container-fluid">
   <div class="lavish-table-row-mb">
