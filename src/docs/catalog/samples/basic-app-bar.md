@@ -1,10 +1,10 @@
 ---
-title: AppBar Basics
-description: An example that implements a basic AppBar.
+title: AppBar Cơ bản 
+description: Một ví dụ cho việc cài đặt một AppBar cơ bản.
 deprecated: true
 ---
 
-A typical AppBar with a title, actions, and an overflow dropdown menu.
+Một AppBar điển hình với tiêu đề, những hành động, và một menu sổ xuống. 
 
 <p>
   <div class="container-fluid">
@@ -23,21 +23,22 @@ A typical AppBar with a title, actions, and an overflow dropdown menu.
   </div>
 </p>
 
-An app that displays one of a half dozen choices with an icon and a title.
-The two most common choices are available as action buttons and the remaining
-choices are included in the overflow dropdow menu.
+Một ứng dụng hiển thị một trong sáu lựa chọn với một biểu tượng và một tiêu đề.
+Hai lựa chọn phổ biến nhất được hiển thị sẵn dưới dạng các nút tác động (action buttons) 
+và nhứng lựa chọn còn lại thì được chứa trong menu sổ xuống. 
 
-Try this app out by creating a new project with `flutter create` and
-replacing the contents of `lib/main.dart` with the following code.
+Hãy dùng thử ứng dụng này bằng cách tạo một dự án mới với `flutter create` và
+thay thế nội dụng trong `lib/main.dart` bằng đoạn mã nguồn sau đây.
 
 ```dart
 // Copyright 2017 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
+// Việc sử dụng đoạn mã nguồn này bị chi phối bởi giấy phép BSD-style được nêu trong
+// tập tin LICENSE.
 
 import 'package:flutter/material.dart';
 
-// This app is a stateful, it tracks the user's current choice.
+// Ứng dụng này có trạng thái, nó theo dõi sự lựa chọn hiện tại của người dùng.
+
 class BasicAppBarSample extends StatefulWidget {
   @override
   _BasicAppBarSampleState createState() => _BasicAppBarSampleState();
@@ -142,8 +143,8 @@ void main() {
 }
 ```
 
-## See also
+## Xem thêm
 
-* The Material [App bars: top]({{site.material}}/design/components/app-bars-top.html) component page.
-* The source code in
+* Thành phần Material [App bars: top]({{site.material}}/design/components/app-bars-top.html).
+* Mã nguồn ở
   [examples/catalog/lib/basic_app_bar.dart]({{site.repo.flutter}}/tree/{{site.branch}}/examples/catalog/lib/basic_app_bar.dart).
