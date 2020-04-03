@@ -29,8 +29,8 @@ Khám phá ứng dụng sau đây bằng cách tạo một project mới với `
 
 ```dart
 // Copyright 2017 The Chromium Authors. All rights reserved.
-// Việc sử dụng mã nguồn này được quản lý bởi giấy phép BSD.
-// Xem thêm tại tập tin LICENSE.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
 
 import 'package:flutter/material.dart';
 
