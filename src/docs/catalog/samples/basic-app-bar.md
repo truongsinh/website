@@ -32,8 +32,8 @@ thay thế nội dụng trong `lib/main.dart` bằng đoạn mã nguồn sa
 
 ```dart
 // Copyright 2017 The Chromium Authors. All rights reserved.
-// Việc sử dụng đoạn mã nguồn này bị chi phối bởi giấy phép BSD-style được nêu trong
-// tập tin LICENSE.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
 
 import 'package:flutter/material.dart';
 
