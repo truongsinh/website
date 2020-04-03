@@ -3,7 +3,7 @@ title: TabBar Sample Apps
 description: Examples that use TabBars.
 deprecated: true
 ---
-
+<!-- REUP -->
 Tất cả ứng dụng mẫu được liệt kê ở đây sử dụng lớp Flutter TabBar. Trang [Danh mục Ứng dụng mẫu](/docs/catalog/samples) liệt kê toàn bộ ứng dụng mẫu.
 
 <div class="container-fluid">
