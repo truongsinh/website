@@ -29,8 +29,8 @@ Khám phá ứng dụng sau đây bằng cách tạo một project mới với `
 
 ```dart
 // Copyright 2017 The Chromium Authors. All rights reserved.
-// Việc sử dụng mã nguồn này được quản lý bởi giấy phép BSD.
-// Xem thêm tại tập tin LICENSE.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -44,7 +44,7 @@ class _AnimatedListSampleState extends State<AnimatedListSample> {
   final GlobalKey<AnimatedListState> _listKey = GlobalKey<AnimatedListState>();
   ListModel<int> _list;
   int _selectedItem;
-  int _nextItem; // Mục tiếp theo sẽ được thêm vào khi người dùng nhấn '+'.
+  int _nextItem; // The next item inserted when the user presses the '+' button.
 
   @override
   void initState() {
@@ -57,7 +57,7 @@ class _AnimatedListSampleState extends State<AnimatedListSample> {
     _nextItem = 3;
   }
 
-  // Build các mục chưa bị xóa.
+  // Used to build list items that haven't been removed.
   Widget _buildItem(
       BuildContext context, int index, Animation<double> animation) {
     return CardItem(
@@ -72,29 +72,29 @@ class _AnimatedListSampleState extends State<AnimatedListSample> {
     );
   }
 
-  // Build các mục đã bị xóa khỏi danh sách. Ta cần phương thức này vì 
-  // những mục bị xóa vẫn sẽ hiển thị cho tới khi animation đã hoàn tất
-  // (mặc dù trong ListModel thì mục này đã biến mất). Widget mà phương 
-  // thức này trả về sẽ làm tham số [AnimatedListRemovedItemBuilder] 
-  // trong phương thức [AnimatedListState.removeItem].
+  // Used to build an item after it has been removed from the list. This method is
+  // needed because a removed item remains  visible until its animation has
+  // completed (even though it's gone as far this ListModel is concerned).
+  // The widget will be used by the [AnimatedListState.removeItem] method's
+  // [AnimatedListRemovedItemBuilder] parameter.
   Widget _buildRemovedItem(
       int item, BuildContext context, Animation<double> animation) {
     return CardItem(
       animation: animation,
       item: item,
       selected: false,
-      // Không có detector cho thao thác nhấn vì mục bị xóa không cần tương tác
+      // No gesture detector here: we don't want removed items to be interactive.
     );
   }
 
-  // Thêm mục tiếp theo vào list model.
+  // Insert the "next item" into the list model.
   void _insert() {
     final int index =
         _selectedItem == null ? _list.length : _list.indexOf(_selectedItem);
     _list.insert(index, _nextItem++);
   }
 
-  // Xóa mục đang chọn khỏi list model.
+  // Remove the selected item from the list model.
   void _remove() {
     if (_selectedItem != null) {
       _list.removeAt(_list.indexOf(_selectedItem));
@@ -136,15 +136,15 @@ class _AnimatedListSampleState extends State<AnimatedListSample> {
   }
 }
 
-/// Tạo ra một Dart List để đồng bộ với AnimatedList.
+/// Keeps a Dart List in sync with an AnimatedList.
 ///
-/// Hai phương thức [insert] và [removeAt] sẽ thêm hoặc xóa mục trong cả 
-/// list nội bộ (internal list) - Dart List và animated list, thuộc về listKey.
+/// The [insert] and [removeAt] methods apply to both the internal list and the
+/// animated list that belongs to [listKey].
 ///
-/// Lớp này chỉ thể hiện một phần của Dart List API cần dùng trong ứng dụng mẫu.
-/// Có thể thêm nhiều phương thức liên quan đến list khác, nhưng một khi đã làm
-/// thay đối list thì cần phải có sự thay đổi tương ứng ở animated list đồng
-/// nghĩa với việc gọi [AnimatedListState.insertItem] hoặc [AnimatedList.removeItem].
+/// This class only exposes as much of the Dart List API as is needed by the
+/// sample app. More list methods are easily added, however methods that mutate the
+/// list must make the same changes to the animated list in terms of
+/// [AnimatedListState.insertItem] and [AnimatedList.removeItem].
 class ListModel<E> {
   ListModel({
     @required this.listKey,
@@ -183,11 +183,10 @@ class ListModel<E> {
   int indexOf(E item) => _items.indexOf(item);
 }
 
-/// Mỗi thẻ hiển thị một số nguyên tương ứng dưới dạng 'item N'
-/// và màu được dựa trên giá trị trên thẻ. Màu chữ sẽ đổi sang 
-/// xanh lá cây nếu thẻ đang được chọn. Chiều cao của thẻ dựa 
-/// trên tham số animation, dao động từ 0 đến 128 khi giá trị 
-/// animation dao động từ 0.0 đến 1.0.
+/// Displays its integer item as 'item N' on a Card whose color is based on
+/// the item's value. The text is displayed in bright green if selected is true.
+/// This widget's height is based on the animation parameter, it varies
+/// from 0 to 128 as the animation varies from 0.0 to 1.0.
 class CardItem extends StatelessWidget {
   const CardItem(
       {Key key,
