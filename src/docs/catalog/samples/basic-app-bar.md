@@ -37,7 +37,7 @@ thay thế nội dụng trong `lib/main.dart` bằng đoạn mã nguồn sa
 
 import 'package:flutter/material.dart';
 
-// Ứng dụng này có trạng thái, nó theo dõi sự lựa chọn hiện tại của người dùng.
+// This app is a stateful, it tracks the user's current choice.
 
 class BasicAppBarSample extends StatefulWidget {
   @override
