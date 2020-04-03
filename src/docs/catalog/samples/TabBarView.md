@@ -4,9 +4,7 @@ description: Examples that use TabBarView.
 deprecated: true
 ---
 
-All of the sample apps listed here use the Flutter TabBarView class in
-an interesting way. The [Sample App Catalog](/docs/catalog/samples) page lists
-all of the sample apps.
+Tất cả ứng dụng mẫu được liệt kê ở đây sử dụng lớp Flutter TabBarView. Trang [Danh mục Ứng dụng mẫu](/docs/catalog/samples) liệt kê toàn bộ ứng dụng mẫu.
 
 <div class="container-fluid">
   <div class="lavish-table-row-mb">
@@ -17,10 +15,10 @@ all of the sample apps.
    </a>
     <div class="col-lg-9">
       <p>
-        Any widget with a PreferredSize can appear at the bottom of an AppBar.
+        Bất kì tiện ích nào với một PreferredSize có thể xuất hiện ở bên dưới của một AppBar.
       </p>
       <p>
-        This app features the following classes: AppBar, PreferredSize, TabBarView, TabController.
+        Ứng dụng này chứa những lớp sau: AppBar, PreferredSize, TabBarView, TabController.
       </p>
       <p>
         <a href="/docs/catalog/samples/app-bar-bottom">Learn more</a>.
@@ -36,13 +34,13 @@ all of the sample apps.
    </a>
     <div class="col-lg-9">
       <p>
-        An AppBar with a TabBar as its bottom widget.
+        Một AppBar với TabBar là tiện ích dưới của nó.
       </p>
       <p>
-        This app features the following classes: AppBar, DefaultTabController, TabBar, Scaffold, TabBarView.
+        Ứng dụng này chứa những lớp sau: AppBar, DefaultTabController, TabBar, Scaffold, TabBarView.
       </p>
       <p>
-        <a href="/docs/catalog/samples/tabbed-app-bar">Learn more</a>.
+        <a href="/docs/catalog/samples/tabbed-app-bar">Tìm hiểu thêm</a>.
       </p>
     </div>
   </div>
