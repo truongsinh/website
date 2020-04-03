@@ -1,12 +1,10 @@
 ---
-title: Scaffold Sample Apps
-description: Examples that use Scaffolds.
+title: Ứng dụng mẫu với Scaffold
+description: Các ví dụ sử dụng Scaffolds.
 deprecated: true
 ---
 
-All of the sample apps listed here use the Flutter Scaffold class in
-an interesting way. The [Sample App Catalog](/docs/catalog/samples) page
-lists all of the sample apps.
+Những ứng dụng mẫu dưới đây sử dụng lớp Flutter Scaffold theo nhiều cách khác nhau. Tham khảo danh sách đầy đủ các ứng dụng mẫu tại [đây](/docs/catalog/samples).
 
 <div class="container-fluid">
   <div class="lavish-table-row-mb">
@@ -17,13 +15,13 @@ lists all of the sample apps.
    </a>
     <div class="col-lg-9">
       <p>
-        A typical AppBar with a title, actions, and an overflow dropdown menu.
+        Một AppBar thông thường với tiêu đề (title), các actions và menu tràn xuống (overflow dropdown menu).
       </p>
       <p>
-        This app features the following classes: AppBar, IconButton, PopupMenuButton, Scaffold.
+        Các lớp có trong ứng dụng: AppBar, IconButton, PopupMenuButton, Scaffold.
       </p>
       <p>
-        <a href="/docs/catalog/samples/basic-app-bar">Learn more</a>.
+        <a href="/docs/catalog/samples/basic-app-bar">Xem thêm</a>.
       </p>
     </div>
   </div>
@@ -36,13 +34,13 @@ lists all of the sample apps.
    </a>
     <div class="col-lg-9">
       <p>
-        An AppBar with a TabBar as its bottom widget.
+        Một AppBar với một TabBar là widget nằm dưới nó.
       </p>
       <p>
-        This app features the following classes: AppBar, DefaultTabController, TabBar, Scaffold, TabBarView.
+        Các lớp có trong ứng dụng: AppBar, DefaultTabController, TabBar, Scaffold, TabBarView.
       </p>
       <p>
-        <a href="/docs/catalog/samples/tabbed-app-bar">Learn more</a>.
+        <a href="/docs/catalog/samples/tabbed-app-bar">Xem thêm</a>.
       </p>
     </div>
   </div>
