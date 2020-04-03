@@ -24,5 +24,4 @@ Một ứng dụng thường gặp với một AppBar bao gồm title, các acti
 </p>
 </div>
 </div>
->>>>>>> c31b5c1048c8914093a4e8eb21323ab24bf9123d
 </div>
