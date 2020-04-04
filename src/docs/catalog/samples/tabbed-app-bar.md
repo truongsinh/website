@@ -4,7 +4,7 @@ description: An example that uses a TabBar for its AppBar.
 deprecated: true
 ---
 
- Sử dụng AppBar với TabBar ở bên dưới widget.
+ Một AppBar với TabBar ở bên dưới cùng.
 
 <p>
   <div class="container-fluid">
