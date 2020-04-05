@@ -239,4 +239,4 @@ Also check out the site-shared
 [rvm]: https://rvm.io/rvm/install#installation
 [this repo]: https://github.com/flutter/website
 [Netlify Status]: https://api.netlify.com/api/v1/badges/c2329679-dfdf-4467-8a41-d5430cead699/deploy-status
-[Repo on Netlify]: https://app.netlify.com/sites/quizzical-banach-2b10e8/deploys
+[Repo on Netlify]: https://app.netlify.com/sites/fluttervn-dev/deploys
