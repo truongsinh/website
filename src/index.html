@@ -1,15 +1,16 @@
 ---
-title: Flutter - Beautiful native apps in record time
+title: Flutter - Những ứng dụng thuần phát triển với tốc độ kỷ lục
 layout: landing
 body_class: landing-page homepage
 homepage: true
 description: >
-  Flutter is Google's UI toolkit for crafting beautiful,
-  natively compiled applications for mobile, web, and desktop from a
-  single codebase.  Flutter works with existing code,
-  is used by developers and organizations around the world,
-  and is free and open source.
+  Flutter là bộ công cụ UI của Google để tạo nên những ứng dụng thuần với
+  giao diện đẹp mắt cho di động, trang web, desktop từ một bộ mã nguồn
+  duy nhất. Flutter vận hành với những mã nguồn có sẵn, được sử dụng bởi nhiều
+  lập trình viên, tổ chức trên toàn thế giới, và hoàn toàn miễn phí với mã nguồn mở.
 js:
+- url: /assets/js/detect_safari.js
+  defer: true
 - url: /assets/js/dartpad_picker_main.dart.js
   defer: true
 
@@ -21,28 +22,28 @@ js:
             {% asset homepage/carousel/slide_1-bg.jpg class='homepage__hero__image homepage__hero__image--layer-1' %}
             {% asset homepage/carousel/slide_1-layer_1.png class='homepage__hero__image homepage__hero__image--layer-2' %}
             {% asset homepage/carousel/slide_1-layer_2.png class='homepage__hero__image homepage__hero__image--layer-3' %}
-            <h1 class="homepage__hero__text">Design <span class="color-white">beautiful</span> apps</h1>
+            <h1 class="homepage__hero__text">Thiết kế ứng dụng <span class="color-white">đẹp mắt</span></h1>
             {% asset homepage/carousel/phone_bezel.png class='homepage__hero__phone-bezel' %}
         </div>
         <div class="carousel-item homepage__hero__slide homepage__hero__slide--productive">
             {% asset homepage/carousel/slide_2-bg.jpg class='homepage__hero__image homepage__hero__image--layer-1' %}
             {% asset homepage/carousel/slide_2-layer_2.png class='homepage__hero__image homepage__hero__image--layer-2' %}
             {% asset homepage/carousel/slide_2-layer_1.png class='homepage__hero__image homepage__hero__image--layer-3' %}
-            <h1 class="homepage__hero__text"><span class="color-white">Productively</span> build apps</h1>
+            <h1 class="homepage__hero__text">Xây dựng ứng dụng <span class="color-white">hiệu quả</span></h1>
             {% asset homepage/carousel/phone_bezel.png class='homepage__hero__phone-bezel' %}
         </div>
         <div class="carousel-item homepage__hero__slide homepage__hero__slide--faster">
             {% asset homepage/carousel/slide_3-bg.jpg class='homepage__hero__image homepage__hero__image--layer-1' %}
             {% asset homepage/carousel/slide_3-layer_2.png class='homepage__hero__image homepage__hero__image--layer-2' %}
             {% asset homepage/carousel/slide_3-layer_1.png class='homepage__hero__image homepage__hero__image--layer-3' %}
-            <h1 class="homepage__hero__text">Create <span class="color-white">faster</span> apps</h1>
+            <h1 class="homepage__hero__text">Ứng dụng chạy <span class="color-white">nhanh hơn</span></h1>
             {% asset homepage/carousel/phone_bezel.png class='homepage__hero__phone-bezel' %}
         </div>
         <div class="carousel-item homepage__hero__slide homepage__hero__slide--publish">
             {% asset homepage/carousel/slide_4-bg.jpg class='homepage__hero__image homepage__hero__image--layer-1' %}
             {% asset homepage/carousel/slide_4-layer_2.png class='homepage__hero__image homepage__hero__image--layer-2' %}
             {% asset homepage/carousel/slide_4-layer_1.png class='homepage__hero__image homepage__hero__image--layer-3' %}
-            <h1 class="homepage__hero__text">Target <span class="color-white">mobile, web, & desktop</span> apps</h1>
+            <h1 class="homepage__hero__text">Nhắm đến ứng dụng <span class="color-white">di động, web và desktop</span></h1>
             {% asset homepage/carousel/phone_bezel.png class='homepage__hero__phone-bezel' %}
         </div>
     </div>
@@ -54,19 +55,20 @@ js:
             <div class="col-md-12 col-lg-8 offset-lg-2">
                 <span class="homepage__intro__partner">Made by {% asset homepage/logo-google.svg alt='Google logo' %}</span>
                 <p class="homepage__intro__statement text-center">
-                    Flutter is Google’s UI toolkit for building
-                    beautiful, natively compiled applications for
-                    <a href="/docs">mobile</a>, <a href="/web">web</a>,
-                    and <a href="/desktop">desktop</a> from a single codebase.
+                  Flutter là bộ công cụ UI của Google để tạo nên những
+                  ứng dụng thuần (<i>native apps</i>) với giao diện đẹp
+                  mắt dành cho <a href="/docs">di động</a>, <a href="/web">
+                  trang web</a>, và <a href="/desktop">desktop</a> từ
+                  một bộ mã nguồn (<i>codebase</i>) duy nhất.
                 </p>
 
                 <div class="homepage__intro__buttons">
-                    <a class="btn btn-primary btn-cta" href="/docs/get-started/install">Get started</a>
-                    <button class="btn btn-link btn-icon" type="button" data-toggle="modal" data-target="#videoModal" data-video="5VbAwhBBHsg"><i class="material-icons" aria-hidden="true">play_circle_filled</i> Watch video</button>
+                    <a class="btn btn-primary btn-cta" href="/docs/get-started/install">Bắt đầu</a>
+                    <button class="btn btn-link btn-icon" type="button" data-toggle="modal" data-target="#videoModal" data-video="5VbAwhBBHsg"><i class="material-icons" aria-hidden="true">play_circle_filled</i>Xem video</button>
                 </div>
 
                 <p>
-                    Coming from another platform? Docs:
+                    Bạn đến từ một nền tảng khác? Tham khảo các tài liệu:
                     <a href="/docs/get-started/flutter-for/ios-devs">iOS</a>,
                     <a href="/docs/get-started/flutter-for/android-devs">Android</a>,
                     <a href="/docs/get-started/flutter-for/web-devs">Web</a>,
@@ -85,25 +87,26 @@ js:
             <div class="homepage__key-point col-lg-4">
                 <div class="homepage__icon" aria-hidden="true">{% asset homepage/icon-development.svg %}</div>
 
-                <h3>Fast Development</h3>
+                <h3>Phát triên ứng dụng nhanh chóng</h3>
 
                 <p>
-                Paint your app to life in milliseconds with Stateful
-                Hot Reload. Use a rich set of fully-customizable
-                widgets to build native interfaces in minutes.
+                Chạy thử ứng dụng chỉ trong tích tắc nhờ chức năng Stateful
+                Hot Reload. Sử dụng bộ widget phong phú, tùy chỉnh hoàn toàn
+                để tạo nên những giao diện thuần trong ít phút.
                 </p>
             </div>
 
             <div class="homepage__key-point col-lg-4">
                 <div class="homepage__icon" aria-hidden="true">{% asset homepage/icon-ui.svg %}</div>
 
-                <h3>Expressive and Flexible UI</h3>
+                <h3>Giao diện người dùng đặc tả, linh động</h3>
 
                 <p>
-                Quickly ship features with a focus on native end-user
-                experiences. Layered architecture allows for full
-                customization, which results in incredibly fast
-                rendering and expressive and flexible designs.
+                  Các tính năng được gửi đi nhanh chóng, tập trung vào trải
+                  nghiệm của người dùng cuối (<i>end-user</i>). Kiến trúc
+                  theo lớp cho phép tùy chỉnh toàn bộ widget, nên việc
+                  kết xuất đồ họa sẽ diễn ra nhanh một cách đáng kinh ngạc,
+                  tạo nên những thiết kế linh động và đặc tả.
                 </p>
             </div>
 
@@ -113,12 +116,14 @@ js:
                 <h3>Native Performance</h3>
 
                 <p>
-                Flutter’s widgets incorporate all critical platform
-                differences such as scrolling, navigation, icons and
-                fonts, and your Flutter code is compiled to native ARM
-                machine code using <a href="https://dart.dev/platforms">Dart's native compilers</a>.
-                Thus Flutter gives you full native performance on both
-                iOS and Android.
+                  Các widget của Flutter kết hợp những khác biệt quan trọng
+                  giữa các nền tảng như cuộn (<i>scrolling</i>), điều hướng
+                  (<i>navigation</i>), biểu tượng (<i>icons</i>) và kiểu chữ,
+                  và mã nguồn Flutter của bạn sẽ được biên dịch sang mã máy
+                  ARM thuần sử dụng <a href="https://dart.dev/platforms">trình
+                  biên dịch thuần của Dart</a>. Vì vậy, Flutter có thể tạo
+                  ra những ứng dụng thuần chạy trên cả hai nền tảng iOS và
+                  Android.
                 </p>
             </div>
 
@@ -136,18 +141,18 @@ js:
             <div class="col-lg-4">
                 <div class="homepage__icon" aria-hidden="true">{% asset homepage/icon-development.svg %}</div>
 
-                <h2>Fast development</h2>
+                <h2>Phát triển ứng dụng nhanh chóng</h2>
 
                 <p>
-                    Flutter's <em>hot reload</em> helps you quickly
-                    and easily experiment, build UIs, add features, and fix
-                    bugs faster. Experience sub-second reload times,
-                    without losing state, on
-                    emulators, simulators, and hardware for iOS
-                    and Android.
+                  Chức năng <em>hot reload</em> của Flutter giúp bạn nhanh chóng,
+                  dễ dàng thử nghiệm và xây dựng giao diện người dùng, thêm các
+                  tính năng, và sửa lỗi nhanh hơn. Trải nghiệm khả năng tải lại
+                  giao diện trong tích tắc mà không làm mất trạng thái hiện tại
+                  trên các thiết bị giả lập như emulator, simulator, và các phần
+                  cứng cho cả iOS và Android.
                 </p>
 
-                <a href="/docs/development/tools/hot-reload">Learn more</a>
+                <a href="/docs/development/tools/hot-reload">Xem thêm</a>
             </div>
         </div>
     </div>
@@ -160,10 +165,10 @@ js:
                 <div>
                     <div class="homepage__beautiful-uis__app-info">
                         <h5>Reflectly</h5>
-                        <p>An award winning mindfulness app built with Flutter.</p>
+                        <p>Một ứng dụng đạt giải được xây dựng bằng Flutter.</p>
                         <small>
-                        Download: <a href="https://itunes.apple.com/us/app/reflectly-mindfulness-journal/id1241229134" target="_blank" rel="noopener">iOS</a>, <a href="https://play.google.com/store/apps/details?id=com.reflectlyApp&e=-EnableAppDetailsPageRedesign" target="_blank" rel="noopener">Android</a><br>
-                        <a href="https://reflect.ly" target="blank">Learn more</a>
+                        Tải về: <a href="https://itunes.apple.com/us/app/reflectly-mindfulness-journal/id1241229134" target="_blank" rel="noopener">iOS</a>, <a href="https://play.google.com/store/apps/details?id=com.reflectlyApp&e=-EnableAppDetailsPageRedesign" target="_blank" rel="noopener">Android</a><br>
+                        <a href="https://reflect.ly" target="blank">Xem thêm</a>
                         </small>
                     </div>
                     <video src="/videos/BeautifulUI.mp4" autoplay playsinline muted loop title="Reflectly app demo"></video>
@@ -172,16 +177,16 @@ js:
             <div class="col-lg-4">
                 <div class="homepage__icon" aria-hidden="true">{% asset homepage/icon-ui.svg %}</div>
 
-                <h2>Expressive, beautiful UIs</h2>
+                <h2>Giao diện người dụng đặc tả, đẹp mắt</h2>
 
                 <p>
-                Delight your users with Flutter's built-in
-                beautiful Material Design and
-                Cupertino (iOS-flavor) widgets, rich motion APIs,
-                smooth natural scrolling, and platform awareness.
+                  Thỏa mãn người dùng với những widget tích hợp sẵn theo
+                  các nguyên tắc của Material Design và Cupertino (iOS),
+                  cùng với API phong phú dành cho chuyển động, cuộn mượt
+                  mà, tự nhiên, và tự nhận thức được nền tảng.
                 </p>
 
-                <a href="/docs/development/ui/widgets/catalog">Browse the widget catalog</a>
+                <a href="/docs/development/ui/widgets/catalog">Xem danh sách các widget</a>
             </div>
         </div>
     </div>
@@ -199,16 +204,17 @@ js:
                 <h2>Native Performance</h2>
 
                 <p>
-                Flutter’s widgets incorporate all critical platform
-                differences such as scrolling, navigation, icons
-                and fonts to provide full native
-                performance on both iOS and Android.
+                  Các widget của Flutter kết hợp những khác biệt quan trọng
+                  giữa các nền tảng như cuộn (<i>scrolling</i>), điều hướng
+                  (<i>navigation</i>), biểu tượng (<i>icons</i>) và kiểu chữ
+                  để tạo ra những ứng dụng thuần chạy trên cả hai nền tảng
+                  iOS và Android.
                 </p>
                 <p>
-                    <a href="/showcase">Examples of apps built with Flutter</a>
+                    <a href="/showcase">Một vài ứng dụng ví dụ phát triển bằng Flutter</a>
                 </p>
                 <p class="small mb-0">
-                    <small>Demo design inspired by
+                    <small>Thiết kế demo được lấy cảm hứng từ
                         <a href="https://dribbble.com/aureliensalomon">Aurélien Salomon</a>'s
                         <a href="https://dribbble.com/shots/2940231-Google-Newsstand-Navigation-Pattern">Google Newsstand Navigation Pattern</a>
                     </small>
@@ -227,14 +233,14 @@ js:
                 </div>
             </div>
             <div class="col-lg-4">
-                <h2 class="homepage__headline-after-image">Learn from developers</h2>
+                <h2 class="homepage__headline-after-image">Học hỏi từ các lập trình viên Flutter</h2>
 
                 <p>
-                Watch these videos to learn from Google and developers
-                as you build with Flutter.
+                Những video được cung cấp bởi Google và các lập trình viên sau đây
+                sẽ giúp bạn học hỏi trong quá trình sử dụng Flutter.
                 </p>
 
-                <a href="{{site.social.youtube}}">Visit our YouTube playlist</a>
+                <a href="{{site.social.youtube}}">Truy cập danh sách phát Youtube của chúng tôi</a>
             </div>
         </div>
     </div>
@@ -258,13 +264,13 @@ js:
                 </div>
             </div>
             <div class="col-lg-5">
-                <h2 class="homepage__headline-after-image">Who's using Flutter?</h2>
+                <h2 class="homepage__headline-after-image">Những ai đang sử dụng Flutter?</h2>
 
                 <p>
-                Organizations around the world are building apps with Flutter.
+                Nhiều tổ chức trên thế giới đang phát triển ứng dụng bằng Flutter.
                 </p>
 
-                <a href="/showcase">See what’s being created</a>
+                <a href="/showcase">Xem danh sách các ứng dụng.</a>
             </div>
         </div>
     </div>
@@ -276,7 +282,7 @@ js:
         <div class="card-body">
             <p class="card-text"><small class="text-muted">News</small></p>
             <h3>Announcing Flutter 1.12</h3>
-            <a href="https://developers.googleblog.com/2019/12/flutter-ui-ambient-computing.html">Read More</a>
+            <a href="https://developers.googleblog.com/2019/12/flutter-ui-ambient-computing.html">Xem thêm</a>
         </div>
     </div>
     <div class="card">
@@ -284,28 +290,30 @@ js:
         <div class="card-body">
             <p class="card-text"><small class="text-muted">News</small></p>
             <h3>Flutter’s iOS Application Bundle</h3>
-            <a href="https://medium.com/flutter/flutters-ios-application-bundle-6f56d4e88cf8">Read More</a>
+            <a href="https://medium.com/flutter/flutters-ios-application-bundle-6f56d4e88cf8">Xem thêm</a>
         </div>
     </div>
 </div>
 
+
+<!-- Do not show DartPad on Safari -->
 <section id="dartpad-landing-page" class="landing-page__cta card text-center">
     <div class="card-body">
         <div class="dash-dartpad">
             <a name="try-dart"></a>
-            <h2>Try Flutter in your browser</h2>
+            <h2>Trải nghiệm Flutter ngay trên trình duyệt</h2>
             <select id="dartpad-select" aria-label="Select a Flutter demo"></select>
             <div id="dartpad-host"></div>
-            <h3>Want more practice? <a href="/codelabs">Try a codelab</a>.</h3>
+            <h3>Bạn muốn thực hành nhiều hơn> <a href="/codelabs">Hãy trải nghiệm codelab</a>.</h3>
         </div>
     </div>
 </section>
 
 <section class="landing-page__cta card text-center">
     <div class="card-body">
-        <h2 class="landing-page__cta__headline">Install Flutter today.</h2>
-        <p class="landing-page__cta__body">It’s free and open source.</p>
-        <a class="landing-page__cta__button btn btn-primary btn-cta" href="/docs/get-started/install">Get started</a>
+        <h2 class="landing-page__cta__headline">Cài đặt Flutter ngay hôm nay.</h2>
+        <p class="landing-page__cta__body">Hoàn toàn miễn phí với mã nguồn mở.</p>
+        <a class="landing-page__cta__button btn btn-primary btn-cta" href="/docs/get-started/install">Bắt đầu</a>
     </div>
 </section>
 
