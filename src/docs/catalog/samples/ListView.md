@@ -1,12 +1,10 @@
 ---
-title: ListView Sample Apps
-description: Examples of apps that use ListView.
+title: Ứng dụng mẫu với ListView
+description: Các ví dụ sử dụng ListView.
 deprecated: true
 ---
 
-All of the sample apps listed here use the Flutter ListView class in an
-interesting way. The [Sample App Catalog](/docs/catalog/samples) page lists
-all of the sample apps.
+Những ứng dụng mẫu dưới đây sử dụng lớp Flutter ListView theo nhiều cách khác nhau. Tham khảo danh sách đầy đủ các ứng dụng mẫu tại [đây](/docs/catalog/samples).
 
 <div class="container-fluid">
   <div class="lavish-table-row-mb">
@@ -17,13 +15,13 @@ all of the sample apps.
    </a>
     <div class="col-lg-9">
       <p>
-        ExpansionTiles can be used to produce two-level or multi-level lists.
+        ExpansionTiles có thể được dùng để tạo ra danh sách có 2 hoặc nhiều cấp..
       </p>
       <p>
-        This app features the following classes: ExpansionTile, ListView.
+        Các lớp có trong ứng dụng: ExpansionTile, ListView.
       </p>
       <p>
-        <a href="/docs/catalog/samples/expansion-tile-sample">Learn more</a>.
+        <a href="/docs/catalog/samples/expansion-tile-sample">Xem thêm</a>.
       </p>
     </div>
   </div>
