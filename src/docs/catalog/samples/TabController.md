@@ -1,12 +1,10 @@
 ---
-title: TabController Sample Apps
-description: Examples that use TabController.
+title: Ứng dụng mẫu dùng TabController
+description: Các ví dụ sử dụng TabController.
 deprecated: true
 ---
-
-All of the sample apps listed here use the Flutter TabController class
-in an interesting way. The [Sample App Catalog](/docs/catalog/samples) page
-lists all of the sample apps.
+Tất cả những ứng dụng mẫu được đưa ra dưới đây đều dùng lớp TabController của Flutter theo một cách rất thú vị.
+Vào trang [Danh mục ứng dụng mẫu](/docs/catalog/samples) để xem thêm về các ứng dụng mẫu.
 
 <div class="container-fluid">
   <div class="lavish-table-row-mb">
@@ -17,13 +15,13 @@ lists all of the sample apps.
    </a>
     <div class="col-lg-9">
       <p>
-        Any widget with a PreferredSize can appear at the bottom of an AppBar.
+        Mọi widget với PreferedSize đều có thể hiện lên bên dưới một thanh AppBar.
       </p>
       <p>
-        This app features the following classes: AppBar, PreferredSize, TabBarView, TabController.
+        Ứng dụng này có sử dụng các lớp: AppBar, PreferredSize, TabBarView, TabController.
       </p>
       <p>
-        <a href="/docs/catalog/samples/app-bar-bottom">Learn more</a>.
+        <a href="/docs/catalog/samples/app-bar-bottom">Tìm hiểu thêm</a>.
       </p>
     </div>
   </div>
