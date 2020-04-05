@@ -1,35 +1,29 @@
 ---
-title: Fade a widget in and out
-description: How to fade a widget in and out.
+title: Hiệu ứng fade in và fade out cho widget
+description: Cách tạo hiệu ứng fade in và fade out cho widget.
 prev:
-  title: Animate the properties of a container
+  title: Tạo hiệu ứng cho các thuộc tính của container
   path: /docs/cookbook/animation/animated-container
 next:
-  title: Add a drawer to a screen
+  title: Thêm drawer vào một màn hình
   path: /docs/cookbook/design/drawer
 js:
   - defer: true
     url: https://dartpad.dev/inject_embed.dart.js
 ---
 
-UI developers often need to show and hide elements on screen.
-However, quickly popping elements on and off the screen can
-feel jarring to end users. Instead,
-fade elements in and out with an opacity animation to create
-a smooth experience.
+Các lập trình viên UI thường cần hiển thị và ẩn đi các thành phần trên màn hình. Tuy nhiên, các thành phần xuất hiện và biến mất nhanh chóng có thể gây khó chịu cho người dùng. Thay vì vậy, thêm hiệu ứng fade in/out kèm theo độ mờ sẽ tạo ra trải nghiệm mượt mà hơn.
 
-The [`AnimatedOpacity`][] widget makes it easy to perform opacity
-animations. This recipe uses the following steps:
+Widget [`AnimatedOpacity`][] giúp ta tạo hiệu ứng mờ dễ dàng hơn.
+Các bước như sau:
+  1. Tạo một box sẽ dùng hiệu ứng fade in/out.
+  2. Khai báo một `StatefulWidget`.
+  3. Hiển thị một button để chuyển đổi chế độ hiển thị.
+  4. Áp dụng hiệu ứng fade in/out vào cho box.
 
-  1. Create a box to fade in and out.
-  2. Define a `StatefulWidget`.
-  3. Display a button that toggles the visibility.
-  4. Fade the box in and out.
+## 1. Tạo một box sẽ dùng hiệu ứng fade in/out
 
-## 1. Create a box to fade in and out
-
-First, create something to fade in and out. For this example,
-draw a green box on screen.
+Đầu tiên, tạo một thứ gì đó để dùng hiệu ứng này. Ví dụ, vẽ một box màu xanh lá lên màn hình.
 
 <!-- skip -->
 ```dart
@@ -40,24 +34,21 @@ Container(
 );
 ```
 
-## 2. Define a `StatefulWidget`
+## 2. Khai báo một `StatefulWidget`
 
-Now that you have a green box to animate,
-you need a way to know whether the box should be visible.
-To accomplish this, use a [`StatefulWidget`][].
+Bây giờ bạn đã có một box màu xanh lá, bạn cần một cách để hiển thị nó.
+Để làm được, hãy dùng [`StatefulWidget`][].
 
-A `StatefulWidget` is a class that creates a `State` object.
-The `State` object holds some data about the app and provides a way to
-update that data. When updating the data,
-you can also ask Flutter to rebuild the UI with those changes.
+`StatefulWidget` là một lớp tạo ra một đối tượng `State`.
+Đối tượng `State` lưu trữ một vài dữ liệu về ứng dụng và cung cấp một cách để cập nhật dữ liệu đó. Khi cập nhật dữ liệu, bạn cũng có thể yêu cầu Flutter rebuild lại UI có những thay đổi đó.
 
-In this case, you have one piece of data:
-a boolean representing whether the button is visible.
+Trong trường hợp này, bạn có một ít dữ liệu sau:
+một giá trị boolean cho thấy button có thể nhìn thấy được hay không.
 
-To construct a `StatefulWidget`, create two classes: A
-`StatefulWidget` and a corresponding `State` class.
-Pro tip: The Flutter plugins for Android Studio and VSCode include
-the `stful` snippet to quickly generate this code.
+Để khởi tạo một `StatefulWidget`, ta cần 2 lớp: một lớp
+`StatefulWidget` và một lớp `State` tương ứng.
+Mẹo hay: Các Flutter plugin cho Android Studio và VSCode bao gồm
+snippet `stful` để tạo nhanh đoạn code này.
 
 <!-- skip -->
 ```dart
@@ -85,21 +76,20 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 ```
 
-## 3. Display a button that toggles the visibility
+## 3. Hiển thị một button để chuyển đổi chế độ hiển thị
 
-Now that you have some data to determine whether the green box
-should be visible, you need a way to update that data.
-In this example, if the box is visible, hide it.
-If the box is hidden, show it.
+Bây giờ bạn đã có một ít dữ liệu để xác định xem box màu xanh lá nhìn thấy hay không, bạn cần một cách để cập nhật dữ liệu đó.
+Trong ví dụ này, nếu box nhìn thấy được, ẩn nó đi.
+Nếu box đang bị ẩn, hiển thị nó ra.
 
-To handle this, display a button. When a user presses the button,
-flip the boolean from true to false, or false to true.
-Make this change using [`setState()`][],
-which is a method on the `State` class.
-This tells Flutter to rebuild the widget.
+Để xử lí việc này, hãy hiển thị một button. Khi người dùng bấm vào button,
+chuyển giá trị boolean từ true thành false, hoặc false thành true.
+Thực hiện thay đổi dùng [`setState()`][],
+đây là một phương thước thuộc lớp `State`.
+Điều này yêu cầu Flutter rebuild lại widget.
 
-For more information on working with user input,
-see the [Gestures][] section of the cookbook.
+Để biết thêm thông tin về cách làm việc với dữ liệu đầu vào của người dùng,
+xem phần [Gestures][] của cookbook.
 
 <!-- skip -->
 ```dart
@@ -116,17 +106,17 @@ FloatingActionButton(
 );
 ```
 
-## 4. Fade the box in and out
+## 4. Áp dụng hiệu ứng fade in/out vào cho box
 
-You have a green box on screen and a button to toggle the visibility
-to `true` or `false`. How to fade the box in and out? With an
-[`AnimatedOpacity`][] widget.
+Bạn có một box màu xanh lá trên màn hình và một button để chuyển đổi chế độ hiển thị
+thành `true` hoặc `false`. Làm thế nào để áp dụng hiệu ứng fade in/out vào cho box với widget
+[`AnimatedOpacity`][]?
 
-The `AnimatedOpacity` widget requires three arguments:
+Widget `AnimatedOpacity` yêu cầu 3 đối số  :
 
-  * `opacity`: A value from 0.0 (invisible) to 1.0 (fully visible).
-  * `duration`: How long the animation should take to complete.
-  * `child`: The widget to animate. In this case, the green box.
+  * `opacity`: một giá trị từ 0.0 (không nhìn thấy được) đến 1.0 (nhìn thấy được hoàn toàn).
+  * `duration`: Thời gian của hiệu ứng.
+  * `child`: Widget cần dùng hiệu ứng. Trong trường hợp này là box màu xanh lá.
 
 <!-- skip -->
 ```dart
@@ -144,7 +134,7 @@ AnimatedOpacity(
 );
 ```
 
-## Interactive example
+## Ví dụ tương tác
 
 ```run-dartpad:theme-light:mode-flutter:run-true:width-100%:height-600px:split-60:ga_id-interactive_example
 import 'package:flutter/material.dart';
