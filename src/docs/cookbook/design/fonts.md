@@ -59,7 +59,7 @@ flutter:
           weight: 700
 ```
 
-### `pubspec.yaml` option definitions
+### `pubspec.yaml` tùy chọn định nghĩa
 
 `family` dùng để xác định tên của font, mà bạn dùng trong
  thuộc tính [`fontFamily`][] của một đối tượng [`TextStyle`][] .
