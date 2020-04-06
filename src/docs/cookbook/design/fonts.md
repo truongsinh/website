@@ -9,34 +9,26 @@ next:
   path: /docs/cookbook/design/themes
 ---
 
-Although Android and iOS offer high quality system fonts,
-one of the most common requests from designers is for custom fonts.
-For example, you might have a custom-built font from a designer,
-or perhaps you downloaded a font from [Google Fonts][].
+Android và IOS đã cung cấp hệ thống fonts chữ chất lượng cao, nhưng yêu cầu về fonts chữ của các designers là được tùy chỉnh designers. Ví dụ, bạn muốn fonts chữ tùy chỉnh được xây dựng từ một designers, bạn có thể tải về từ [Google Fonts][].
 
 {{site.alert.note}}
   Check out the [google_fonts][] package for direct access
   to almost 1000 open-sourced font families.
 {{site.alert.end}}
 
-Flutter works with custom fonts and you can apply a custom
-font across an entire app or to individual widgets.
-This recipe creates an app that uses custom fonts with
-the following steps:
+Flutter sử dụng fonts tùy chỉnh và bạn có thể ứng dụng fonts tùy chỉnh trên toàn bộ ứng dụng hoặc vài widgets. Các bước để tạo một ứng dụng sử dụng fonts chữ tùy chỉnh
 
-  1. Import the font files.
-  2. Declare the font in the pubspec.
-  3. Set a font as the default.
-  4. Use a font in a specific widget.
+  1. Thêm fonts vào dự án.
+  2. Khai báo font trong file.
+  3. Đặt font làm mặc định.
+  4. Sử dụng font trong các widget.
 
-## 1. Import the font files
+## 1. Thêm fonts vào dự án
 
-To work with a font, import the font files into the project.
-It's common practice to put font files in a `fonts` or `assets`
-folder at the root of a Flutter project.
+Khi sử dụng fonts, bạn phải cài đặt các file fonts vào bên trong dự án. Các file thường được đặt trong thư mục `fonts` hoặc `assets`. của dự án.
 
-For example, to import the Raleway and Roboto Mono font
-files into a project, the folder structure might look like this:
+Ví dụ bạn muốn thêm fonts Raleway và Roboto Mono 
+vào dự án, cấu trúc thư mục có thể như sau:
 
 ```
 awesome_app/
@@ -47,10 +39,10 @@ awesome_app/
     RobotoMono-Bold.ttf
 ```
 
-## 2. Declare the font in the pubspec
+## 2. Khai báo font trong file
 
-Once you've identified a font, tell Flutter where to find it.
-You can do this by including a font definition in the `pubspec.yaml` file.
+Bạn cần phải cài đặt đường dẫn để Flutter có thể tìm được fonts.
+Một cách đơn giản là bạn có thể chỉ rõ đường dẫn bên trong `pubspec.yaml` file.
 
 ```yaml
 flutter:
@@ -69,35 +61,33 @@ flutter:
 
 ### `pubspec.yaml` option definitions
 
-The `family` determines the name of the font, which you use in the
-[`fontFamily`][] property of a [`TextStyle`][] object.
+`family` dùng để xác định tên của font, mà bạn dùng trong
+ thuộc tính [`fontFamily`][] của một đối tượng [`TextStyle`][] .
 
-The `asset` is a path to the font file, relative to the `pubspec.yaml` file.
-These files contain the outlines for the glyphs in the font.
-When building the app, these files are included in the app's asset bundle.
+`asset` là đường dẫn tới font file, có liên quan đến file `pubspec.yaml`.
+Các file này chứa các khung, dàn cho font.
+Khi xây ứng dụng, các files này thường nằm trong các gói hỗ trợ sẵn.
 
-A single font can reference many different files with different
-outline weights and styles:
+Một fonts có thể liên kết được nhiều file với nhiều nét chữ khác nhau:
 
-  * The `weight` property specifies the weight of the outlines in
-    the file as an integer multiple of 100, between 100 and 900.
-    These values correspond to the [`FontWeight`][]
-    and can be used in the [`fontWeight`][] property of a
-    [`TextStyle`][] object.
+  * Thuộc tính `weight` cho ta biết mức độ dày của fonts là
+    các số nguyên bội số của 100, từ 100 tới 900.
+    Các giá trị này tương ứng với[`FontWeight`][]
+    và được sử dụng trong thuộc tính [`fontWeight`][] 
+    của đối tượng [`TextStyle`][].
 
-  * The `style` property specifies whether the outlines in the file are
-    `italic` or `normal`. These values correspond to the
-    [`FontStyle`][] and can be used in the [`fontStyle`][] property of a
-    [`TextStyle`][] object.
+  * Thuộc tính `style` chỉ định nét chữ của fonts trong file là
+    `italic` hay `normal`. Các giá trị này tương ứng
+    [`FontStyle`][] và có thể dùng trong thuộc tính [`fontStyle`][] của đối tượng
+    [`TextStyle`][].
 
-## 3. Set a font as the default
+## 3. Đặt font làm mặc định
 
-You have two options for how to apply fonts to text: as the default font
-or only within specific widgets.
+Có 2 cách để sử dụng fonts cho các chữ trong ứng dụng: sử dụng fonts mặc định hoặc sử dụng fonts trong widgets.
 
-To use a font as the default, set the `fontFamily` property as part of
-the app's `theme`. The value provided to `fontFamily` must match the `family`
-name declared in the `pubspec.yaml`.
+Muốn đặt fonts chữ làm mặc định, đặt thuộc tính `fontFamily` là một phần của
+`theme` ứng dụng. Các giá trị được cấp cho `fontFamily` phải khớp với tên `family`
+đã được khai báo trong file `pubspec.yaml`.
 
 <!-- skip -->
 ```dart
@@ -109,17 +99,17 @@ MaterialApp(
 );
 ```
 
-For more information on themes,
-see the [Using Themes to share colors and font styles][] recipe.
+Nếu bạn muốn thêm thông tin về themes,
+xem [Using Themes to share colors and font styles][].
 
-## 4. Use the font in a specific widget
+## 4. Sử dụng fonts trong các widget
 
-If you want to apply the font to a specific widget,
-such as a `Text` widget,
-provide a [`TextStyle`][] to the widget.
+Nếu bạn muốn sử dụng font cho các widget,
+chẳng hạn như `Text` widget,
+cung cấp môjt [`TextStyle`][] cho widget.
 
-In this example, apply the RobotoMono font to a single `Text` widget.
-Once again, the `fontFamily` must match the `family` name declared in the
+Ở ví dụ này, ta dùng font RobotoMono cho `Text` widget.
+Lưu ý,  `fontFamily` phải khớp với tên `family` đã được khai báo trong file
 `pubspec.yaml`.
 
 <!-- skip -->
@@ -132,10 +122,10 @@ Text(
 
 ### TextStyle
 
-If a [`TextStyle`][] object specifies a weight
-or style for which there is no exact font file,
-the engine uses one of the more generic files for the font and attempts to
-extrapolate outlines for the requested weight and style.
+Nếu đối tượng [`TextStyle`][] có độ dày, các kiểu chữ
+không đúng với fonts đã khai báo,
+máy sẽ dùng một trong những font chữ mặc định và cố gắng
+phản hồi lại các yêu cầu về độ dày và kiểu chữ.
 
 ## Complete example
 
