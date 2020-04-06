@@ -12,27 +12,18 @@ js:
     url: https://dartpad.dev/inject_embed.dart.js
 ---
 
-In some situations,
-you want to update the display of an app when the user
-rotates the screen from portrait mode to landscape mode. For example,
-the app might show one item after the next in portrait mode,
-yet put those same items side-by-side in landscape mode.
+Trong vài trường hợp,
+bạn muốn thay đổi hiện thị của ứng dụng khi người dùng xoay màn hình từ chế độ chân dung sang chế độ phong cảnh. Ví dụ, ứng dụng sẽ hiển thị một item, trượt qua để thấy item tiếp theo, còn với chế độ phong cảnh, các item sẽ hiển thị ngang.
 
-In Flutter, you can build different layouts depending
-on a given [`Orientation`][].
-In this example, build a list that displays two columns in
-portrait mode and three columns in landscape mode using the
-following steps:
+Trong Flutter, bạn có thể xây dựng nhiều lớp bố trí khác nhau dựa vào [`Orientation`][] đã cho.
+Trong ví dụ này, xây dựng một danh sách hiển thị 2 cột trong chế độ chân dung và 3 cột trong chế độ phong cảnh thông qua các bước sau:
 
-  1. Build a `GridView` with two columns.
-  2. Use an `OrientationBuilder` to change the number of columns.
+  1. Dùng `GridView` để hiện thị định dạng 2 cột .
+  2. Sử dụng `OrientationBuilder` để thay đổi số lượng cột hiển thị.
 
-## 1. Build a `GridView` with two columns
+## 1. Dùng `GridView` để hiện thị định dạng 2 cột
 
-First, create a list of items to work with.
-Rather than using a normal list,
-create a list that displays items in a grid.
-For now, create a grid with two columns.
+Đầu tiên, tạo một danh sách items để làm việc. Thay vì sử dụng một danh sách bình thường, ta tạo một danh sách các items sẽ hiện thí trong lưới. Tiếp theo, ta tạo một lưới với hai cột
 
 <!-- skip -->
 ```dart
@@ -43,19 +34,15 @@ GridView.count(
 );
 ```
 
-To learn more about working with `GridViews`,
-see the [Creating a grid list][] recipe.
+Tìm hiểu thêm về `GridViews`, xem [Creating a grid list][].
 
-## 2. Use an `OrientationBuilder` to change the number of columns
+## 2. Sử dụng `OrientationBuilder` để thay đổi số lượng cột hiển thị
 
-To determine the app's current `Orientation`, use the
+Để xác định `Orientation`  ứng dụng hiện tại, sử dụng
 [`OrientationBuilder`][] widget.
-The `OrientationBuilder` calculates the current `Orientation` by
-comparing the width and height available to the parent widget,
-and rebuilds when the size of the parent changes.
+ `OrientationBuilder` sẽ tính toán các `Orientation` bằng các so sánh chiều rộng và chiều cao có sẵn của các widget gốc, và xây dựng lại khi kích thước gốc bị thay đổi.
 
-Using the `Orientation`, build a list that displays two columns in portrait
-mode, or three columns in landscape mode.
+Sử dụng `Orientation`, xây dựng danh sách hiển thị hai cột ở chế độ chân dung hay ba cột ở chế độ phong cảnh
 
 <!-- skip -->
 ```dart
@@ -77,7 +64,7 @@ OrientationBuilder(
   `OrientationBuilder` widget.
 {{site.alert.end}}
 
-## Interactive example
+## Ví dụ
 
 ```run-dartpad:theme-light:mode-flutter:run-true:width-100%:height-500px:split-60:ga_id-interactive_example
 import 'package:flutter/material.dart';
