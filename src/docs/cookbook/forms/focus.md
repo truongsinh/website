@@ -1,6 +1,6 @@
 ---
-title: Focus and text fields
-description: How focus works with text fields.
+title: Focus và ô text
+description: Giải thích cách focus tương tác với các ô để nhập text.
 prev:
   title: Retrieve the value of a text field
   path: /docs/cookbook/forms/retrieve-input
@@ -12,28 +12,16 @@ js:
     url: https://dartpad.dev/inject_embed.dart.js
 ---
 
-When a text field is selected and accepting input,
-it is said to have "focus."
-Generally, users shift focus to a text field by tapping,
-and developers shift focus to a text field programmatically by
-using the tools described in this recipe.
+Khi một ô text được chọn và đang chờ được nhập vào gọi là trường text đó đang được focus (tập trung). Về cơ bản, người dùng sẽ focus vào một ô text bằng cách nhấn vào màn hình, còn lập trình viên sẽ focus một ô text bằng cách dùng các công cụ có trong bài hướng dẫn này.
 
-Managing focus is a fundamental tool for creating forms with an intuitive
-flow. For example, say you have a search screen with a text field.
-When the user navigates to the search screen,
-you can set the focus to the text field for the search term.
-This allows the user to start typing as soon as the screen
-is visible, without needing to manually tap the text field.
+Kiểm soát focus là công cụ nền tảng để tạo ra các biểu mẫu dễ dùng. Ví dụ, mình có một màn hình để tìm và tra cứu. Trên màn hình đó có một ô để nhập text. Khi người dùng mở ra màn hình này, mình có thể cho focus vào ô text đó. Như vậy, người dùng có thể nhập liệu vào ngay khi tới màn hình này mà không cần phải chọn vào ô text.
 
-In this recipe, learn how to give the focus
-to a text field as soon as it's visible,
-as well as how to give focus to a text field
-when a button is tapped.
+Bài viết này hướng dẫn focus một ô text theo hai cách:
+  - Focus vào ô text ngay khi nó hiện ra
+  - Focus khi một nút nào đó được nhấn 
+## Focus vào một ô text ngay khi xuất hiện
 
-## Focus a text field as soon as it's visible
-
-To give focus to a text field as soon as it's visible,
-use the `autofocus` property.
+Để focus vào một ô text ngay khi xuất hiện, mình dùng đặc tính `autofocus`.
 
 <!-- skip -->
 ```dart
@@ -42,33 +30,23 @@ TextField(
 );
 ```
 
-For more information on handling input and creating text fields,
-see the [Forms][] section of the cookbook.
+Xem phần [Forms][] để tìm hiểu thêm về cách tạo trường text và xử lý input.
 
-## Focus a text field when a button is tapped
+## Focus vào ô text khi một nút nào đó
 
-Rather than immediately shifting focus to a specific text field,
-you might need to give focus to a text field at a later point in time.
-In the real world, you might also need to give focus to a specific
-text field in response to an API call or a validation error.
-In this example, give focus to a text field after the user
-presses a button using the following steps:
+Sẽ có những lúc mình không cần focus ngay lập tức vào ô text, mà chỉ focus khi nào cần thiết thôi.
+Trên thực tế, cũng có lúc mình cần phải focus vào ô text khi được gọi từ API hoặc các trường hợp khác. Trong ví dụ này, mình sẽ focus vào một ô text khi người dùng nhấn vào một nút bấm trên màn hình. Mình sẽ làm như sau:
 
-  1. Create a `FocusNode`.
-  2. Pass the `FocusNode` to a `TextField`.
-  3. Give focus to the `TextField` when a button is tapped.
+  1. Tạo một cái `FocusNode`.
+  2. Truyền `FocusNode` vào một ô `TextField`.
+  3. Focus vào ô `TextField` khi nút được nhấn.
 
-### 1. Create a `FocusNode`
+### 1. Tạo `FocusNode`
 
-First, create a [`FocusNode`][].
-Use the `FocusNode` to identify a specific `TextField` in Flutter's
-"focus tree." This allows you to give focus to the `TextField`
-in the next steps.
+Trước tiên, mình cần tạo [`FocusNode`][].
+Dùng `FocusNode` để xác định chính xác một ô `TextField` trong "cây focus" của Flutter. Như vậy, tiếp theo mình có thể focus vào ô `TextField`.
 
-Since focus nodes are long-lived objects, manage the lifecycle
-using a `State` object. Use the following instructions to create
-a `FocusNode` instance inside the `initState()` method of a
-`State` class, and clean it up in the `dispose()` method:
+Vì những cái focus nodes là những object có vòng đời (lifecycle) rất dài, nên mình kiểm soát vòng đời của nó bằng object `State`. Sau đây là hướng dẫn để tạo ra một instance của `FocusNode` bên trong phương thức `initState()` của lớp `State`, và sau đó sẽ dọn dẹp bằng phương thức `dispose()`:
 
 <!-- skip -->
 ```dart
@@ -107,10 +85,9 @@ class _MyCustomFormState extends State<MyCustomForm> {
 }
 ```
 
-### 2. Pass the `FocusNode` to a `TextField`
+### 2. Truyền `FocusNode` vào một trường `TextField`
 
-Now that you have a `FocusNode`,
-pass it to a specific `TextField` in the `build()` method.
+Sau khi đã có `FocusNode`, mình sẽ truyền nó vào một trường `TextField` trong phương thức `build()`.
 
 <!-- skip -->
 ```dart
@@ -126,11 +103,9 @@ class _MyCustomFormState extends State<MyCustomForm> {
 }
 ```
 
-### 3. Give focus to the `TextField` when a button is tapped
+### 3. Focus vào trường `TextField` khi nhấn vào nút
 
-Finally, focus the text field when the user taps a floating
-action button. Use the [`requestFocus()`][] method to perform
-this task.
+Bây giờ, mình sẽ focus vào ô text field khi người dùng nhấn vào một nút nào đó. Để làm được điều này, mình sẽ dùng phương thức  [`requestFocus()`][].
 
 <!-- skip -->
 ```dart
@@ -141,7 +116,7 @@ FloatingActionButton(
 );
 ```
 
-## Interactive example
+## Một số ví dụ
 
 {{site.alert.note}}
   While the following code runs successfully in DartPad,
