@@ -63,7 +63,7 @@ OrientationBuilder(
   `OrientationBuilder` widget.
 {{site.alert.end}}
 
-## Ví dụ t
+## Ví dụ tương tác
 
 ```run-dartpad:theme-light:mode-flutter:run-true:width-100%:height-500px:split-60:ga_id-interactive_example
 import 'package:flutter/material.dart';
