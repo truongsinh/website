@@ -12,8 +12,7 @@ js:
     url: https://dartpad.dev/inject_embed.dart.js
 ---
 
-Trong vài trường hợp,
-bạn muốn thay đổi hiện thị của ứng dụng khi người dùng xoay màn hình từ chế độ chân dung sang chế độ phong cảnh. Ví dụ, ứng dụng sẽ hiển thị một item, trượt qua để thấy item tiếp theo, còn với chế độ phong cảnh, các item sẽ hiển thị ngang.
+Trong vài trường hợp bạn có thể muốn thay đổi hiển thị của ứng dụng khi người dùng xoay màn hình từ chế độ chân dung sang chế độ phong cảnh. Ví dụ, ứng dụng có thể hiện thị các item dạng danh sách dọc ở chế độ chân dung nhưng hiển thị các item cạnh nhau theo phương ngang ở chế độ phong cảnhh.
 
 Trong Flutter, bạn có thể xây dựng nhiều lớp bố trí khác nhau dựa vào [`Orientation`][] đã cho.
 Trong ví dụ này, xây dựng một danh sách hiển thị 2 cột trong chế độ chân dung và 3 cột trong chế độ phong cảnh thông qua các bước sau:
@@ -23,7 +22,7 @@ Trong ví dụ này, xây dựng một danh sách hiển thị 2 cột trong ch�
 
 ## 1. Dùng `GridView` để hiện thị định dạng 2 cột
 
-Đầu tiên, tạo một danh sách items để làm việc. Thay vì sử dụng một danh sách bình thường, ta tạo một danh sách các items sẽ hiện thí trong lưới. Tiếp theo, ta tạo một lưới với hai cột
+Đầu tiên, tạo một danh sách items để làm việc. Thay vì sử dụng một danh sách bình thường, ta tạo một danh sách các items sẽ hiển thị trong lưới. Tiếp theo, ta tạo một lưới với hai cột
 
 <!-- skip -->
 ```dart
@@ -64,7 +63,7 @@ OrientationBuilder(
   `OrientationBuilder` widget.
 {{site.alert.end}}
 
-## Ví dụ
+## Ví dụ t
 
 ```run-dartpad:theme-light:mode-flutter:run-true:width-100%:height-500px:split-60:ga_id-interactive_example
 import 'package:flutter/material.dart';
