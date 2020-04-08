@@ -9,19 +9,19 @@ next:
   path: /docs/cookbook/design/themes
 ---
 
-Android và IOS đã cung cấp hệ thống fonts chữ chất lượng cao, nhưng yêu cầu về fonts chữ của các designers là được tùy chỉnh designers. Ví dụ, bạn muốn fonts chữ tùy chỉnh được xây dựng từ một designers, bạn có thể tải về từ [Google Fonts][].
+Android và iOS đã cung cấp hệ thống fonts chữ chất lượng cao, nhưng môt trong những yêu cầu thường thấy từ các designers là khả năng tùy biến. Ví dụ, bạn muốn fonts chữ tùy chỉnh được xây dựng từ một designer, bạn có thể tải về từ [Google Fonts][].
 
 {{site.alert.note}}
   Check out the [google_fonts][] package for direct access
   to almost 1000 open-sourced font families.
 {{site.alert.end}}
 
-Flutter sử dụng fonts tùy chỉnh và bạn có thể ứng dụng fonts tùy chỉnh trên toàn bộ ứng dụng hoặc vài widgets. Các bước để tạo một ứng dụng sử dụng fonts chữ tùy chỉnh
+Flutter sử dụng fonts tùy chỉnh và bạn có thể ứng dụng fonts tùy chỉnh trên toàn bộ ứng dụng hoặc vài widgets. Dưới đây là các bước để tạo một ứng dụng sử dụng fonts chữ tùy chỉnh
 
   1. Thêm fonts vào dự án.
   2. Khai báo font trong file.
   3. Đặt font làm mặc định.
-  4. Sử dụng font trong các widget.
+  4. Sử dụng font trong các widget c.
 
 ## 1. Thêm fonts vào dự án
 
@@ -83,7 +83,7 @@ Một fonts có thể liên kết được nhiều file với nhiều nét chữ
 
 ## 3. Đặt font làm mặc định
 
-Có 2 cách để sử dụng fonts cho các chữ trong ứng dụng: sử dụng fonts mặc định hoặc sử dụng fonts trong widgets.
+Có 2 cách để sử dụng fonts cho các chữ trong ứng dụng: đặt làm fonts mặc định hoặc chỉ sử dụng trong từng widget cụ thê.
 
 Muốn đặt fonts chữ làm mặc định, đặt thuộc tính `fontFamily` là một phần của
 `theme` ứng dụng. Các giá trị được cấp cho `fontFamily` phải khớp với tên `family`
@@ -102,7 +102,7 @@ MaterialApp(
 Nếu bạn muốn thêm thông tin về themes,
 xem [Using Themes to share colors and font styles][].
 
-## 4. Sử dụng fonts trong các widget
+## 4. Sử dụng fonts trong các widget c
 
 Nếu bạn muốn sử dụng font cho các widget,
 chẳng hạn như `Text` widget,
