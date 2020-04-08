@@ -28,8 +28,8 @@ sẽ hiển thị hoặc ẩn đi những phần tử con của nó. Khi 
 những phần tử con của nó cũng bị xóa đi nên vùng nhớ chứa widget của danh sách chỉ 
 phản ánh những gì có thể thấy được.
 
-Khi hiển thị bên trong một cái có thể cuộn được (a scrollable) mà nó tạo danh sách các mục của nó một 
-cách lười biếng, giống như một danh sách có thể cuộn được tạo với `ListView.builder()`, thì
+Khi hiển thị bên trong một widget cuộn (a scrollable widget) tạo ra danh sách các mục của nó một 
+cách chậm chạp, giống như một danh sách cuộn được tạo với `ListView.builder()`, thì
 ExpansionTiles có thể hoạt động khá hiệu quả, đặc biệt đối với những danh sách Material Design 
 "mở rộng/thu lại".
 
