@@ -1,12 +1,10 @@
 ---
-title: AppBar Sample Apps
-description: Examples that use AppBars.
+title: Ứng dụng mẫu với AppBar
+description: Một số ví dụ sử dụng AppBar.
 deprecated: true
 ---
 
-All of the sample apps listed here use the Flutter AppBar class in an
-interesting way. The [Sample App Catalog](/docs/catalog/samples) page lists
-all of the sample apps.
+Những ứng dụng mẫu dưới đây đều sử dụng lớp AppBar trong Flutter theo nhiều cách khác nhau. Tham khảo danh sách đầy đủ các ứng dụng mẫu tại [đây](/docs/catalog/samples).
 
 <div class="container-fluid">
   <div class="lavish-table-row-mb">
@@ -17,13 +15,13 @@ all of the sample apps.
    </a>
     <div class="col-lg-9">
       <p>
-        Any widget with a PreferredSize can appear at the bottom of an AppBar.
+      Bất kỳ widget nào có sử dụng lớp PreferredSize đều có thể xuất hiện ở dưới cùng của AppBar.
       </p>
       <p>
-        This app features the following classes: AppBar, PreferredSize, TabBarView, TabController.
+      Các lớp có trong ứng dụng: AppBar, PreferredSize, TabBarView, TabController.
       </p>
       <p>
-        <a href="/docs/catalog/samples/app-bar-bottom">Learn more</a>.
+        <a href="/docs/catalog/samples/app-bar-bottom">Xem thêm</a>.
       </p>
     </div>
   </div>
@@ -36,13 +34,13 @@ all of the sample apps.
    </a>
     <div class="col-lg-9">
       <p>
-        A typical AppBar with a title, actions, and an overflow dropdown menu.
+      Một AppBar điển hình với tiêu đề (title), các actions và menu tràn xuống (<i>overflow dropdown menu</i>).
       </p>
       <p>
-        This app features the following classes: AppBar, IconButton, PopupMenuButton, Scaffold.
+      Các lớp có trong ứng dụng: AppBar, IconButton, PopupMenuButton, Scaffold.
       </p>
       <p>
-        <a href="/docs/catalog/samples/basic-app-bar">Learn more</a>.
+        <a href="/docs/catalog/samples/basic-app-bar">Xem thêm</a>.
       </p>
     </div>
   </div>
@@ -55,13 +53,13 @@ all of the sample apps.
    </a>
     <div class="col-lg-9">
       <p>
-        An AppBar with a TabBar as its bottom widget.
+      AppBar với bottom widget là TabBar.
       </p>
       <p>
-        This app features the following classes: AppBar, DefaultTabController, TabBar, Scaffold, TabBarView.
+      Các lớp có trong ứng dụng: AppBar, DefaultTabController, TabBar, Scaffold, TabBarView.
       </p>
       <p>
-        <a href="/docs/catalog/samples/tabbed-app-bar">Learn more</a>.
+        <a href="/docs/catalog/samples/tabbed-app-bar">Xem thêm</a>.
       </p>
     </div>
   </div>
