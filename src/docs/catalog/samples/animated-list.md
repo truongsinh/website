@@ -4,7 +4,7 @@ description: Một ví dụ sử dụng AnimatedList.
 deprecated: true
 ---
 
-AnimatedList sẽ hiển thị danh sách các thẻ (<i>card</i>) được đồng bộ hóa với ListModel trong ứng dụng đó. Khi môt mục được thêm vào hoặc xóa khỏi model thì thẻ tương ứng cũng sẽ xuất hiện hoặc biến mất.
+AnimatedList sẽ hiển thị danh sách các <i>thẻ</i> (card) được đồng bộ hóa với ListModel trong ứng dụng đó. Khi một mục được thêm vào hoặc xóa khỏi model thì thẻ tương ứng cũng sẽ xuất hiện hoặc biến mất.
 
 <p>
   <div class="container-fluid">
@@ -23,7 +23,7 @@ AnimatedList sẽ hiển thị danh sách các thẻ (<i>card</i>) được đ�
   </div>
 </p>
 
-Nhấn vào một mục để chọn, nhấn lần nữa để bỏ chọn. Nhấn '+' để thêm mục mới tại vị trí đang chọn, và nhấn '-' để xóa đi mục đang chọn. Bộ xử lý các thao tác nhấn này sẽ thêm hoặc xóa các mục trong `ListModel<E>`, một <i>đóng gói</i> (encapsulation) đơn giản của `List<E>`. Việc sử dụng ListModel sẽ giúp đồng bộ hóa các thao tác trên AnimatedList. Ngoài ra, list model này còn dùng một GlobalKey để gọi các <i>phương thức</i> (methods) insertItem (thêm mục) và removeItem (xóa mục) được định nghĩa bởi AnimatedListState.
+Bấm vào một thẻ để chọn, bấm lại lần nữa để bỏ chọn. Bấm '+' để thêm thẻ mới tại vị trí đang chọn, và bấm '-' để xóa đi thẻ đang chọn. Bộ xử lý các thao tác bấm này sẽ thêm hoặc xóa các mục trong `ListModel<E>`, một <i>đóng gói</i> (encapsulation) đơn giản của `List<E>`. Việc sử dụng ListModel sẽ giúp đồng bộ hóa các thao tác trên AnimatedList. Ngoài ra, list model này còn dùng một GlobalKey để gọi các <i>phương thức</i> (methods) insertItem (thêm mục) và removeItem (xóa mục) được định nghĩa bởi AnimatedListState.
 
 Khám phá ứng dụng sau đây bằng cách tạo một project mới với `flutter create` và thay thế nội dụng trong file `lib/main.dart` thành mã nguồn dưới đây.
 
