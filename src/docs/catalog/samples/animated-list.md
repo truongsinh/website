@@ -1,12 +1,10 @@
 ---
 title: AnimatedList
-description: An example that uses AnimatedList.
+description: Một ví dụ sử dụng AnimatedList.
 deprecated: true
 ---
 
-An AnimatedList that displays a list of cards that stay in sync
-with an app-specific ListModel. When an item is added to or removed
-from the model, the corresponding card animates in or out of view.
+AnimatedList sẽ hiển thị danh sách các thẻ (<i>card</i>) được đồng bộ hóa với ListModel trong ứng dụng đó. Khi môt mục được thêm vào hoặc xóa khỏi model thì thẻ tương ứng cũng sẽ xuất hiện hoặc biến mất.
 
 <p>
   <div class="container-fluid">
@@ -25,15 +23,9 @@ from the model, the corresponding card animates in or out of view.
   </div>
 </p>
 
-Tap an item to select it, tap it again to unselect. Tap '+' to insert at the
-selected item, '-' to remove the selected item. The tap handlers add or
-remove items from a `ListModel<E>`, a simple encapsulation of `List<E>`
-that keeps the AnimatedList in sync. The list model has a GlobalKey for
-its animated list. It uses the key to call the insertItem and removeItem
-methods defined by AnimatedListState.
+Nhấn vào một mục để chọn, nhấn lần nữa để bỏ chọn. Nhấn '+' để thêm mục mới tại vị trí đang chọn, và nhấn '-' để xóa đi mục đang chọn. Bộ xử lý các thao tác nhấn này sẽ thêm hoặc xóa các mục trong `ListModel<E>`, một <i>đóng gói</i> (encapsulation) đơn giản của `List<E>`. Việc sử dụng ListModel sẽ giúp đồng bộ hóa các thao tác trên AnimatedList. Ngoài ra, list model này còn dùng một GlobalKey để gọi các <i>phương thức</i> (methods) insertItem (thêm mục) và removeItem (xóa mục) được định nghĩa bởi AnimatedListState.
 
-Try this app out by creating a new project with `flutter create`
-and replacing the contents of `lib/main.dart` with the following code.
+Khám phá ứng dụng sau đây bằng cách tạo một project mới với `flutter create` và thay thế nội dụng trong file `lib/main.dart` thành mã nguồn dưới đây.
 
 ```dart
 // Copyright 2017 The Chromium Authors. All rights reserved.
@@ -245,10 +237,9 @@ void main() {
 }
 ```
 
-## See also
+## Xem thêm
 
-* The
-  [Components-Lists: Controls]({{site.material}}/guidelines/components/lists-controls.html#)
-  section of the [Material Design]({{site.material}}) specification:
-* The source code in
+* [Components-Lists: Controls]({{site.material}}/guidelines/components/lists-controls.html#)
+  trong trang về [Material Design]({{site.material}}).
+* Mã nguồn trong
   [examples/catalog/lib/animated_list.dart]({{site.repo.flutter}}/tree/{{site.branch}}/examples/catalog/lib/animated_list.dart).
