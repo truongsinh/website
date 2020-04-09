@@ -136,6 +136,7 @@ and the web server when you want to test on other browsers.
 
 <li markdown="1">The starting app is displayed in the following DartPad.
 
+<!-- skip -->
 ```run-dartpad:theme-light:mode-flutter:run-true:width-100%:height-600px:split-60:ga_id-starting_code
 import 'package:flutter/material.dart';
 
@@ -191,7 +192,7 @@ class _LoginFormState extends State<LoginForm> {
           Text('Sign Up', style: Theme
               .of(context)
               .textTheme
-              .display1),
+              .display1), // display1 changes to headline4 in 1.16
           Padding(
             padding: EdgeInsets.all(8.0),
             child: TextFormField(
@@ -749,6 +750,7 @@ Then, replace the `LinearProgressIndicator` in the Form with this new
 
 This widget uses an `AnimatedBuilder` to animate the progress indicator to the
 latest value. 
+</li>
 
 <li markdown="1">Run the app.<br>
 Type anything into the three fields to verify that the animation works,
@@ -758,6 +760,7 @@ and that clicking the **Sign up** button brings up the Welcome screen.
 
 ### Complete Sample
 
+<!-- skip -->
 ```run-dartpad:theme-light:mode-flutter:run-true:width-100%:height-600px:split-60:ga_id-starting_code
 import 'package:flutter/material.dart';
 
