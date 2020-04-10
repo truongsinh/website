@@ -5,7 +5,7 @@ deprecated: true
 ---
 
 Toàn bộ ứng dụng mẫu được liệt kê ở đây sử dụng lớp Flutter TabBar.
-Trang [Sample App Catalog](/docs/catalog/samples) liệt kê tất cả
+Trang [Danh mục Ứng dụng mẫu](/docs/catalog/samples) liệt kê tất cả
 ứng dụng mẫu.
 
 <div class="container-fluid">
@@ -17,7 +17,7 @@ Trang [Sample App Catalog](/docs/catalog/samples) liệt kê tất cả
    </a>
     <div class="col-lg-9">
       <p>
-        Một AppBar với TabBar là tiện ích dưới của nó.
+        Một AppBar với một TabBar là widget nằm dưới nó. 
       </p>
       <p>
         Ứng dụng này bao gồm các lớp sau: AppBar, DefaultTabController, TabBar, Scaffold, TabBarView.
