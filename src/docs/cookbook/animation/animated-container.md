@@ -1,11 +1,11 @@
 ---
-title: Animate the properties of a container
-description: How to animate properties of a container using implicit animations.
+title: Xây dựng chuyển đổi các thuộc tính của một container
+description: Cách để xây dựng chuyển đổi các thuộc tính của một container sử dụng implicit animation.
 prev:
-  title: Animate a widget using a physics simulation
+  title: Xây dựng animation cho một widget bằng cách mô phỏng
   path: /docs/cookbook/animation/physics-simulation
 next:
-  title: Fade a widget in and out
+  title: Làm một widget ẩn và hiện
   path: /docs/cookbook/animation/opacity-animation
 js:
   - defer: true
@@ -16,7 +16,7 @@ Lớp [`Container`][] cung cấp một cách thuận tiện để tạo một wi
 
 Việc đơn giản hoá những hoạt ảnh thường bao gồm thay đổi những thuộc tính này theo thời gian. Ví dụ như bạn muốn chuyển đổi màu của phong nền từ xám đến xanh lá để cho thấy là một mục đã được chọn bởi người dùng.
 
-Để tạo chuyển động cho những thuộc tính này, Flutter cung cấp widget ['AnimatedContainer']. Cũng như `Container` widget, `AnimatedContainer` cho phép người dùng tự định nghĩa chiều rộng, chiều cao, màu phông nền, vân vân. Tuy nhiên, khi `AnimatedContainer` được xây dựng lại với các thuộc tính mới, nó tự động chuyển đổi giữa các giá trị cũ và mới. Trong Flutter, những kiểu hoạt ảnh này được biết đến như là "hoạt ảnh ngầm."
+Để tạo chuyển động cho những thuộc tính này, Flutter cung cấp widget ['AnimatedContainer'][]. Cũng như widget `Container`, `AnimatedContainer` cho phép người dùng tự định nghĩa width, height, background color, ... . Tuy nhiên, khi `AnimatedContainer` được xây dựng lại với các thuộc tính mới, nó tự động chuyển đổi giữa các giá trị cũ và mới. Trong Flutter, những kiểu hoạt ảnh này được biết đến như là "implicit animation."
 
 Hướng dẫn này mô tả cách sử dụng một `AnimatedContainer` để tạo chuyển đổi kích thước, màu phông nền cùng với bán kính biên khi người dùng bấn nút sử dụng những bước sau:
 
@@ -38,8 +38,8 @@ class AnimatedContainerApp extends StatefulWidget {
 }
 
 class _AnimatedContainerAppState extends State<AnimatedContainerApp> {
-  // Định nghĩa các thuộc tính với giá trị mặc định. Cập nhật những thuộc tính này
-  // khi người dùng bấm FloatingActionButton.
+  // Define the various properties with default values. Update these properties
+  // when the user taps a FloatingActionButton.
   double _width = 50;
   double _height = 50;
   Color _color = Colors.green;
@@ -47,7 +47,7 @@ class _AnimatedContainerAppState extends State<AnimatedContainerApp> {
 
   @override
   Widget build(BuildContext context) {
-    // Điển vào đây ở những bước tiếp theo.
+    // Fill this out in the next steps.
   }
 }
 ```
@@ -59,16 +59,16 @@ Tiếp theo hãy xây dựng `AnimatedContainer` sử dụng những thuộc tí
 <!-- skip -->
 ```dart
 AnimatedContainer(
-  // Sử dụng thuộc tính được lưu trữ trong lớp State.
+  // Use the properties stored in the State class.
   width: _width,
   height: _height,
   decoration: BoxDecoration(
     color: _color,
     borderRadius: _borderRadius,
   ),
-  // Định nghĩa thời gian chạy hoạt ảnh.
+  // Define how long the animation should take.
   duration: Duration(seconds: 1),
-  // Cung cấp một hàm đường cong tuỳ ý để giúp cho hoạt ảnh mượt hơn.
+  // Provide an optional curve to make the animation feel smoother.
   curve: Curves.fastOutSlowIn,
 );
 ```
@@ -87,18 +87,18 @@ Một ứng dụng thực tế thường chuyển đổi giữa các giá trị 
 ```dart
 FloatingActionButton(
   child: Icon(Icons.play_arrow),
-  // Khi người dùng bấm nút
+  // When the user taps the button
   onPressed: () {
-    // Sử dụng setState để xây dựng lại widget với các giá trị mới.
+    // Use setState to rebuild the widget with new values.
     setState(() {
-      // Tạo ra máy tạo số ngẫu nhiên.
+      // Create a random number generator.
       final random = Random();
 
-      // Phát ra chiều rộng và chiều cao ngẫu nhiên.
+      // Generate a random width and height.
       _width = random.nextInt(300).toDouble();
       _height = random.nextInt(300).toDouble();
 
-      // Phát ra một màu ngẫu nhiên.
+      // Generate a random color.
       _color = Color.fromRGBO(
         random.nextInt(256),
         random.nextInt(256),
@@ -106,7 +106,7 @@ FloatingActionButton(
         1,
       );
 
-      // Phát ra bán kinh biên ngẫu nhiên.
+      // Generate a random border radius.
       _borderRadius =
           BorderRadius.circular(random.nextInt(100).toDouble());
     });
@@ -114,7 +114,7 @@ FloatingActionButton(
 );
 ```
 
-## Ví dụ tương tác
+## Ví dụ
 
 ```run-dartpad:theme-light:mode-flutter:run-true:width-100%:height-600px:split-60:ga_id-interactive_example
 import 'dart:math';
@@ -129,8 +129,8 @@ class AnimatedContainerApp extends StatefulWidget {
 }
 
 class _AnimatedContainerAppState extends State<AnimatedContainerApp> {
-  // Định nghĩa các thuộc tính với giá trị mặc định. Cập nhật những thuộc tính này
-  // khi người dùng bấm FloatingActionButton.
+  // Define the various properties with default values. Update these properties
+  // when the user taps a FloatingActionButton.
   double _width = 50;
   double _height = 50;
   Color _color = Colors.green;
@@ -145,33 +145,33 @@ class _AnimatedContainerAppState extends State<AnimatedContainerApp> {
         ),
         body: Center(
           child: AnimatedContainer(
-            // Sử dụng thuộc tính được lưu trữ trong lớp State.
+            // Use the properties stored in the State class.
             width: _width,
             height: _height,
             decoration: BoxDecoration(
               color: _color,
               borderRadius: _borderRadius,
             ),
-            // Định nghĩa thời gian chạy hoạt ảnh.
+            // Define how long the animation should take.
             duration: Duration(seconds: 1),
-            // Cung cấp một hàm đường cong tuỳ ý để giúp cho hoạt ảnh mượt hơn.
+            // Provide an optional curve to make the animation feel smoother.
             curve: Curves.fastOutSlowIn,
           ),
         ),
         floatingActionButton: FloatingActionButton(
           child: Icon(Icons.play_arrow),
-          // Khi người dùng bấm nút
+          // When the user taps the button
           onPressed: () {
-            // Sử dụng setState để xây dựng lại widget với các giá trị mới.
+            // Use setState to rebuild the widget with new values.
             setState(() {
-              // Tạo ra máy tạo số ngẫu nhiên.
+              // Create a random number generator.
               final random = Random();
 
-              // Phát ra chiều rộng và chiều cao ngẫu nhiên.
+              // Generate a random width and height.
               _width = random.nextInt(300).toDouble();
               _height = random.nextInt(300).toDouble();
 
-              // Phát ra một màu ngẫu nhiên.
+              // Generate a random color.
               _color = Color.fromRGBO(
                 random.nextInt(256),
                 random.nextInt(256),
@@ -179,7 +179,7 @@ class _AnimatedContainerAppState extends State<AnimatedContainerApp> {
                 1,
               );
 
-              // Phát ra bán kinh biên ngẫu nhiên.
+              // Generate a random border radius.
               _borderRadius =
                   BorderRadius.circular(random.nextInt(100).toDouble());
             });
