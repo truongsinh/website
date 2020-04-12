@@ -26,6 +26,13 @@ Install the following tools if you don't have them already.
 - **[rvm][]**, the Ruby Version Manager.
 - **[Flutter][Flutter install]**
 - **[Dart SDK][Dart install]**
+- **[GNU diffutils][]** version 3.6 or later.
+  > NOTE: `diff` v3.6+ is required to ensure that in-page code diffs are
+  > consistently refreshed across macOS and Linux. [Issue #3076][] was due to
+  > the default macOS `diff` being at v2.x -- to up upgrade `diffutils` run:<br>
+  > `brew install diffutils`.
+  >
+  > [issue #3076]: https://github.com/flutter/website/issues/3076
 
 > IMPORTANT: Follow the installation instructions for each of the tools
 carefully. In particular, configure your shell/environment so
@@ -232,6 +239,7 @@ Also check out the site-shared
 [Firebase]: https://firebase.google.com/
 [first-timers SVG]: https://img.shields.io/badge/first--timers--only-friendly-blue.svg?style=flat-square
 [first-timers]: https://www.firsttimersonly.com/
+[GNU diffutils]: https://www.gnu.org/software/diffutils
 [DartPad embedding guide]: https://github.com/dart-lang/dart-pad/wiki/Embedding-Guide
 [Jekyll]: https://jekyllrb.com/
 [nvm]: https://github.com/creationix/nvm#installation
@@ -239,4 +247,4 @@ Also check out the site-shared
 [rvm]: https://rvm.io/rvm/install#installation
 [this repo]: https://github.com/flutter/website
 [Netlify Status]: https://api.netlify.com/api/v1/badges/c2329679-dfdf-4467-8a41-d5430cead699/deploy-status
-[Repo on Netlify]: https://app.netlify.com/sites/quizzical-banach-2b10e8/deploys
+[Repo on Netlify]: https://app.netlify.com/sites/fluttervn-dev/deploys
