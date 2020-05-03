@@ -1,10 +1,10 @@
 ---
 title: ExpansionTile
-description: An example that uses ExpansionTiles.
+description: Một ví dụ sử dụng ExpansionTiles.
 deprecated: true
 ---
 
-ExpansionTiles can be used to produce two-level or multi-level lists.
+ExpansionTiles có thể được sử dụng để tạo ra các danh sách hai hoặc nhiều tầng.
 
 <p>
   <div class="container-fluid">
@@ -23,18 +23,18 @@ ExpansionTiles can be used to produce two-level or multi-level lists.
   </div>
 </p>
 
-This app displays hierarchical data with ExpansionTiles. Tapping a tile
-expands or collapses the view of its children. When a tile is collapsed
-its children are disposed so that the widget footprint of the list only
-reflects what's visible.
+Ứng dụng này hiển thị dữ liệu phân cấp với ExpansionTiles. Nhấp vào một ô(tile)
+sẽ hiển thị hoặc ẩn đi những phần tử con của nó. Khi một ô bị thu lại thì
+những phần tử con của nó cũng bị xóa đi nên vùng nhớ chứa widget của danh sách chỉ 
+phản ánh những gì có thể thấy được.
 
-When displayed within a scrollable that creates its list items lazily,
-like a scrollable list created with `ListView.builder()`, ExpansionTiles
-can be quite efficient, particularly for Material Design "expand/collapse"
-lists.
+Khi hiển thị bên trong một widget cuộn (a scrollable widget) mà danh sách các mục của widget 
+đó chỉ được tạo ra khi dùng đến (lazy evaluation), ví dụ như một danh sách cuộn được tạo với
+ `ListView.builder()`, thì ExpansionTiles có thể hoạt động khá hiệu quả, đặc biệt đối với 
+ những danh sách Material Design "mở rộng/thu lại".
 
-Try this app out by creating a new project with `flutter create` and
-replacing the contents of `lib/main.dart` with the following code.
+Dùng thử ứng dụng này bằng cách tạo một dự án mới với `flutter create` và
+thay thế nội dụng bên trong của `lib/main.dart` với đoạn mã nguồn sau.
 
 ```dart
 // Copyright 2017 The Chromium Authors. All rights reserved.
@@ -138,8 +138,8 @@ void main() {
 }
 ```
 
-## See also
+## Xem thêm
 
-* The Material [Lists]({{site.material}}/design/components/lists.html) component page.
-* The source code in
+* Trang về thành phần Material [Lists]({{site.material}}/design/components/lists.html).
+* Mã nguồn ở
   [examples/catalog/lib/expansion_tile_sample.dart]({{site.repo.flutter}}/tree/{{site.branch}}/examples/catalog/lib/expansion_tile_sample.dart).
