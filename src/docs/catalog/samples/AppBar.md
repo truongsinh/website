@@ -16,6 +16,7 @@ Những ứng dụng mẫu dưới đây đều sử dụng lớp AppBar trong F
     <div class="col-lg-9">
       <p>
         Bất kỳ widget nào có sử dụng lớp PreferredSize đều có thể xuất hiện ở dưới cùng của AppBar.
+      </p>
       <p>
         Các lớp có trong ứng dụng: AppBar, PreferredSize, TabBarView, TabController.
       </p>
