@@ -92,7 +92,7 @@ Featured services
                         <div class="card-footer card-footer--transparent card-footer--links">
                             {% if case.learn_more_link[0] -%}
                                 <span class="dropdown">
-                                    <a href="#" class="dropdown-toggle" id="dropdownMenuButton{{ forloop.index }}"                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <a href="#" class="dropdown-toggle" id="dropdownMenuButton{{ forloop.index }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         {{ learnMoreCta }}
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton{{ forloop.index }}">
@@ -100,7 +100,6 @@ Featured services
                                             <a class="dropdown-item" href="{{learnMoreCase.url}}" target="_blank" rel="noopener">{{learnMoreCase.name}}</a>
                                         {% endfor -%}
                                     </div>
-
                                 </span>
                             {% elsif case.learn_more_link -%}
                                 <a href="{{ case.learn_more_link }}">{{ learnMoreCta }}</a>
