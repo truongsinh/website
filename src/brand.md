@@ -113,7 +113,7 @@ Những vị trí hiển thị thương hiệu Flutter trên một tài khoản 
 dạng tên cộng đồng, bạn nên đính kèm một cảnh báo rằng đó không phải là một tài
 khoản chính thức của Google.
 
-3. <b>[Sự kiện Flutter không chính thức]</b> Bạn có thể sử dụng Thương hiệu
+3. <b>[Sự kiện về Flutter không chính thống]</b> Bạn có thể sử dụng Thương hiệu
 Flutter dưới dạng tên của một sự kiện cộng đồng (ví dụ: hội thảo), nhưng hãy đảm
 bảo bạn đính kèm cảnh báo trên trang web sự kiện một cách nổi bật và dễ thấy:
 "Flutter and the related logo are trademarks of Google LLC. [Title of event] is
