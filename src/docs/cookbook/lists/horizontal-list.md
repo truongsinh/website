@@ -1,6 +1,6 @@
 ---
-title: Create a horizontal list
-description: How to implement a horizontal list.
+title: Tạo ra một horizontal list
+description: Triển khai một horizontal list.
 prev:
   title: Use lists
   path: /docs/cookbook/lists/basic-list
@@ -12,12 +12,12 @@ js:
     url: https://dartpad.dev/inject_embed.dart.js
 ---
 
-You might want to create a list that scrolls
-horizontally rather than vertically.
-The [`ListView`][] widget supports horizontal lists.
+Đôi khi bạn muốn tạo ra một danh sách có thể lướt (scroll) ngang thay vì
+lượt dọc. Widget [`ListView`][] sẽ hỗ trợ bạn xây dựng một horizontal list.
 
-Use the standard `ListView` constructor, passing in a horizontal
-`scrollDirection`, which overrides the default vertical direction.
+Bạn chỉ cần sử dụng constructor cơ bản của `ListView`, sau đó thêm
+`scrollDirection` là 'horizontal'. Điều này sẽ override hướng scroll mặc định
+của ListView là lướt dọc.
 
 <!-- skip -->
 ```dart
@@ -49,7 +49,7 @@ ListView(
 )
 ```
 
-## Interactive example
+## Một ví dụ tương tác
 
 ```run-dartpad:theme-light:mode-flutter:run-true:width-100%:height-600px:split-60:ga_id-interactive_example
 import 'package:flutter/material.dart';
