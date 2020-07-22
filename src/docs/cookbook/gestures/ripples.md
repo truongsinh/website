@@ -1,27 +1,27 @@
 ---
-title: Add Material touch ripples
-description: How to implement ripple animations.
+title: Thêm Material touch ripples
+description: Cách để biểu diễn hoạt ảnh sóng.
 prev:
-  title: Focus and text fields
+  title: Focus và text fields
   path: /docs/cookbook/forms/focus
 next:
-  title: Handle taps
+  title: Xử lý thao tác bấm
   path: /docs/cookbook/gestures/handling-taps
 js:
   - defer: true
     url: https://dartpad.dev/inject_embed.dart.js
 ---
 
-Widgets that follow the Material Design guidelines display
-a ripple animation when tapped.
+Widgets tuân theo the Material Design hướng dẫn biểu diễn 
+hiệu ứng sóng khi bấm.
 
-Flutter provides the [`InkWell`][]
-widget to perform this effect.
-Create a ripple effect using the following steps:
+Flutter cung cấp widget [`InkWell`][]
+để biểu diễn hiệu ứng này.
+Tạo một hiệu ứng sóng theo các bước sau:
 
-  1. Create a widget that supports tap.
-  2. Wrap it in an `InkWell` widget to manage tap callbacks and
-     ripple animations.
+  1. Tạo một widget hỗ trợ thao tác bấm.
+  2. Cuốn nó trong một widget `InkWell` để quản lí bấm callbacks và
+     hoạt ảnh sóng.
 
 <!-- skip -->
 ```dart
@@ -40,7 +40,7 @@ InkWell(
 );
 ```
 
-## Interactive example
+## Ví dụ
 
 ```run-dartpad:theme-light:mode-flutter:run-true:width-100%:height-600px:split-60:ga_id-interactive_example
 import 'package:flutter/material.dart';
