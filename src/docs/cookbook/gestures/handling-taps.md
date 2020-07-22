@@ -1,11 +1,11 @@
 ---
-title: Handle taps
+title: Xử lý thao tác bấm
 description: Cách để xử lý bấm và kéo
 prev:
-  title: Add Material touch ripples
+  title: Thêm Material touch ripples
   path: /docs/cookbook/gestures/ripples
 next:
-  title: Implement swipe to dismiss
+  title: Triển khai thao tác vuốt để bỏ qua
   path: /docs/cookbook/gestures/dismissible
 js:
   - defer: true
