@@ -1,27 +1,27 @@
 ---
-title: Handle taps
-description: How to handle tapping and dragging.
+title: Xử lý thao tác bấm
+description: Cách để xử lý bấm và kéo
 prev:
-  title: Add Material touch ripples
+  title: Thêm Material touch ripples
   path: /docs/cookbook/gestures/ripples
 next:
-  title: Implement swipe to dismiss
+  title: Triển khai thao tác vuốt để bỏ qua
   path: /docs/cookbook/gestures/dismissible
 js:
   - defer: true
     url: https://dartpad.dev/inject_embed.dart.js
 ---
 
-You not only want to display information to users,
-you want users to interact with your app.
-Use the [`GestureDetector`][] widget to respond
-to fundamental actions, such as tapping and dragging.
+Bạn không muốn chỉ hiện thị thông tin đến người dùng,
+bạn còn muốn người dùng tương tác với ứng dụng.
+Sử dụng widget [`GestureDetector`][] để phản ứng 
+với các thao tác cơ bản như bấm và kéo.
 
-This recipe shows how to make a custom button that shows
-a snackbar when tapped with the following steps:
+Hướng dẫn này chỉ cách tạo một nút bấm để hiển thị 
+snackbar sau khi bấm với các thao tác sau:
 
-  1. Create the button.
-  2. Wrap it in a `GestureDetector` that an `onTap()` callback.
+  1. Tạo một nút.
+  2. Bao nó trong một `GestureDetector` với hàm callback `onTap()`.
 
 <!-- skip -->
 ```dart
@@ -45,16 +45,16 @@ GestureDetector(
 );
 ```
 
-## Notes
+## Chú thích
 
-  1. For information on adding the Material ripple effect to your
-     button, see the [Add Material touch ripples][] recipe.
-  2. Although this example creates a custom button,
-     Flutter includes a handful of button implementations, such as:
-     [`RaisedButton`][], [`FlatButton`][], and
+  1. Về thông tin về cách thêm Material ripple effect cho 
+  nút bấm của bạn, coi hướng dẫn trên [Add Material touch ripples][].
+  2. Mặc dù ví dụ này tạo một nút thủ công,
+     Flutter cung cấp nhiều thao tác tạo nút, như là:
+     [`RaisedButton`][], [`FlatButton`][], và
      [`CupertinoButton`][].
 
-## Interactive example
+## Ví dụ
 
 ```run-dartpad:theme-light:mode-flutter:run-true:width-100%:height-600px:split-60:ga_id-interactive_example
 import 'package:flutter/material.dart';
