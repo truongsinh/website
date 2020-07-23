@@ -1,21 +1,19 @@
 ---
-title: Work with cached images
-description: How to work with cached images.
+title: Làm việc với ảnh được lưu trữ
+description: Cách để làm việc với ảnh được lưu trữ.
 prev:
-  title: Fade in images with a placeholder
+  title: Làm ảnh mờ dần với một placeholder
   path: /docs/cookbook/images/fading-in-images
 next:
-  title: Use lists
+  title: Sử dụng lists
   path: /docs/cookbook/lists/basic-list
 ---
 
-In some cases, it's handy to cache images as they're downloaded from the
-web, so they can be used offline. For this purpose,
-use the [`cached_network_image`][] package.
+Trong một số trường hơp sẽ thuận tiện hơn khi lưu trữ hình ảnh khi chúng được tải từ trên web, khi đó chúng có thể sử dụng một cách offline. Cho mục đích này, sử dụng gói [`cached_network_image`][].
 
-In addition to caching, the `cached_network_image`
-package also supports placeholders and fading images
-in as they're loaded.
+Ngoài việc lưu trữ, gói `cached_network_image`
+còn hỗ trợ placeholders và làm mờ ảnh
+trong khi ảnh còn đang tải.
 
 <!-- skip -->
 ```dart
@@ -26,8 +24,7 @@ CachedNetworkImage(
 
 ## Adding a placeholder
 
-The `cached_network_image` package allows you to use any widget as a
-placeholder. In this example, display a spinner while the image loads.
+Gói `cached_network_image` cho phép bạn sử dụng bất kì widget như là một placeholder. Trong ví dụ này, biểu diễn một spinner trong khi ảnh được tải.
 
 <!-- skip -->
 ```dart
@@ -37,7 +34,7 @@ CachedNetworkImage(
 );
 ```
 
-## Complete example
+## Ví dụ
 
 <!-- skip -->
 ```dart
