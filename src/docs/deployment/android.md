@@ -288,13 +288,13 @@ Lúc này, bạn có thể xem xét kĩ thuật làm rối mã nguồn Dart (obf
 ([obfuscating your Dart code][])
 để mã nguồn khó bị đảo ngược hơn (_reverse engineer_). Để sử dụng 
 kĩ thuật làm rối mã nguồn bạn cần thêm một vài thẻ flags 
-vào câu lệnh để xây dựng (build) ứng dụng,
+vào câu lệnh xây dựng (build) ứng dụng,
 cũng như lưu trữ một vài tệp bổ sung để gỡ rối (de-obfuscate) 
 dấu vết ngăn xếp (stack traces).
 
 Ở cửa sổ command line:
 
-1. Gõ `cd <app dir>`<br>
+1. Gõ lệnh `cd <app dir>`<br>
    (Thay thế `<app dir>` bằng tên thư mục ứng dụng.)
 1. Chạy `flutter build appbundle`<br>
    (Chạy `flutter build` mặc định sẽ xây dựng ra một bản phát hành.)
@@ -331,124 +331,126 @@ sẽ miêu tả 2 cách
 
 Mặc dù các gối ứng dụng thường được ưu tiên hơn APK, vẫn có những cửa hàng lưu trữ ứng dụng
 chưa hỗ trợ gói ứng dụng (app bundle). Trong trường hợp này, hãy xây dựng một bản APK phát hành
-cho từng đối tượng ABI (Application Binary Interface) .
+cho từng đối tượng ABI (Application Binary Interface).
 
-If you completed the signing steps,
-the APK will be signed.
-At this point, you might consider [obfuscating your Dart code][]
-to make it more difficult to reverse engineer. Obfuscating
-your code involves adding a couple flags to your build command.
+Nếu bạn đã hoàn thành các bước đăng ký,
+APK sẽ được ký kết.
 
-From the command line:
+Lúc này, bạn có thể xem xét kĩ thuật làm rối mã nguồn Dart (obfuscation) 
+([obfuscating your Dart code][])
+để mã nguồn khó bị đảo ngược hơn (_reverse engineer_). Để sử dụng 
+kĩ thuật làm rối mã nguồn bạn cần thêm một vài thẻ flags 
+vào câu lệnh xây dựng (build) ứng dụng.
 
-1. Enter `cd <app dir>`<br>
-   (Replace `<app dir>` with your application's directory.)
-1. Run `flutter build apk --split-per-abi`<br>
-   (The `flutter build` command defaults to `--release`.)
+Ở cửa sổ command line:
 
-This command results in three APK files:
+1. Gõ lệnh `cd <app dir>`<br>
+   (Thay `<app dir>` bằng tên thư mục ứng dụng của bạn.)
+1. Chạy `flutter build apk --split-per-abi`<br>
+   (Lệnh `flutter build` mặc định là `--release`.)
+
+Lệnh này sẽ tạo ra 3 tệp APK:
 
 * `<app dir>/build/app/outputs/apk/release/app-armeabi-v7a-release.apk`
 * `<app dir>/build/app/outputs/apk/release/app-arm64-v8a-release.apk`
 * `<app dir>/build/app/outputs/apk/release/app-x86_64-release.apk`
 
-Removing the `--split-per-abi` flag results in a fat APK that contains
-your code compiled for _all_ the target ABIs. Such APKs are larger in
-size than their split counterparts, causing the user to download
-native binaries that are not applicable to their device's architecture.
+Xóa thẻ flag `--split-per-abi` sẽ tạo ra một tệp fat APK chứa
+mã nguồn được biên dịch cho _tất cả_ đối tượng ABIs (Application Binary Interface). 
+Những APKs như này are có kích thước lớn hơn các bản phân chia của nó, khiến người dùng tải xuống
+mã nhị phân (_native binaries_) không tương thích với cấu trúc thiết bị của họ.
 
-### Install an APK on a device
+### Cài đặt APK trên thiết bị
 
-Follow these steps to install the APK on a connected Android device.
+Hãy làm theo các bước sau đây để cài đặt APK trên một thiết bị Android được kết nối
 
-From the command line:
+Ở cửa sổ command line:
 
-1. Connect your Android device to your computer with a USB cable.
-1. Enter `cd <app dir>` where `<app dir>` is your application directory.
-1. Run `flutter install`.
+1. Kết nối thiết bị Android tới máy tính của bạn bằng cab USB.
+1. Gõ lệnh `cd <app dir>` với `<app dir>` là tên thư mục ứng dụng của bạn.
+1. Chạy lệnh `flutter install`.
 
-## Publishing to the Google Play Store
+## Phát hành lên Google Play Store
 
-For detailed instructions on publishing your app to the Google Play Store,
-see the [Google Play launch][play] documentation.
+Để biết thêm chỉ dẫn chi tiết về việc phát hành ứng dụng lên Google Play Store,
+xem tài liệu [Google Play launch][play].
 
-## Updating the app's version number
+## Cập nhật đánh số phiên bản của ứng dụng.
 
-The default version number of the app is `1.0.0`.
-To update it, navigate to the `pubspec.yaml` file
-and update the following line:
+Đánh số mặc định của phiên bản là `1.0.0`.
+Để cập nhật, đến tệp `pubspec.yaml`
+và cập nhật dòng sau đây:
 
 `version: 1.0.0+1`
 
-The version number is three numbers separated by dots,
-such as `1.0.0` in the example above, followed by an optional
-build number such as `1` in the example above, separated by a `+`.
+Đánh số phiên bản là 3 con số ngăn cách bởi dấu chấm,
+như là `1.0.0` ở ví dụ trên, đi kèm theo một đánh số xây dựng (_build number_)
+như là `1` ở ví dụ, được ngăn cách bởi ký tự `+`.
 
-Both the version and the build number may be overridden in Flutter's
-build by specifying `--build-name` and `--build-number`, respectively.
+Cả đánh số ở phiên bản (_version_) và bản xây dựng (_build_) có thể bị ghi đè
+bởi bản build của Flutter bằng việc thêm chỉ định lần lượt là `--build-name` và `--build-number`.
 
-In Android, `build-name` is used as `versionName` while
-`build-number` used as `versionCode`. Để biết thêm thông tin,
-see [Version your app][] in the Android documentation.
+Ở Android, `build-name` được dùng như `versionName` trong khi
+`build-number` được dùng như `versionCode`. Để biết thêm thông tin,
+xem [Version your app][] ở tài liệu Android.
 
 ## Android release FAQ
 
-Here are some commonly asked questions about deployment for
-Android apps.
+Dưới đây là một số câu hỏi thường gặp về việc triển khai
+các ứng dụng Android
 
-### When should I build app bundles versus APKs?
+### Khi nào tôi nên xây gói ứng dụng/APKs?
 
-The Google Play Store recommends that you deploy app bundles
-over APKs because they allow a more efficient delivery of the
-application to your users. However, if you’re distributing
-your application by means other than the Play Store,
-an APK may be your only option.
+Google Play Store khuyến khích bạn triển khai gói ứng dụng (app bundles)
+hơn là APKs vì chúng đưa ứng dụng hiệu quả hơn tới người dùng của bạn. 
+Tuy nhiên, nếu bạn phân phối ứng dụng của bạn bằng các phương tiện khác ngoài Play Store,
+APK có thể là lựa chọn duy nhất.
 
-### What is a fat APK?
+### Fat APK là gi?
 
-A [fat APK][] is a single APK that contains binaries for multiple
-ABIs embedded within it. This has the benefit that the single APK
-runs on multiple architectures and thus has wider compatibility,
-but it has the drawback that its file size is much larger,
-causing users to download and store more bytes when installing
-your application. When building APKs instead of app bundles,
-it is strongly recommended to build split APKs,
-as described in [build an APK](#build-an-apk) using the
-`--split-per-abi` flag.
+Tệp [fat APK][] là một tệp APK chứa mã nhị phân cho nhiều
+ABIs được nhúng trong nó. Lợi ích của việc này là chỉ một APK duy nhất
+có thể chạy trên nhiều kiến trúc và có độ tương thích cao,
+nhưng nhược điểm là kích cỡ tệp lớn,
+người dùng sẽ phải tải và lưu nhiều bytes hơn khi cài đặt
+ứng dụng của bạn. Khi xây APK (thay vì gói ứng dụng),
+chúng tôi đặc biệt khuyên rằng bạn nên xây các APKs tách riêng,
+như được mô tả trong phần [xây APK](#build-an-apk) bằng cách sử dụng
+thẻ flag `--split-per-abi`.
 
-### What are the supported target architectures?
+### Các đối tượng kiến trúc được hỗ trợ?
 
-When building your application in release mode,
-Flutter apps can be compiled for [armeabi-v7a][] (ARM 32-bit),
-[arm64-v8a][] (ARM 64-bit), and [x86-64][] (x86 64-bit).
-Flutter does not currently support building for x86 Android
-(See [Issue 9253][]).
+Khi xây dựng ứng dụng ở chế độ phát hành,
+ứng dụng Flutter có thể được biên dịch cho [armeabi-v7a][] (ARM 32-bit),
+[arm64-v8a][] (ARM 64-bit), và [x86-64][] (x86 64-bit).
+Flutter hiện tại chưa hỗ trợ xây dựng cho x86 Android
+(Xem [Issue 9253][]).
 
-### How do I sign the app bundle created by `flutter build appbundle`?
+### Cách đăng kí gói ứng dụng được tạo bởi `flutter build appbundle`?
 
-See [Signing the app](#signing-the-app).
+Xem phần [Đăng kí ứng dụng](#signing-the-app).
 
-### How do I build a release from within Android Studio?
+### Cách xây dựng một phiên bản phát hành với Android Studio?
 
-In Android Studio, open the existing `android/`
-folder under your app’s folder. Then,
-select **build.gradle (Module: app)** in the project panel:
+Ở Android Studio, hãy mở thư mục `android/`
+trong thư mục ứng dụng của bạn. Sau đó, chọn **build.gradle (Module: app)** 
+trong bảng điều khiển dự án (_project panel_):
 
 {% asset 'deployment/android/gradle-script-menu.png' alt='screenshot of gradle build script menu' %}
 
-Next, select the build variant. Click **Build > Select Build Variant**
-in the main menu. Select any of the variants in the **Build Variants**
-panel (debug is the default):
+Sau đó, chọn biến thể bản dựng (_build variant_). 
+Nhấp vào **Build > Select Build Variant** trong menu chính. 
+Chọn bất kì biến thể nào trong bản điều khiển **Build Variants** 
+(_biến thể bản dựng_) (debug - gỡ lỗi là lựa chọn mặc định):
 
 {% asset 'deployment/android/build-variant-menu.png' alt='screenshot of build variant menu' %}
 
-The resulting app bundle or APK files are located in
-`build/app/outputs` within your app's folder.
+Gói ứng dụng hoặc các tệp APK được tạo nằm trong danh mục
+`build/app/outputs` trong thư mục của ứng dụng.
 
 {% comment %}
 ### Are there any special considerations with add-to-app?
 {% endcomment %}
-
 
 [apk-deploy]: {{site.android-dev}}/studio/command-line/bundletool#deploy_with_bundletool
 [apk-set]: {{site.android-dev}}/studio/command-line/bundletool#generate_apks
