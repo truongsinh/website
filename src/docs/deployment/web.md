@@ -1,46 +1,45 @@
 ---
-title: Build and release a web app
-description: How to prepare for and release a web app.
+title: Xây dựng và phát hành một ứng dụng web
+description: Cách chuẩn bị và phát hành một ứng dụng web.
 short-title: Web
 ---
 
-During a typical development cycle,
-you test an app using `flutter run -d chrome`
-(for example) at the command line.
-This builds a _debug_ version of your app.
+Trong một chu trình phát triển thông thường,
+bạn có thể chạy thử ứng dụng bằng `flutter run -d chrome`
+(ví dụ) ở cửa sổ command line.
+Lệnh này sẽ xây một bản _gỡ lỗi_ (_debug_) cho ứng dụng của bạn.
 
-This page helps you prepare a _release_ version
-of your app and covers the following topics:
+Phần này sẽ giúp bạn chuẩn bị một bản _phát hành_ 
+cho ứng dụng của bạn và bao gồm những chủ đề hướng dẫn sau đây:
 
-* [Minification](#minification)
-* [Building the app for release](#building-the-app-for-release)
-* [Deploying to the web](#deploying-to-the-web)
+* [Kĩ thuật rút gọn dung lượng](#minification)
+* [Xây dựng ứng dụng để phát hành](#building-the-app-for-release)
+* [Triển khai ứng dụng lên web](#deploying-to-the-web)
 
+## Kĩ thuật rút gọn dung lượng
 
-## Minification
+Kĩ thuật rút gọn dung lượng sẽ được xử lí cho bạn
+khi bạn tạo một bản xây dựng để phát hành.
 
-Minification is handled for you when you
-create a release build.
+Bản dựng gỡ lỗi (_debug build_) sẽ không được rút gọn dung lượng và
+không được áp dụng kĩ thuật _tree shaking_.
 
-A debug build of a web app is not minified and
-tree shaking has not been performed.
+Bản dựng cá nhân (_profile build_) không được rút gọn dung lượng
+được áp dụng kĩ thuật _tree shaking_.
 
-A profile build is not minified and tree shaking
-has been performed.
+Bản dựng phát hành (_release build_) vừa được rút gọn dung lượng
+vừa được áp dụng kĩ thuật _tree shaking_.
 
-A release build is both minified and tree shaking
-has been performed.
+## Xây dựng ứng dụng để phát hành
 
-## Building the app for release
+Để xây dựng ứng dụng cho việc triển khai ta dùng
+dòng lệnh `flutter build web`.
+Lệnh này tạo ra ứng dụng, bao gồm các tài nguyên tĩnh (_assets_),
+và đặt các tệp vào thư mục `/build/web`
+trong dự án của bạn.
 
-Build the app for deployment using the
-`flutter build web` command.
-This generates the app, including the assets,
-and places the files into the `/build/web`
-directory of the project.
-
-The release build of a simple app has the
-following structure:
+Bản dựng phát hành (_release build_) của một ứng dụng đơn giản 
+có cấu trúc sau đây:
 
 ```none
 /build/web
@@ -57,44 +56,43 @@ following structure:
   main.dart.js.map
 ```
 
-Launch a web server (for example,
+Chạy máy chủ (_server_) của trang web (ví dụ,
 `python -m SimpleHTTPServer 8000`,
-or by using the [dhttpd][] package),
-and open the /build/web directory. Navigate to
-`localhost:8000` in your browser
-(given the python SimpleHTTPServer example)
-to view the release version of your app.
+hoặc sử dụng package [dhttpd][]),
+và mở thư mục /build/web. Mở
+`localhost:8000` trong trình duyệt của bạn
+(ví dụ áp dụng với SimpleHTTPServer của python)
+để xem bản phát hành ứng dụng của bạn.
 
-## Embedding a Flutter app into an HTML page
+## Nhúng ứng dụng Flutter vào trang HTML
 
-You can embed a Flutter web app,
-as you would embed other content,
-in an [`iframe`][] tag of an HTML file.
-In the following example, replace "URL"
-with the location of your HTML page:
+Bạn có thể nhúng một ứng dụng web Flutter,
+như cách bạn nhúng các nội dung khác,
+trong thẻ [`iframe`][] của tệp HTML.
+Trong ví dụ sau đây, thay đổi "URL"
+với vị trí trang HTML của bạn:
 
 ```html
 <iframe src="URL"></iframe>
 ```
 
-## Deploying to the web
+## Triển khai lên trang web
 
-When you are ready to deploy your app,
-upload the release bundle
-to Firebase, the cloud, or a similar service.
-Here are a few possibilities, but there are
-many others:
+Khi bạn đã sẵn sàng triển khai ứng dụng của bạn,
+đăng tải gói phát hành
+lên Firebase, đám mây, hoặc dịch vụ tương tự.
+Dưới đây là một số ví dụ, nhưng vẫn sẽ có
+nhiều lựa chọn khác:
 
 * [Firebase Hosting][]
 * [GitHub Pages][]
 * [Google Cloud Hosting][]
 
-In future, we plan to generate PWA configuration files
-to support Progressive Web Apps.
+Trong tương lai, chúng tôi dự định sẽ tạo ra các tệp cấu hình PWA
+để hỗ trợ Progressive Web Apps.
 
 [dhttpd]: {{site.pub}}/packages/dhttpd
 [Firebase Hosting]: https://firebase.google.com/docs/hosting
 [GitHub Pages]: https://pages.github.com/
 [Google Cloud Hosting]: https://cloud.google.com/solutions/smb/web-hosting/
 [`iframe`]: https://html.com/tags/iframe/
-
