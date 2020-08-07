@@ -1,23 +1,22 @@
 ---
-title: Build and release a web app
-description: How to prepare for and release a web app.
+title: Xây dựng và phát hành một ứng dụng web
+description: Cách chuẩn bị và phát hành một ứng dụng web.
 short-title: Web
 ---
 
-During a typical development cycle,
-you test an app using `flutter run -d chrome`
-(for example) at the command line.
-This builds a _debug_ version of your app.
+Trong một chu trình phát triển thông thường,
+bạn có thể chạy thử ứng dụng bằng `flutter run -d chrome`
+(ví dụ) ở cửa sổ command line.
+Lệnh này sẽ xây một bản _gỡ lỗi_ (_debug_) cho ứng dụng của bạn.
 
-This page helps you prepare a _release_ version
-of your app and covers the following topics:
+Phần này sẽ giúp bạn chuẩn bị một bản _phát hành_ 
+cho ứng dụng của bạn và bao gồm những chủ đề hướng dẫn sau đây:
 
-* [Minification](#minification)
-* [Building the app for release](#building-the-app-for-release)
-* [Deploying to the web](#deploying-to-the-web)
+* [Kĩ thuật rút gọn dung lượng](#minification)
+* [Xây dựng ứng dụng để phát hành](#building-the-app-for-release)
+* [Triển khai ứng dụng lên web](#deploying-to-the-web)
 
-
-## Minification
+## Kĩ thuật rút gọn dung lượng
 
 Minification is handled for you when you
 create a release build.

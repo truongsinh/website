@@ -77,7 +77,7 @@ Dòng lệnh sẽ lưu trữ tệp `key.jks` ở danh mục chính
 của bạn. Nếu bạn muốn lưu nó ở chỗ khác, thay thế
 đối số truyền vào *tham số* `-keystore`.
 **Tuy nhiên, hãy giữ bảo mật tệp `keystore`; 
-không đưa nó vào hệ thống quản lí công cộng!**
+không đưa nó vào hệ thống quản lí công khai!**
 
 {{site.alert.note}}
 * Lệnh `keytool` có thể không ở trong *path* của bạn&mdash;nó là
@@ -111,7 +111,7 @@ storeFile=<location of the key store file, such as /Users/<user name>/key.jks>
 
 {{site.alert.warning}}
   Hãy giữ bảo mật tệp `key.properties`;
-  không đưa nó vào hệ thống quản lí công cộng.
+  không đưa nó vào hệ thống quản lí công khai.
 {{site.alert.end}}
 
 ### Cấu hình đăng kí ở gradle
