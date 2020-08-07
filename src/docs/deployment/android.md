@@ -473,4 +473,4 @@ The resulting app bundle or APK files are located in
 [upload-bundle]: {{site.android-dev}}/studio/publish/upload-bundle
 [Version your app]: {{site.android-dev}}/studio/publish/versioning
 [versions]: {{site.android-dev}}/studio/publish/versioning
-[x86-64]: {{site.android-dev}}/ndk/guides/abis#86-64
+[x86-64]: {{site.android-dev}}/ndk/guides/abis#86-64 
