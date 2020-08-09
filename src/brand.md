@@ -1,123 +1,122 @@
 ---
-title: Flutter Brand Guidelines
+title: Nguyên tắc về thương hiệu Flutter
 ---
 
-The "Flutter" name and logo are trademarks owned by Google.
-These Brand Guidelines describe the appropriate uses of the Flutter
-trademarks by members of the developer community who have obtained our
-consent to use the trademarks pursuant to the [Flutter Terms of Service](/tos).
-These guidelines will ensure that the Flutter trademarks are used in a
-manner that promotes Google's mission to provide a free and open source
-SDK for crafting high-quality native interfaces on iOS and
-Android in record time, and are not associated with objectionable material,
-as determined by Google.
+Tên gọi và logo của "Flutter" là thương hiệu thuộc sở hữu của Google.
+Những nguyên tắc về thương hiệu dưới đây mô tả những trường hợp được sử dụng
+thương hiệu Flutter dành cho các thành viên trong cộng đồng lập trình viên được
+Google cho phép sử dụng thương hiệu theo [Điều khoản Dịch vụ của Flutter](/tos).
+Những nguyên tắc này nhằm đảm bảo rằng thương hiệu Flutter được sử dụng đúng mục
+đích quảng bá sứ mệnh của Google trong việc cung cấp một SDK miễn phí, mã nguồn
+mở nhằm xây dựng các giao diện native trên iOS và Android một cách nhanh chóng,
+và đảm bảo thương hiệu sẽ không liên quan đến các tài liệu phản cảm, như Google
+đã ấn định.
 
-Use of the Flutter trademarks that is not expressly permitted by these
-guidelines is prohibited absent written permission from Google.
+Các trường hợp sử dụng thương hiệu Flutter không nằm trong các nguyên tắc dưới
+đây sẽ bị cấm nếu không có sự cho phép bằng văn bản của Google.
 
-The official Flutter logos can be found in the [Flutter and Dart logo
-assets](https://drive.google.com/corp/drive/folders/1KXNtO9My2AMpDOF9A9Y_4aj4_BcgmDDT).
+Những logo chính thức của Flutter nằm tại trang [logo assets của Flutter và Dart]
+(https://drive.google.com/corp/drive/folders/1KXNtO9My2AMpDOF9A9Y_4aj4_BcgmDDT).
 
-## General Rules That Govern the Use of the Flutter Trademarks
+## Nguyên tắc chung cho việc sử dụng thương hiệu Flutter
 
-You are free to use the Flutter trademarks: (i) in connection with your
-download and use of the Flutter SDK to build and develop
-apps, (ii) in training materials (e.g., video tutorials, online publications,
-etc.) that provide instructions or tips regarding how to use the Flutter
-SDK to build and develop apps, and (iii) to show your support for
-the use of the Flutter SDK by members of the developer community.
+Bạn được phép sử dụng thương hiệu Flutter: (i) cùng với Flutter SDK khi download
+và dùng để xây dựng, phát triển các ứng dụng, (ii) trong các tài liệu đào tạo
+(ví dụ: video hướng dẫn, ấn bản trực tuyến,...) nhằm cung cấp các chỉ dẫn hoặc
+kinh nghiệm liên quan đến việc sử dụng Flutter SDK để xây dựng, phát triển ứng
+dụng, và (iii) nhằm thể hiện sự ủng hộ của bạn đối với việc sử dụng Flutter SDK
+của cộng đồng lập trình viên.
 
-These guidelines do not restrict your right to use the "Flutter" name
-in connection with descriptions of the Flutter SDK that would be
-considered "fair use."  For example, you may use the "Flutter"
-name to make truthful factual statements (e.g., "built with the Flutter
-SDK") or to accurately describe a feature of the Flutter SDK.
+Các nguyên tắc dưới đây không hạn chế quyền sử dụng cái tên "Flutter" chung với
+các mô tả về Flutter SDK nếu được xem là "hợp lý". Ví dụ như, có thể sử dụng cái
+tên "Flutter" để mô tả những sự thật như "được phát triển bằng Flutter SDK" hoặc
+để mô tả chính xác một tính năng của Flutter SDK.
 
-You may use the Flutter trademarks on your personal website, personal
-blog, or social media account to show your support for the Flutter SDK,
-provided you do not use the Flutter trademarks in a way that
-could confuse people into thinking that your site is an official Google
-site or that Google has sponsored or endorsed your site. In the case of
-websites or personal blogs, this means you should not use the Flutter
-trademarks as the primary element on the webpage (e.g., in the masthead
-of the webpage or the title of the blog). In the case of social media
-accounts, this means you should not use the Flutter trademarks in the
-background, in your profile image or in your social media username.
+Bạn được phép sử dụng thương hiệu Flutter trên trang web cá nhân, blog cá nhân
+hoặc tài khoản mạng xã hội để thể hiện sự ủng hộ Flutter SDK nếu bạn không khiến
+mọi người hiểu lầm rằng trang của bạn là một trang chính thức của Google hoặc
+Google đã tài trợ cho trang của bạn. Trong trường hợp trang web hoặc blog cá nhân,
+điều này có nghĩa là bạn không nên sử dụng cái tên Flutter như một thành phần
+chính của trang web (như tiêu đề của trang web hoặc của blog). Trong trường hợp
+tài khoản mạng xã hội, điều này có nghĩa là bạn không nên sử dụng hình ảnh
+Flutter làm nền cho ảnh đại diện hoặc sử dụng cái tên Flutter trong tên tài khoản.
 
-## Specific Rules for Proper Usage of the Flutter Trademarks
+## Nguyên tắc cụ thể dành cho các trường hợp được sử dụng thương hiệu Flutter
 
-In addition to the general rules discussed above, below are specific
-rules governing the proper use of the Flutter trademarks.
+Bên cạnh những nguyên tắc chung trên, dưới đây là những nguyên tắc cụ thể nhằm
+quy định những trường hợp được phép sử dụng thương hiệu Flutter.
 
-**DO:**
+**ĐƯỢC PHÉP:**
 
-* Use the "Flutter" name as an adjective, never as a noun or verb,
-  and never in the plural or possessive form.
-* Use a generic term following the "Flutter" name, for example,
-  "the Flutter SDK" or "the Flutter UI toolkit."
-* Distinguish the "Flutter" name from the surrounding text in some way.
-  Capitalize the first letter, capitalize or italicize the entire mark,
-  place the mark in quotes, use a different type style or font for the mark.
-* Use the trademark symbol <sup>TM</sup> for the first or most prominent
-  time the "Flutter" name appears in text on your website or blog.
-  Make sure to always use the <sup>TM</sup> symbol,
-  not the <sup>&reg;</sup> symbol.
-* Include the following text near the first or most prominent use of the
-  Flutter marks on your website or blog: "Flutter and the related logo are
-  trademarks of Google LLC. We are not endorsed by or affiliated with
-  Google LLC."
-* Keep some distance between the Flutter trademarks and any other trademarks,
-  logos, or icons that are displayed on the webpage.
+* Sử dụng cái tên "Flutter" như một tính từ, không sử dụng như danh từ hoặc động
+từ, và không sử dụng số nhiều hay dưới dạng sở hữu.
+* Sử dụng một thuật ngữ chung đằng sau cái tên "Flutter", ví dụ như "Flutter SDK"
+hoặc "Bộ công cụ giao diện Flutter".
+* Giúp người đọc phân biệt cái tên "Flutter" với những từ xung quanh theo một
+cách nào đó. Viết hoa chữ cái đầu tiên, viết hoa hoặc in nghiêng toàn bộ tên,
+đặt trong dấu ngoặc, sử dụng style hoặc font chữ khác.
+* Sử dụng ký hiệu thương hiệu <sup>TM</sup> cho lần xuất hiện đầu tiên hoặc lần
+xuất hiện quan trọng nhất của cái tên "Flutter" trong các văn bản trên trang web
+hoặc blog của bạn. Hãy đảm bảo bạn sử dụng ký hiệu <sup>TM</sup> chứ không phải
+ký hiệu <sup>&reg;</sup>.
+* Thêm các văn bản sau gần lần xuất hiện đầu tiên hoặc lần xuất hiện quan trọng
+nhất của Flutter trên trang web hoặc blog của bạn: "Flutter and the related logo
+are trademarks of Google LLC. We are not endorsed by or affiliated with Google
+LLC." (Flutter và các logo liên quan là thương hiệu của Google LLC. Chúng tôi
+không được chứng thực hoặc có liên kết với Google LLC).
+* Giữ khoảng cách giữa hình ảnh thương hiệu Flutter và bất kỳ thương hiệu, logo
+hoặc icon nào khác trên trang web.
 
-**DON'T:**
+**KHÔNG ĐƯỢC PHÉP:**
 
-* Don't alter, distort, or modify the Flutter trademarks in any way.
-  This includes varying the spelling of the "Flutter" name, or displaying
-  the Flutter logo with color variations or unapproved visual elements.
-* Don't combine the Google name with the "Flutter" name to form a unitary
-  brand (e.g., don’t use the phrases "Google Flutter" or "Google’s Flutter").
-  You may use the Google name in full text to accurately describe the
-  Flutter SDK (e.g., "The Flutter SDK by Google").
-* Don't register the Flutter trademarks or any trademarks, logos,
-  or domain names that are confusingly similar to them.
-* Don't incorporate the Flutter trademarks into your own product names,
-  service names, trademarks, logos, or company names.
-* Don't display the Flutter trademarks in a manner that is misleading,
-  unfair, defamatory, infringing, libelous, disparaging, obscene or
-  otherwise objectionable to Google.
-* Don't use the Flutter trademarks on or in connection with the sale of
-  any non-software goods or services (e.g., merchandise such as clothing,
-  pens, and stickers).
+* Không thay đổi, xuyên tạc hoặc chỉnh sửa các nhãn hiệu Flutter theo bất kỳ
+cách nào. Bao gồm thay đổi cái tên "Flutter", hoặc hiển thị logo Flutter với màu
+khác hay với các yếu tố trực quan khác.
+* Không kết hợp tên Google với tên "Flutter" để tạo ra một thương hiệu duy nhất
+(ví dụ: không dùng từ "Google Flutter" hoặc "Google's Flutter"). Bạn có thể sử
+dụng tên Google trong một văn bản đầy đủ để mô tả chính xác Flutter SDK (ví dụ:
+"The Flutter SDK by Google").
+* Không đăng ký thương hiệu Flutter hay bất kỳ thương hiệu, logo hoặc tên miền
+tương tự, có thể gây nhầm lẫn.
+* Không kết hợp nhãn hiệu Flutter vào tên sản phẩm, tên dịch vụ, tên thương hiệu,
+logo hay tên công ty của bạn.
+* Không hiển thị nhãn hiệu Flutter theo một cách gây hiểu nhầm, không hợp lý,
+phỉ báng, xâm phạm bản quyền, bôi nhọ, chê bai, thô tục hoặc gây phản cảm cho
+Google.
+* Không sử dụng nhãn hiệu Flutter trên hoặc chung với việc buôn bán các sản phẩm,
+dịch vụ không liên quan đến phần mềm (ví dụ: hàng hóa như quần áo, bút, stickers).
 
-## Community Use Exceptions
+## Ngoại lệ cho việc sử dụng trong cộng đồng
 
-To allow for the use of the Flutter trademarks by the Flutter community,
-below are specific exceptions to the rules described above:
+Nhằm cho phép việc sử dụng thương hiệu Flutter bởi cộng đồng Flutter, dưới đây
+là những ngoại lệ của các nguyên tắc bên trên:
 
-1. Local Flutter user groups may: (i) use the "Flutter" name
-   as part of their social media username in the following format:
-   "Flutter + [name of country/city]" (e.g., "Flutter France"); and (ii)
-   use the Flutter logo in the national colors of the country where the
-   user group is based (e.g., for a user group based in France,
-   the colors blue, white and red), provided the Flutter logo is otherwise
-   unaltered.  Such social media accounts should include a disclaimer that
-   clarifies that it is not an official Google account.
+1. Những nhóm người dùng Flutter ở từng địa phương có thể: (i) sử dụng cái tên
+"Flutter" trong tên tài khoản mạng xã hội theo format sau: "Flutter + [tên nước/
+thành phố]" (ví dụ: "Flutter France"); và (ii) sử dụng logo Flutter với màu đặc
+trưng của đất nước của nhóm người dùng đó (ví dụ: với một nhóm người dùng ở Pháp
+có thể dùng màu xanh dương, trắng, đỏ) nếu như các yếu tố còn lại của logo không
+bị thay đổi. Những tài khoản mạng xã hội đó nên đính kèm một cảnh báo rằng đó
+không phải là một tài khoản chính thức của Google.
 
-2. You may use the Flutter trademarks as part of the name of a newsletter
-   or related community content (e.g., Flutter training courses,
-   Flutter community forums) whose purpose is to promote the use of the
-   Flutter SDK by members of the developer community.
-   Where the Flutter trademarks are displayed on a website as part of a
-   community site name, you should use the trademark symbol <sup>TM</sup>
-   after the most prominent appearance of the "Flutter" name and include
-   the following text: "Flutter and the related logo are trademarks of
-   Google LLC.  We are not endorsed by or affiliated with Google LLC."
-   Where the Flutter trademarks are displayed on a social media account
-   as part of a community site name, you should include a disclaimer that
-   clarifies that it is not an official Google account.
+2. Bạn có thể sử dụng thương hiệu Flutter như một phần của tên bản tin hoặc
+những nội dung liên quan đến cộng đồng (ví dụ: Khóa học đào tạo Flutter, Diễn
+đàn cộng đồng Flutter) nhằm mục đích quảng bá việc sử dụng Flutter SDK đến cộng
+đồng lập trình viên.
+Những vị trí hiển thị thương hiệu Flutter trên một trang web dưới dạng tên của
+một cộng đồng, bạn nên sử dụng ký hiệu thương hiệu <sup>TM</sup> sau lần xuất
+hiện quan trọng nhất của cái tên "Flutter" và đính kèm văn bản: "Flutter and the
+related logo are trademarks of Google LLC.  We are not endorsed by or affiliated
+with Google LLC." (Flutter và các logo liên quan là thương hiệu của Google LLC.
+Chúng tôi không được chứng thực hoặc có liên kết với Google LLC.)
+Những vị trí hiển thị thương hiệu Flutter trên một tài khoản mạng xã hội dưới
+dạng tên cộng đồng, bạn nên đính kèm một cảnh báo rằng đó không phải là một tài
+khoản chính thức của Google.
 
-3. <b>[Unofficial Flutter Events]</b> You may use the Flutter trademarks as part of the name
-   of a community event (e.g. conference), but please make sure to include the following disclaimer
-   on the event website in a prominent and easy-to-see spot:  "Flutter and the related logo are trademarks of Google LLC.
-   [Title of event] is not affiliated with or otherwise sponsored by Google LLC."
-
+3. <b>[Sự kiện về Flutter không chính thống]</b> Bạn có thể sử dụng Thương hiệu
+Flutter dưới dạng tên của một sự kiện cộng đồng (ví dụ: hội thảo), nhưng hãy đảm
+bảo bạn đính kèm cảnh báo trên trang web sự kiện một cách nổi bật và dễ thấy:
+"Flutter and the related logo are trademarks of Google LLC. [Title of event] is
+not affiliated with or otherwise sponsored by Google LLC." (Flutter và các logo
+liên quan là thương hiệu của Google LLC. [Tên sự kiện] không có liên kết và cũng
+không được tài trợ bởi Google LLC).
