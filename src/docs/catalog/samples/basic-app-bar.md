@@ -23,9 +23,9 @@ Một AppBar điển hình với tiêu đề, những hành động, va�
   </div>
 </p>
 
-Một ứng dụng hiển thị một trong sáu lựa chọn với một biểu tượng và một tiêu đề.
-Hai lựa chọn phổ biến nhất được hiển thị sẵn dưới dạng các nút tác động (action buttons) 
-và nhứng lựa chọn còn lại thì được chứa trong menu sổ xuống. 
+An app that displays one of a half dozen choices with an icon and a title.
+The two most common choices are available as action buttons and the remaining
+choices are included in the overflow dropdown menu.
 
 Hãy dùng thử ứng dụng này bằng cách tạo một dự án mới với `flutter create` và
 thay thế nội dụng trong `lib/main.dart` bằng đoạn mã nguồn sau đây.
@@ -121,7 +121,7 @@ class ChoiceCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final TextStyle textStyle = Theme.of(context).textTheme.display1;
+    final TextStyle textStyle = Theme.of(context).textTheme.headline4;
     return Card(
       color: Colors.white,
       child: Center(

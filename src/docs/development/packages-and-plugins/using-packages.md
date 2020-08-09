@@ -71,7 +71,6 @@ To add the package, `css_colors`, to an app:
      Hot reload and hot restart only update the Dart code,
      so a full restart of the app might be required to avoid
      errors like `MissingPluginException` when using the package.
-     [PENDING: Is this also true for web and macos plugins?]
 
 The [Installing tab][],
 available on any package page on pub.dev,
@@ -202,7 +201,10 @@ run `flutter pub upgrade`
 (**Upgrade dependencies** in IntelliJ or Android Studio)
 to retrieve the highest available version of the package
 that is allowed by the version constraint specified in
-`pubspec.yaml`.
+`pubspec.yaml`. 
+Note that this is a different command from 
+`flutter upgrade` or `flutter update-packages', 
+which both update Flutter itself.
 
 ### Dependencies on unpublished packages
 
@@ -213,6 +215,7 @@ additional dependency options are available:
 **Path dependency**
 : A Flutter app can depend on a plugin via a file system
   `path:` dependency. The path can be either relative or absolute.
+  Relative paths are evaluated relative to the directory containing `pubspec.yaml`.
   For example, to depend on a plugin `plugin1` located in a directory
   next to the app, use the following syntax:
 
