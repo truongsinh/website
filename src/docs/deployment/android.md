@@ -45,7 +45,7 @@ Một phương án khác: Bạn có thể làm việc này thủ công theo các
 
 1. Ở tệp `AndroidManifest.xml`, thay đổi thuộc tính
    `android:icon` của thẻ [`application`][applicationtag]
-   để trỏ đến icons biểu tưởng ở bước trước (Ví dụ:
+   để trỏ đến icons biểu tượng ở bước trước (Ví dụ:
    `<application android:icon="@mipmap/ic_launcher" ...`).
 
 1. Để xác nhận bạn đã thay thành công icon biểu tượng,

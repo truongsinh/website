@@ -1,22 +1,23 @@
 ---
-title: Xây dựng và phát hành một ứng dụng web
-description: Cách chuẩn bị và phát hành một ứng dụng web.
+title: Build and release a web app
+description: How to prepare for and release a web app.
 short-title: Web
 ---
 
-Trong một chu trình phát triển thông thường,
-bạn có thể chạy thử ứng dụng bằng `flutter run -d chrome`
-(ví dụ) ở cửa sổ command line.
-Lệnh này sẽ xây một bản _gỡ lỗi_ (_debug_) cho ứng dụng của bạn.
+During a typical development cycle,
+you test an app using `flutter run -d chrome`
+(for example) at the command line.
+This builds a _debug_ version of your app.
 
-Phần này sẽ giúp bạn chuẩn bị một bản _phát hành_ 
-cho ứng dụng của bạn và bao gồm những chủ đề hướng dẫn sau đây:
+This page helps you prepare a _release_ version
+of your app and covers the following topics:
 
-* [Kĩ thuật rút gọn dung lượng](#minification)
-* [Xây dựng ứng dụng để phát hành](#building-the-app-for-release)
-* [Triển khai ứng dụng lên web](#deploying-to-the-web)
+* [Minification](#minification)
+* [Building the app for release](#building-the-app-for-release)
+* [Deploying to the web](#deploying-to-the-web)
 
-## Kĩ thuật rút gọn dung lượng
+
+## Minification
 
 Minification is handled for you when you
 create a release build.
@@ -46,7 +47,7 @@ following structure:
   assets
     AssetManifest.json
     FontManifest.json
-    LICENSE
+    NOTICES
     fonts
       MaterialIcons-Regular.ttf
       <other font files>
@@ -57,7 +58,7 @@ following structure:
 ```
 
 Launch a web server (for example,
-`python -m SimpleHTTPServer 8000`,
+`python -m http.server 8000`,
 or by using the [dhttpd][] package),
 and open the /build/web directory. Navigate to
 `localhost:8000` in your browser
@@ -88,12 +89,21 @@ many others:
 * [GitHub Pages][]
 * [Google Cloud Hosting][]
 
-In future, we plan to generate PWA configuration files
-to support Progressive Web Apps.
+## PWA Support
+
+As of release 1.20, the Flutter template for web apps includes support
+for the core features needed for an installable, offline-capable PWA app.
+Flutter-based PWAs can be installed in the same way as any other web-based
+PWA; the settings signaling that your Flutter app is a PWA are provided by
+`manifest.json`, which is produced by `flutter create` in the `web` directory.
+
+PWA support remains a work in progress,
+so please [give us feedback][] if you see something that doesn’t look right.
 
 [dhttpd]: {{site.pub}}/packages/dhttpd
 [Firebase Hosting]: https://firebase.google.com/docs/hosting
 [GitHub Pages]: https://pages.github.com/
+[give us feedback]: {{site.github}}/flutter/flutter/issues/new?title=%5Bweb%5D:+%3Cdescribe+issue+here%3E&labels=%E2%98%B8+platform-web&body=Describe+your+issue+and+include+the+command+you%27re+running,+flutter_web%20version,+browser+version
 [Google Cloud Hosting]: https://cloud.google.com/solutions/smb/web-hosting/
 [`iframe`]: https://html.com/tags/iframe/
 
