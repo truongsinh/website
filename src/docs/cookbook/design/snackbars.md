@@ -12,29 +12,28 @@ js:
     url: https://dartpad.dev/inject_embed.dart.js
 ---
 
-It can be useful to briefly inform your users when certain actions
-take place. For example, when a user swipes away a message in a list,
-you might want to inform them that the message has been deleted.
-You might even want to give them an option to undo the action.
+Khi một số thao tác xảy ra thì việc thông báo cho người dùng rất có ích.
+Ví dụ, khi người dùng kéo một tin nhắn ra khỏi danh sách, bạn muốn thông báo
+với họ rằng tin nhắn đó đã được xoá.
+Bạn cũng muốn cung cấp cho họ cơ hội để hoàn tác hành động đó.
 
-In Material Design, this is the job of a [`SnackBar`][].
-This recipe implements a snackbar using the following steps:
+Trong Material Design, đây là công việc của [`SnackBar`][].
+Phương thức này áp dụng snackbar thông qua những bước sau:
 
-  1. Create a `Scaffold`.
-  2. Display a `SnackBar`.
-  3. Provide an optional action.
+  1. Tạo `Scaffold`.
+  2. Hiển thị `Snackbar`.
+  3. Cung cấp thao tác phụ.
 
-## 1. Create a `Scaffold`
+## 1. Tạo `Scaffold`
 
-When creating apps that follow the Material Design guidelines,
-give your apps a consistent visual structure.
-In this example, display the `SnackBar` at the bottom of the screen,
-without overlapping other important
-widgets, such as the `FloatingActionButton`.
+Khi tạo ứng dụng theo nguyên tắc Material Design,
+hãy thiết kế cho ứng dụng đó một cấu trúc giao diện thống nhất.
+Ở ví dụ này, hiển thị `SnackBar` ở dưới đáy màn hình mà không chồng lên
+những widget quan trọng khác, như `FloatingActionButton`.
 
-The [`Scaffold`][] widget, from the [material library][],
-creates this visual structure and ensures that important
-widgets don't overlap.
+Widget [`Scaffold`][], từ [material library][],
+tạo cấu trúc giao diện này và đảm bảo rằng các widget quan trọng
+không chồng lên nhau.
 
 <!-- skip -->
 ```dart
@@ -46,10 +45,10 @@ Scaffold(
 );
 ```
 
-## 2. Display a `SnackBar`
+## 2. Hiển thị `SnackBar`
 
-With the `Scaffold` in place, display a `SnackBar`.
-First, create a `SnackBar`, then display it using the `Scaffold`.
+Sau khi tạo `Scaffold` thì ta sẽ hiển thị `SnackBar`.
+Đầu tiên, tạo `SnackBar`, và hiển thị nó thông qua `Scaffold`.
 
 <!-- skip -->
 ```dart
@@ -59,16 +58,16 @@ final snackBar = SnackBar(content: Text('Yay! A SnackBar!'));
 Scaffold.of(context).showSnackBar(snackBar);
 ```
 
-## 3. Provide an optional action
+## 3. Cung cấp thao tác phụ
 
-You might want to provide an action to the user when
-the SnackBar is displayed.
-For example, if the user accidentally deletes a message,
-they might use an optional action in the SnackBar to recover
-the message.
+Bạn có thể muốn cung cấp cho người dùng một thao tác khi
+SnackBar được hiển thị.
+Ví dụ, nếu người dùng vô tình xoá một tin nhắn,
+có thể họ sẽ muốn sử dụng một thao tác phụ trong SnackBar để phục hồi lại
+tin nhắn đó.
 
-Here's an example of providing
-an additional `action` to the `SnackBar` widget:
+Đây là một ví dụ của việc cung cấp
+một `thao tác` phụ cho `SnackBar`:
 
 <!-- skip -->
 ```dart
@@ -83,12 +82,12 @@ final snackBar = SnackBar(
 );
 ```
 
-## Interactive example
+## Ví dụ
 
 {{site.alert.note}}
-  In this example, the SnackBar displays when a user taps a button.
-  For more information on working with user input,
-  see the [Gestures][] section of the cookbook.
+  Trong ví dụ này, SnackBar được hiển thị khi người dùng ấn một nút.
+  Để tìm hiểu thêm về các thao tác nhập của người dùng,
+  hãy đến phần [Gestures][] của cẩm nang.
 {{site.alert.end}}
 
 ```run-dartpad:theme-light:mode-flutter:run-true:width-100%:height-600px:split-60:ga_id-interactive_example
