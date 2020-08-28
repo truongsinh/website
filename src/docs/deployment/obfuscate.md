@@ -1,106 +1,108 @@
 ---
-title: Obfuscating Dart code
-description: How to remove function and class names from your Dart binary.
+title: Kĩ thuật làm rối (obfuscation) Dart code 
+description: Làm thế nào để xóa tên function và class trong mã Dart (Dart binary) của bạn.
 ---
 
-[Code obfuscation][] is the process of modifying an
-app's binary to make it harder for humans to understand.
-Obfuscation hides function and class names in your
-compiled Dart code, making it difficult for an attacker
-to reverse engineer your proprietary app.
+*Trong bài này mình sẽ giữ nguyên từ chuyên môn: obfuscation để không làm thay đổi nội dung gốc.*
 
-The following list describes which platforms
-support the obfuscation process described in
-this page:
+[Code obfuscation][] là quá trình điều chỉnh mã nhị phân của ứng dụng
+(app's binary) để làm mã khó hiểu với con người.
+Obfuscation giấu tên các function và class ở trong 
+mã code Dart đã được biên dịch, để những kẻ tấn công khó có thể
+dịch ngược ứng dụng chính chủ của bạn.
+
+Danh sách dưới đây miêu tả những nền tảng nào
+hỗ trợ quá trình obfuscation được miêu tả trong 
+trang này
 
 **Android**/**iOS**
-: Supported as of Flutter 1.16.2.  To obfuscate
-  an app built against an earlier version of Flutter,
-  use the [obfuscation instructions][] on the Flutter wiki.
+: Được hỗ trợ từ Flutter 1.16.2.  Để obfuscate
+  được xây từ phiên bản trước đó của Flutter,
+  hãy sử dụng [obfuscation instructions][] (hướng dẫn obfuscation) trong Flutter wiki.
 
 **macOS**
 : macOS ([in alpha][] as of Flutter 1.13),
-  supports obfuscation as of Flutter 1.16.2.
+  hỗ trợ obfuscation từ Flutter 1.16.2.
 
 **Linux**/**Windows**
-: Not yet supported.
+: Chưa được hỗ trợ
 
 **web**
-: Obfuscation is not supported for web apps,
-  but a web app can be [minified][],
-  which is similar. When you build a
-  release version of a Flutter web app, it
-  is automatically minified. For more information,
-  see [Build and release a web app][].
+: Obfuscation chưa được hỗ trợ cho ứng dụng web,
+  nhưng ứng dụng web có thể được [minified][] (rút gọn code),
+  cũng khá tương đương vơi obfuscation. Khi bạn xây
+  bản phát hành cho một ứng dụng web Flutter, nó
+  sẽ được tư động rút gọn. Để biết thêm thông tin,
+  hãy xem [Build and release a web app][] (Xây dựng và phát hành một ứng dụng web).
 
-**Flutter's code obfuscation, when supported, works
-only on a [release build][].**
+**Obfuscation ở Flutter code, khi được hỗ trợ, sẽ chỉ hoạt động
+với [release build][] (bản phát hành).**
 
-## Obfuscating your app
+## Obfuscating ứng dụng của bạn
 
-To obfuscate your app, build a release
-version using the `--obfuscate` flag,
-combined with the `--split-debug-info` flag.
-The `--split-debug-info` flag specifies the
-directory where Flutter can output debug files.
-This command generates a symbol map.
-The `apk`, `appbundle`, `ios`, and `ios-framework`
-targets are currently supported. (`macos` is
-supported on the master and dev channels.)
-For example:
+Để obfuscate ứng dụng, xây một bản build phát hành
+dùng thẻ flag `--obfuscate`,
+kết hợp với `--split-debug-info`.
+Thẻ flag `--split-debug-info` chỉ định thư mục
+nơi mà Flutter xuất ra tệp gỡ lỗi (debug file).
+Lệnh này tạo ra một symbol map
+Các mục `apk`, `appbundle`, `ios`, và `ios-framework`
+hiện tại đều được hỗ trợ. (`macos` được
+hỗ trợ ở các kênh master và dev)
+Ví dụ:
 
 ```terminal
 flutter build apk --obfuscate --split-debug-info=/<project-name>/<directory>
 ```
 
-Once you've obfuscated your binary, save
-the symbols file. You need this if you later
-want to de-obfuscate a stack trace.
+Một khi bạn đã obfuscate mã (binary) của bạn, lưu
+lưu lại symbols file đó. Banj sẽ cần file này nếu sau đó
+bạn muốn giải mã lại (de-obfuscate) một stack trace.
 
-**Note that the `--split-debug-info` flag can also
-be used by itself. In fact, it can dramatically
-reduce code size. For more information on
-app size, see [Measuring your app's size][].**
+**Lưu ý rằng thẻ flag `--split-debug-info` cũng có thể
+được sử dụng bởi chính nó. Thực ra, nó có thể giảm đáng kể
+kích cỡ của mã code. Để biết thêm thông tin về
+kích cỡ ứng dụng, xem [Measuring your app's size][] (Đo kích cỡ ứng dụng của bạn).**
 
-For detailed information on these flags, run
-the help command for your specific target, for example:
+Để biết thêm thông tin về các thẻ flags này, chạy lệnh
+help cho đối tượng target cụ thể của bạn, ví dụ:
 
 ```terminal
 flutter build apk -h
 ```
 
-If these flags are not listed in the output,
-run `flutter --version` to check your version of Flutter.
+Nếu thẻ flags nêu trên này không được hiện ra ở output,
+chạy `flutter --version` để kiểm tra phiên bản Flutter.
 
-## Reading an obfuscated stack trace
+## Đọc một obfuscated stack trace
 
-To debug a stack trace created by an obfuscated app,
-use the following steps to make it human readable:
+Để gỡ lỗi một stack trace tạo ra bởi ứng dụng đã được obfuscated,
+làm theo các bước sau để làm nó có thể đọc được bởi con người:
 
-1. Find the matching symbols file.
-   For example, a crash from an Android arm64
-   device would need `app.android-arm64.symbols`.
+1. Tìm symbols file khớp với stack trace đó.
+   Ví dụ, lỗi sập ứng dụng ở thiết bị Android arm64
+   sẽ cần `app.android-arm64.symbols`.
 
-1. Provide both the stack trace (stored in a file)
-   and the symbols file to the `flutter symbolize` command.
-   For example:
+1. Cung cấp cả stack trace (lưu trong một tệp)
+   và symbols file tới lệnh `flutter symbolize`.
+   Ví dụ:
 
 ```terminal
 flutter symbolize -i <stack trace file> -d /out/android/app.android-arm64.symbols 
 ```
 
-   For more information on the `symbolize` command,
-   run `flutter symbolize -h`.
+   Đê rbieets thêm thông tin về lệnh `symbolize`,
+   chạy `flutter symbolize -h`.
 
-## Caveat
+## Cảnh báo trước
 
-Be aware of the following when coding an app that will
-eventually be an obfuscated binary.
+Hãy chú ý những điều sau khi code một ứng dụng
+mà sẽ được obfuscated mã binary.
 
-* Code that relies on matching specific class, function,
-  or library names will fail.
-  For example, the following call to `expect()` will not
-  work in an obfuscated binary:
+* Nếu code có phụ thuộc vào việc phải khớp tên class, function,
+  hoặc tên thư viện sẽ không thể obfuscated.
+  Ví dụ, lệnh gọi hàm dưới đây tới `expect()` sẽ không hoạt động
+  trong mã (binary) được obfuscated:
 
 <!-- skip -->
 ```dart
