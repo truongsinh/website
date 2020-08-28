@@ -18,7 +18,7 @@ trang này
 **Android**/**iOS**
 : Được hỗ trợ từ Flutter 1.16.2.  Để obfuscate
   được xây từ phiên bản trước đó của Flutter,
-  hãy sử dụng [obfuscation instructions][] (hướng dẫn obfuscation) trong Flutter wiki.
+  hãy sử dụng [hướng dẫn obfuscation][obfuscation instructions] trong Flutter wiki.
 
 **macOS**
 : macOS ([in alpha][] as of Flutter 1.13),
@@ -33,10 +33,10 @@ trang này
   cũng khá tương đương vơi obfuscation. Khi bạn xây
   bản phát hành cho một ứng dụng web Flutter, nó
   sẽ được tư động rút gọn. Để biết thêm thông tin,
-  hãy xem [Build and release a web app][] (Xây dựng và phát hành một ứng dụng web).
+  hãy xem [Xây dựng và phát hành một ứng dụng web][Build and release a web app].
 
 **Obfuscation ở Flutter code, khi được hỗ trợ, sẽ chỉ hoạt động
-với [release build][] (bản phát hành).**
+với [bản phát hành][release build].**
 
 ## Obfuscating ứng dụng của bạn
 
@@ -62,7 +62,7 @@ bạn muốn giải mã lại (de-obfuscate) một stack trace.
 **Lưu ý rằng thẻ flag `--split-debug-info` cũng có thể
 được sử dụng bởi chính nó. Thực ra, nó có thể giảm đáng kể
 kích cỡ của mã code. Để biết thêm thông tin về
-kích cỡ ứng dụng, xem [Measuring your app's size][] (Đo kích cỡ ứng dụng của bạn).**
+kích cỡ ứng dụng, xem [Đo kích cỡ ứng dụng của bạn][Measuring your app's size].**
 
 Để biết thêm thông tin về các thẻ flags này, chạy lệnh
 help cho đối tượng target cụ thể của bạn, ví dụ:
