@@ -12,46 +12,46 @@ js:
     url: https://dartpad.dev/inject_embed.dart.js
 ---
 
-To make it easier for users to view a list of items,
-you might want to hide the app bar as the user scrolls down the list.
-This is especially true if your app displays a "tall"
-app bar that occupies a lot of vertical space.
+Để người dùng dễ dàng xem danh sách các items,
+bạn muốn ẩn app bar khi người dùng cuộn danh sách xuống.
+Điều này có thể  thực hiện được nếu hiển thị một danh sách ứng dụng
+có chiều cao chiếm nhiều không gian theo chiều dọc.
 
-Typically, you create an app bar by providing an `appBar` property to the
-`Scaffold` widget. This creates a fixed app bar that always remains above
-the `body` of the `Scaffold`.
+Thông thường, bạn tạo một app bar bằng cách cung cấp thuộc tính `appBar` cho
+`Scaffold` widget. Điều này tạo ra một app bar cố định luôn nằm phía trên
+`body` của `Scaffold`.
 
-Moving the app bar from a `Scaffold` widget into a
-[`CustomScrollView`][] allows you to create an app bar
-that scrolls offscreen as you scroll through a
-list of items contained inside the `CustomScrollView`.
+Khi chuyển app bar từ `Scaffold` widget vào
+[`CustomScrollView`][] sẽ cho phép bạn có thể tạo một app bar
+có thể  cuộn khỏi màn hình khi bạn cuộn qua danh sách các item
+có trong `CustomScrollView`.
 
-This recipe demonstrates how to use a `CustomScrollView` to display a list of
-items with an app bar on top that scrolls offscreen as the user scrolls
+Bài viết này cho ta biết cách dùng `CustomScrollView` để hiển thị danh sách
+items với một app bar ở trên cùng, khi người dùng cuộn danh sách thông qua các bước sau:
 down the list using the following steps:
 
-  1. Create a `CustomScrollView`.
-  2. Use `SliverAppBar` to add a floating app bar.
-  3. Add a list of items using a `SliverList`.
+  1. Tạo `CustomScrollView`.
+  2. Dùng `SliverAppBar` để thêm floating app bar.
+  3. Tạo danh sách items bằng `SliverList`.
 
-## 1. Create a `CustomScrollView`
+## 1. Tạo `CustomScrollView`
 
-To create a floating app bar, place the app bar inside a
-`CustomScrollView` that also contains the list of items.
-This synchronizes the scroll position of the app bar and the list of items.
-You might think of the `CustomScrollView` widget as a `ListView`
-that allows you to mix and match different types of scrollable lists
-and widgets together.
+Để tạo floating app bar, ta đặt app bar bên trong
+`CustomScrollView` mà chứa danh sách các items.
+Điều này đồng bộ hóa vị trí cuộn của app bả và danh sách items.
+Bạn sẽ nghĩ `CustomScrollView` widget như là `ListView`,
+thứ cho phép bạn kết hợp nhiều hình thức cuộn danh sách và
+widgets lại với nhau.
 
-The scrollable lists and widgets provided to the
-`CustomScrollView` are known as _slivers_. There are several types
-of slivers, such as `SliverList`, `SliverGridList`, and `SliverAppBar`.
-In fact, the `ListView` and `GridView` widgets use the `SliverList` and
-`SliverGrid` widgets to implement scrolling.
+Các danh sách và widgets cung cấp cho 
+`CustomScrollView` các phần tử được gọi là _slivers_. Có rất nhiều loại
+slivers, chẳng hạn `SliverList`, `SliverGridList`, và `SliverAppBar`.
+Thực tế, `ListView` và `GridView` widgets sử dụng `SliverList` và
+`SliverGrid` widgets để thực hiện cho việc cuộn.
 
-For this example, create a `CustomScrollView` that contains a
-`SliverAppBar` and a `SliverList`. In addition, remove any app bars
-that you provide to the `Scaffold` widget.
+Trong ví dụ này, tạo `CustomScrollView` để chứa
+`SliverAppBar` và `SliverList`. Ngoài ra, gỡ bỏ app bars mà bạn
+cung cấp cho `Scaffold` widget.
 
 <!-- skip -->
 ```dart
@@ -64,26 +64,26 @@ Scaffold(
 );
 ```
 
-### 2. Use `SliverAppBar` to add a floating app bar
+### 2. Dùng `SliverAppBar` để thêm floating app bar
 
-Next, add an app bar to the [`CustomScrollView`][].
-Flutter provides the [`SliverAppBar`][] widget which,
-much like the normal `AppBar` widget,
-uses the `SliverAppBar` to display a title,
-tabs, images and more.
+Tiếp theo, thêm app bar vào [`CustomScrollView`][].
+Flutter cung cấp [`SliverAppBar`][] widget,
+giống như `AppBar` widget,
+Sử dụng `SliverAppBar` để hiện thị tiêu đề,
+tabs, hình ảnh và nhiều thứ khác.
 
-However, the `SliverAppBar` also gives you the ability to create a "floating"
-app bar that scrolls offscreen as the user scrolls down the list.
-Furthermore, you can configure the `SliverAppBar` to shrink and
-expand as the user scrolls.
+Tuy nhiên, `SliverAppBar` cũng cung cấp cho bạn khả năng khởi tạo "floating"
+app bar cuộn màn hình khi người dùng cuộn danh sách xuống.
+Hơn nữa, bạn có thể tùy chỉnh `SliverAppBar` để thu nhỏ và 
+mở rộng khi người dùng cuộn.
 
-To create this effect:
+Để tạo hiệu ứng này:
 
-  1. Start with an app bar that displays only a title.
-  2. Set the `floating` property to `true`.
-     This allows users to quickly reveal the app bar when
-     they scroll up the list.
-  3. Add a `flexibleSpace` widget that fills the available
+  1. Bắt đầu app bar chỉ hiện thị một tiêu đề.
+  2. Đặt thuộc tính `floating` là `true`.
+     Điều này sẽ cho phép người dùng nhanh chóng tiết lộ thanh ứng dụng
+     khi họ cuộn danh sách lên.
+  3. Thêm `flexibleSpace` widget để lấp đầy phần
      `expandedHeight`.
 
 <!-- skip -->
@@ -113,20 +113,20 @@ CustomScrollView(
 {{site.alert.end}}
 
 
-### 3. Add a list of items using a `SliverList`
+### 3. Tạo danh sách items bằng `SliverList`
 
-Now that you have the app bar in place, add a list of items to the
-`CustomScrollView`. You have two options: a [`SliverList`][]
-or a [`SliverGrid`][].  If you need to display a list of items one after the other,
+Bây giờ bạn đã có một thanh app bar, thêm một danh sách items
+`CustomScrollView`. Bạn có hai lựa chọn: [`SliverList`][]
+hoặc [`SliverGrid`][].  Nếu bạn cần hiển thị danh sách các items lần lược,
 use the `SliverList` widget.
-If you need to display a grid list, use the `SliverGrid` widget.
+Nếu bạn muốn hiển thị danh sách với dạng lứoi, dùng `SliverGrid` widget.
 
-The `SliverList` and `SliverGrid` widgets take one required parameter: a
-[`SliverChildDelegate`][], which provides a list
-of widgets to `SliverList` or `SliverGrid`.
-For example, the [`SliverChildBuilderDelegate`][]
-allows you to create a list of items that are built lazily as you scroll,
-just like the `ListView.builder` widget.
+`SliverList` và `SliverGrid` widgets cần một parameter: 
+[`SliverChildDelegate`][], sẽ cung cấp
+từ widgets tới `SliverList` hoặc `SliverGrid`.
+Ví dụ, [`SliverChildBuilderDelegate`][]
+cho phép bạn tạo một danh sách items được xây dựng một cách đơn giản khi bạn cuộn,
+giống như `ListView.builder` widget.
 
 <!-- skip -->
 ```dart
