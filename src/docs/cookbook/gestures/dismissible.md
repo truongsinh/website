@@ -191,6 +191,7 @@ class MyAppState extends State<MyApp> {
 }
 ```
 
+
 <noscript>
   <img src="/images/cookbook/dismissible.gif" alt="Dismissible Demo" class="site-mobile-screenshot" />
 </noscript>
