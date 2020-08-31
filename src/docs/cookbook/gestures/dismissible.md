@@ -1,5 +1,5 @@
 ---
-title: Thực hiện vuốt để loại bỏ
+title: Implement swipe to dismiss
 description: How to implement swiping to dismiss or delete.
 prev:
   title: Handle taps
@@ -12,40 +12,40 @@ js:
     url: https://dartpad.dev/inject_embed.dart.js
 ---
 
-Chế độ "vuốt để loại bỏ" rất được phổ biến trong các ứng dụng điện thoại.
-Ví dụ với ứng dụng quản lí email,
-người dùng có thể vuốt email
-để xóa nó ra khỏi danh sách.
+The "swipe to dismiss" pattern is common in many mobile apps.
+For example, when writing an email app,
+you might want to allow a user to swipe away
+email messages to delete them from a list.
 
-Flutter làm điều này dễ dàng với
+Flutter makes this task easy by providing the
 [`Dismissible`][] widget.
-Hãy tìm hiểu cách thực hiện thao tác này bằng những bước sau:
+Learn how to implement swipe to dismiss with the following steps:
 
-  1. Tạo danh sách items.
-  2. Bao mỗi item với `Dismissible` widget.
-  3. Cung cấp các "dấu hiệu"
+  1. Create a list of items.
+  2. Wrap each item in a `Dismissible` widget.
+  3. Provide "leave behind" indicators.
 
-## 1. Tạo danh sách items
+## 1. Create a list of items
 
-Đầu tiên, tạo một danh sách items. Hướng dẫn
-tạo một danh sách,
-đọc ở bài viết [Working with long lists][].
+First, create a list of items. For detailed
+instructions on how to create a list,
+follow the [Working with long lists][] recipe.
 
-### Tạo source dữ liệu
+### Create a data source
 
-Ở ví dụ này,
-bạn muốn danh sách với 20 items.
-Để đơn giản, sinh ra danh sách của chuỗi.
+In this example,
+you want 20 sample items to work with.
+To keep it simple, generate a list of strings.
 
 <!-- skip -->
 ```dart
 final items = List<String>.generate(20, (i) => "Item ${i + 1}");
 ```
 
-### Chuyển đổi source dữ liệu vài danh sách
+### Convert the data source into a list
 
-Hiển thị mỗi item trong danh sách lên màn hình. Người dùng
-Người dùng không thể vuốt các items này ngay bây giờ.
+Display each item in the list on screen. Users won't
+be able to swipe these items away just yet.
 
 <!-- skip -->
 ```dart
@@ -57,17 +57,18 @@ ListView.builder(
 );
 ```
 
-## 2. Bao mỗi item với Dismissible widget
+## 2. Wrap each item in a Dismissible widget
 
-Ở bước này,
-ta sẽ cho phép người dùng vuốt item ra khỏi danh sách thông qua
+In this step,
+give users the ability to swipe an item off the list by using the
 [`Dismissible`][] widget.
 
-Sau khi người dùng vuốt item
-xóa item từ danh sách rồi hiển thị lên.
-Trong thực tế, bạn cần phải thực hiện các thao tác logic phức tạp hơn, chẳng hạn như xóa các items từ các web service hay từ cơ sở dữ liệu.
+After the user has swiped away the item,
+remove the item from the list and display a snackbar.
+In a real app, you might need to perform more complex logic,
+such as removing the item from a web service or database.
 
-Cập nhật hàm `itemBuilder()` để return `Dismissible` widget:
+Update the `itemBuilder()` function to return a `Dismissible` widget:
 
 <!-- skip -->
 ```dart
@@ -92,15 +93,18 @@ Dismissible(
 );
 ```
 
-## 3. Cung cấp các "dấu hiệu" 
+## 3. Provide "leave behind" indicators
 
-Như ta đã bàn,
-ứng dụng cho phép người dùng vuốt items ra khỏi danh sách, nhưng nó không đưa ra một dấu hiệu trực quan về những gì họ làm.
-Để cung cấp một gợi ý rằng các item đã bị xóa,
-hiển thị một "dấu hiệu" thể hiện item đã vuốt ra khỏi màn hình. Ở ví dụ này, dấu hiệu là nền đỏ.
+As it stands,
+the app allows users to swipe items off the list, but it doesn't
+give a visual indication of what happens when they do.
+To provide a cue that items are removed,
+display a "leave behind" indicator as they
+swipe the item off the screen. In this case,
+the indicator is a red background.
 
-Để thêm dấu hiệu,
-cung cấp parameter của `background` cho `Dismissible`.
+To add the indicator,
+provide a `background` parameter to the `Dismissible`.
 
 <!-- skip -->
 ```dart
@@ -121,7 +125,7 @@ Dismissible(
 );
 ```
 
-## Ví dụ
+## Interactive example
 
 ```run-dartpad:theme-light:mode-flutter:run-true:width-100%:height-600px:split-60:ga_id-interactive_example
 import 'package:flutter/foundation.dart';
