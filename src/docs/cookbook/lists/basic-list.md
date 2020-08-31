@@ -12,16 +12,16 @@ js:
     url: https://dartpad.dev/inject_embed.dart.js
 ---
 
-Displaying lists of data is a fundamental pattern for mobile apps.
-Flutter includes the [`ListView`][]
-widget to make working with lists a breeze.
+Hiển thị danh sách data là chức năng cơ bản của ứng dụng mobile.
+Flutter hỗ trợ [`ListView`][]
+widget để ta có thể thao tác với danh sách dễ dàng.
 
-## Create a ListView
+## Tạo ListView
 
-Using the standard `ListView` constructor is
-perfect for lists that contain only a few items.
-The built-in [`ListTile`][]
-widget is a way to give items a visual structure.
+Sử dụng constructor `ListView` cơ bản
+là phương án tốt nhất cho việc hiển thị danh sách ít items.
+[`ListTile`][] widget được xây dựng
+theo hướng để items có thể dễ dàng trực quan.
 
 <!-- skip -->
 ```dart
@@ -43,7 +43,7 @@ ListView(
 );
 ```
 
-## Interactive example
+## Ví dụ
 
 ```run-dartpad:theme-light:mode-flutter:run-true:width-100%:height-600px:split-60:ga_id-interactive_example
 import 'package:flutter/material.dart';
