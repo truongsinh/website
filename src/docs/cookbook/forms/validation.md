@@ -1,5 +1,5 @@
 ---
-title: Xây dựng một form với tính xác thực
+title: Build a form with validation
 description: How to build a form that validates input.
 prev:
   title: Work with tabs
@@ -12,24 +12,32 @@ js:
     url: https://dartpad.dev/inject_embed.dart.js
 ---
 
-Ứng dụng thường xuyên yêu cầu người dùng nhập thông tin vào text field.
-Ví dụ, bạn bắt người dùng đăng nhập với địa chỉ email kết hợp với password.
+Apps often require users to enter information into a text field.
+For example, you might require users to log in with an email address
+and password combination.
 
-Để ứng dụng tăng thêm bảo mật và dễ sử dụng, kiểm tra thông tin mà người dùng cung cấp. Nếu thông tin người dùng điền form chính xác, ta sé sử lí thông tin. Nếu thông tin người dùng nhập vô sai xác thực, ta sẽ hiển thị một thông báo thân thiện với người dùng để họ sửa lại lỗi sai.
+To make apps secure and easy to use, check whether the
+information the user has provided is valid. If the user has correctly filled
+out the form, process the information. If the user submits incorrect
+information, display a friendly error message letting them know what went
+wrong.
 
-Ở vị dụ này, ta hãy học cách thêm tính xác thực vào form có một text field bằng các bước sau:
+In this example, learn how to add validation to a form that has
+a single text field using the following steps:
 
-  1. Tạo `Form` với `GlobalKey`.
-  2. Thêm `TextFormField` với tính xác thực logic.
-  3. Tạo button để xác thực và nộp form.
+  1. Create a `Form` with a `GlobalKey`.
+  2. Add a `TextFormField` with validation logic.
+  3. Create a button to validate and submit the form.
 
-## 1. Tạo `Form` với `GlobalKey`
+## 1. Create a `Form` with a `GlobalKey`
 
-Đầu tiên, tạo [`Form`][].
-`Form` widget được xem như một vật chứa cho các nhóm và xác thực cho nhiều form.
+First, create a [`Form`][].
+The `Form` widget acts as a container for grouping
+and validating multiple form fields.
 
-Khi tạo form, cung cấp [`GlobalKey`][].
-Điều này tạo sự độc đáo để xác thực `Form`, và cho phép xác thực form vào các bước sau.
+When creating the form, provide a [`GlobalKey`][].
+This uniquely identifies the `Form`,
+and allows validation of the form in a later step.
 
 <!-- skip -->
 ```dart
@@ -73,20 +81,23 @@ class MyCustomFormState extends State<MyCustomForm> {
   access the form within nested widgets.
 {{site.alert.end}}
 
-## 2. Thêm `TextFormField` với tính xác thực logic
+## 2. Add a `TextFormField` with validation logic
 
-Mặc dù `Form` đã được tạo, nhưng nó vẫn chưa cho phép người dùng nhập chữ vào.
-Đó là công việc của [`TextFormField`][].
-`TextFormField` widget sẽ xử lí text field đó rồi hiển thị lỗi khi được tìm thấy bởi hệ thống.
+Although the `Form` is in place,
+it doesn't have a way for users to enter text.
+That's the job of a [`TextFormField`][].
+The `TextFormField` widget renders a material design text field
+and can display validation errors when they occur.
 
-Xác thực input bởi hàm `validator()`  cho
-`TextFormField`. Nếu input của người dùng không hợp lệ,
-hàm `validator`  sẽ return`String` chứa thông báo lỗi.
-Nếu không có lỗi, `validator` sẽ return null.
+Validate the input by providing a `validator()` function to the
+`TextFormField`. If the user's input isn't valid,
+the `validator` function returns a `String` containing
+an error message.
+If there are no errors, the validator must return null.
 
-Trong ví dụ này, tạo `validator` để  bảo đảm
-`TextFormField` không trống. Nếu nó trống,
-return một tin nhắn thân thiện với người dùng.
+For this example, create a `validator` that ensures the
+`TextFormField` isn't empty. If it is empty,
+return a friendly error message.
 
 <!-- skip -->
 ```dart
@@ -101,14 +112,14 @@ TextFormField(
 );
 ```
 
-## 3. Tạo button đẻ xác thực và tạo form
+## 3. Create a button to validate and submit the form
 
-Bây giờ bạn đã có form với text field,
-có button để người dùng có thể nhấn để nộp thông tin.
+Now that you have a form with a text field,
+provide a button that the user can tap to submit the information.
 
-Khi người dùng nộp fomr, kiểm tra form có hợp lệ.
-Nếu hợp lệ, hiển thị thông báo thành công.
-Nếu không (text field không có nội dung) hiển thị thông báo lỗi.
+When the user attempts to submit the form, check if the form is valid.
+If it is, display a success message.
+If it isn't (the text field has no content) display the error message.
 
 <!-- skip -->
 ```dart
@@ -128,21 +139,21 @@ RaisedButton(
 );
 ```
 
-### Nó hoạt động như thế nào?
+### How does this work?
 
-Để xác thực form, sử dụng `_formKey` đã tạo ở
-step 1. Bạn có thể dùng phương thức `_formKey.currentState()`
-để truy cập vào [`FormState`][],
-cái mà Flutter tự động tạo ra khi xây dựng `Form`.
+To validate the form, use the `_formKey` created in
+step 1. You can use the `_formKey.currentState()`
+method to access the [`FormState`][],
+which is automatically created by Flutter when building a `Form`.
 
-Class `FormState` chứa phương thức `validate()`.
-Khi phương thức `validate()` được gọi, nó sẽ khởi chạy hàm `validator()`
-cho mỗi text field in form.
-Nếu mọi thức tốt đẹp, phương thức `validate()` returns `true`.
-Nếu một text field nào đó bị lỗi, phương thức `validate()`
-xẽ xây dựng lại form để  hiển thị tin nhắn lỗi và returns `false`.
+The `FormState` class contains the `validate()` method.
+When the `validate()` method is called, it runs the `validator()`
+function for each text field in the form.
+If everything looks good, the `validate()` method returns `true`.
+If any text field contains errors, the `validate()` method
+rebuilds the form to display any error messages and returns `false`.
 
-## Ví dụ
+## Interactive example
 
 ```run-dartpad:theme-light:mode-flutter:run-true:width-100%:height-600px:split-60:ga_id-interactive_example
 import 'package:flutter/material.dart';
