@@ -1,5 +1,5 @@
 ---
-title: Tạo kiểu cho Text field
+title: Create and style a text field
 description: How to implement a text field.
 prev:
   title: Build a form with validation
@@ -9,20 +9,25 @@ next:
   path: /docs/cookbook/forms/text-field-changes
 ---
 
-Người dùng sẽ sử dụng Text fields để nhập chữ vào ứng dụng. Họ thường dùng để  tạo forms, gửi tin nhắn, tạo dữ liệu tìm kiếm, và những thứ khác. Ở bài viết này, hãy tìm hiểu cách tạo kiểu cho text fields.
+Text fields allow users to type text into an app.
+They are used to build forms,
+send messages, create search experiences, and more.
+In this recipe, explore how to create and style text fields.
 
-Flutter cung cấp 2 loại text fields:
-[`TextField`][] và [`TextFormField`][].
+Flutter provides two text fields:
+[`TextField`][] and [`TextFormField`][].
 
 ## `TextField`
 
-[`TextField`][] được sử dụng phổ biến trong việc nhập text.
+[`TextField`][] is the most commonly used text input widget.
 
-Mặc định, một `TextField` được hiển thị với dấu gạch dứoi.
-Bạn có thể nhập nhãn dán, icon, thông tin gợi ý, và lỗi thông qua
-[`InputDecoration`][] như [`decoration`][]
-là một thuộc tính của `TextField`.
-Để  loại bỏ các hiển thị bên trong (bao gồm cả dấu gạch dưới và các nhãn dán được đảo ngược),ta đặt `decoration` là null.
+By default, a `TextField` is decorated with an underline.
+You can add a label, icon, inline hint text, and error text by supplying an
+[`InputDecoration`][] as the [`decoration`][]
+property of the `TextField`.
+To remove the decoration entirely (including the
+underline and the space reserved for the label),
+set the `decoration` to null.
 
 <!-- skip -->
 ```dart
@@ -34,12 +39,16 @@ TextField(
 );
 ```
 
-Để biết thêm thông tin khi có sự thay đổi,
-tìm hiểu ở bài viết [Handle changes to a text field][].
+To retrieve the value when it changes,
+see the [Handle changes to a text field][] recipe.
 
 ## `TextFormField`
 
-[`TextFormField`][] bao một `TextField` và kết hợi với [`Form`][] để tạo ra một vùng. Điều này cung cấp thêm một chức năng, chẳng hạn kết hợp và tính xác thực nó với [`FormField`][] widgets.
+[`TextFormField`][] wraps a `TextField` and integrates it
+with the enclosing [`Form`][].
+This provides additional functionality,
+such as validation and integration with other
+[`FormField`][] widgets.
 
 <!-- skip -->
 ```dart
@@ -50,7 +59,8 @@ TextFormField(
 );
 ```
 
-Để có thêm thông tin về xác thực dữ liệu vào, tìm hiểu thêm bài viết [Building a form with validation][].
+For more information on input validation, see the
+[Building a form with validation][] recipe.
 
 
 [Building a form with validation]: /docs/cookbook/forms/validation/
