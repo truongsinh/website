@@ -12,25 +12,22 @@ js:
     url: https://dartpad.dev/inject_embed.dart.js
 ---
 
-It's often helpful to guide users through an app as they navigate from screen
-to screen. A common technique to lead users through an app is to animate a
-widget from one screen to the next. This creates a visual anchor connecting
-the two screens.
+Thông thường để hướng dẫn người dùng sử dụng app, ta thường chuyển động từ màn hình
+này sang màn hình khác. Một kỹ thuật chung trong việc chuyển đổi widget sang màn hình kế tiếp. Điều này tạo hiệu ứng trực quan giữa hai màn hình.
 
-Use the [`Hero`][] widget
-to animate a widget from one screen to the next.
-This recipe uses the following steps:
+Dùng [`Hero`][] widget
+để chuyển đổi sang màn hình kế tiếp.
+THướng dẫn gồm các bước:
 
-  1. Create two screens showing the same image.
-  2. Add a `Hero` widget to the first screen.
-  3. Add a `Hero` widget to the second screen.
+  1. Tạo hai màn hình hiển thị cùng một ảnh.
+  2. Thêm `Hero` widget vào màn hình đầu tiên.
+  3. Thêm `Hero` widget vào màn hình thứ hai.
 
-## 1. Create two screens showing the same image
+## 1. Tạo hai màn hình hiển thị cùng một ảnh
 
-In this example, display the same image on both screens.
-Animate the image from the first screen to the second screen when
-the user taps the image. For now, create the visual structure;
-handle animations in the next steps.
+Ở ví dụ này, ta hiển thị một ảnh ở cả hai màn hình.
+Chuyển sang màn hình thứ hai khi người dùng chạm vào ảnh. Bây giờ, tạo một cấu trúc ảo;
+để quản lí chuyển động trong cho các bước tiếp theo.
 
 {{site.alert.note}}
   This example builds upon the
@@ -79,18 +76,17 @@ class DetailScreen extends StatelessWidget {
 }
 ```
 
-## 2. Add a `Hero` widget to the first screen
+## 2. Thêm `Hero` widget vào màn đầu tiên
 
-To connect the two screens together with an animation, wrap
-the `Image` widget on both screens in a `Hero` widget.
-The `Hero` widget requires two arguments:
+Để kết nối hai màn hình với nhau trong một chuyển động, đóng khung `Image` widget ở cả hai màn hình với `Hero` widget.
+`Hero` widget yêu cầu hai arguments:
 
 <dl>
   <dt>`tag`</dt>
-  <dd>An object that identifies the `Hero`.
-      It must be the same on both screens.</dd>
+  <dd>Đối tượng sẽ nhận dạng `Hero`.
+      Tham số phải giống nhau ở hai màn hình.</dd>
   <dt>`child`</dt>
-  <dd>The widget to animate across screens.</dd>
+  <dd>widget sẽ chuyển động.</dd>
 </dl>
 
 <!-- skip -->
@@ -103,14 +99,14 @@ Hero(
 );
 ```
 
-## 3. Add a `Hero` widget to the second screen
+## 3. Thêm `Hero` widget vào màn hình thứ hai
 
-To complete the connection with the first screen,
-wrap the `Image` on the second screen with a `Hero`
-widget that has the same `tag` as the `Hero` in the first screen.
+Để hoàn thành kết nối với màn hình thứ nhất,
+đóng khung `Image` trong màn hình thứ hai với `Hero`
+widget, `tag` phaỉ giống với `Hero` ở màn hình đầu tiên.
 
-After applying the `Hero` widget to the second screen,
-the animation between screens just works.
+Sau khi cài đặt `Hero` widget ở màn hình thứ hai,
+chuyển động giữa hai màn hình sẽ thực hiện.
 
 <!-- skip -->
 ```dart
