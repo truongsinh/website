@@ -12,39 +12,32 @@ js:
     url: https://dartpad.dev/inject_embed.dart.js
 ---
 
-Most apps contain several screens for displaying different types of
-information.
-For example, an app might have a screen that displays products.
-When the user taps the image of a product, a new screen displays
-details about the product.
+Hầu hết app đều chứa một số màn hình để hiển thị các loại thông tin khác nhau.
+Ví dụ, một app có thể màn hình hiển thị sản phẩm.
+Khi người dùng chạm vào hình ảnh của sản phẩm, một màn hình sẽ xuất hiện để hiển thị chi tiết về sản phẩm.
 
 {{site.alert.secondary}}
   **Terminology**: In Flutter, _screens_ and _pages_ are called _routes_.
   The remainder of this recipe refers to routes.
 {{site.alert.end}}
 
-In Android, a route is equivalent to an Activity.
-In iOS, a route is equivalent to a ViewController.
-In Flutter, a route is just a widget.
+Trong Android, route tương đương với Activity.
+Trong iOS, route tương đương với ViewController.
+Nhưng với Flutter, route chỉ là một widget.
 
-Navigate to a new route using the [`Navigator`][].
-This recipe uses the following steps:
+Chuyển sang route mới bằng [`Navigator`][].
 
-The next few sections show how to navigate between two routes,
-using these steps:
+Một số phần tiếp theo cho ta biết cách điều hướng giwaxx hai routes, thông qua các bước sau:
 
-  1. Create two routes.
-  2. Navigate to the second route using Navigator.push().
-  3. Return to the first route using Navigator.pop().
+  1. Tạo hai routes.
+  2. Chuyển đến route thứ hai với Navigator.push().
+  3. Trở về route thứ nhất thông qua Navigator.pop().
 
-## 1. Create two routes
+## 1. Tạo hai routes
 
-First, create two routes to work with. Since this is a basic example,
-each route contains only a single button. Tapping the button on the
-first route navigates to the second route. Tapping the button on the
-second route returns to the first route.
+Đầu tiên, tạo hai routes để ta thao tác. Vì đây là ví dụ cơ bản, mỗi route chỉ chứa một button. Chạm vào button ở route đầu tiên để chuyển đến route thứ hai. Chạm vào button ở route thứ hai để trở về route đầu tiên.
 
-First, set up the visual structure:
+Ta cài đặt cấu trúc như sau:
 
 ```dart
 class FirstRoute extends StatelessWidget {
@@ -86,17 +79,15 @@ class SecondRoute extends StatelessWidget {
 }
 ```
 
-## 2. Navigate to the second route using Navigator.push()
+## 2. Chuyển đến route thứ hai với Navigator.push()
 
-To switch to a new route, use the [`Navigator.push()`][]
-method. The `push()` method adds a `Route` to the stack of routes managed by
-the `Navigator`. Where does the `Route` come from?
-You can create your own, or use a [`MaterialPageRoute`][],
-which is useful because it transitions to the
-new route using a platform-specific animation.
+Để chuyển sang một route mới, dùng [`Navigator.push()`][]
+method. `push()` method thêm một `Route` vào stack của routes được quản lí bởi `Navigator`. Là nơi mà bạn biết được `Route` tới từ đâu?
+Bạn có thể tự tạo thủ công, hoặc dùng [`MaterialPageRoute`][],
+công cụ hữu ích bởi vì nó chuyển đổi sang route mới bằng sử dụng nền tảng đặc biệt cho chuyển động.
 
-In the `build()` method of the `FirstRoute` widget,
-update the `onPressed()` callback:
+Trong `build()` method của `FirstRoute` widget,
+ta cập nhật `onPressed()`:
 
 <!-- skip -->
 ```dart
@@ -109,15 +100,13 @@ onPressed: () {
 }
 ```
 
-## 3. Return to the first route using Navigator.pop()
+## 3. Trở về route thứ nhất thông qua Navigator.pop()
+Làm các nào để đóng route thứ hai và trở về route đầu tiên?
+Ta sẽ dùng [`Navigator.pop()`][] method.
+`pop()` method sẽ xóa `Route` hiện tại từ stack của routes được quản lí bởi `Navigator`.
 
-How do you close the second route and return to the first?
-By using the [`Navigator.pop()`][] method.
-The `pop()` method removes the current `Route` from the stack of
-routes managed by the `Navigator`.
-
-To implement a return to the original route, update the `onPressed()`
-callback in the `SecondRoute` widget:
+Để cài đặt cách trở về route gốc, ta cập nhật `onPressed()`
+bên trong `SecondRoute` widget:
 
 <!-- skip -->
 ```dart
@@ -127,7 +116,7 @@ onPressed: () {
 }
 ```
 
-## Interactive example
+## Ví dụ
 
 ```run-dartpad:theme-light:mode-flutter:run-true:width-100%:height-600px:split-60:ga_id-interactive_example
 import 'package:flutter/material.dart';
