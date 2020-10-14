@@ -9,7 +9,7 @@ next:
   path: /docs/cookbook/forms/text-field-changes
 ---
 
-Người dùng sẽ sử dụng Text fields để nhập chữ vào ứng dụng. Họ thường dùng để  tạo forms, gửi tin nhắn, tạo dữ liệu tìm kiếm, và những thứ khác. Ở bài viết này, hãy tìm hiểu cách tạo kiểu cho text fields.
+Người dùng sẽ sử dụng Text fields để nhập văn bản vào ứng dụng. Họ thường dùng để  tạo forms, gửi tin nhắn, tạo dữ liệu tìm kiếm, và những thứ khác. Ở bài viết này, hãy tìm hiểu cách tạo kiểu cho text fields.
 
 Flutter cung cấp 2 loại text fields:
 [`TextField`][] và [`TextFormField`][].
@@ -22,7 +22,7 @@ Mặc định, một `TextField` được hiển thị với dấu gạch dứoi
 Bạn có thể nhập nhãn dán, icon, thông tin gợi ý, và lỗi thông qua
 [`InputDecoration`][] như [`decoration`][]
 là một thuộc tính của `TextField`.
-Để  loại bỏ các hiển thị bên trong (bao gồm cả dấu gạch dưới và các nhãn dán được đảo ngược),ta đặt `decoration` là null.
+Để  loại bỏ h các trang trí bên trong (bao gồm cả dấu gạch dưới và các nhãn dán được đảo ngược),ta đặt `decoration` là null.
 
 <!-- skip -->
 ```dart
