@@ -9,30 +9,23 @@ next:
   path: /docs/cookbook/design/orientation
 ---
 
-Rather than declaring a font as part of an app,
-you can declare a font as part of a separate package.
-This is a convenient way to share the same font across
-several different projects,
-or for coders publishing their packages to [pub.dev][].
-This recipe uses the following steps:
+Thay vì ta khai báo font là một phần của ứng dụng, bạn có thể sử dụng fonts từ trong các package có sẵn. Cách này rất thuận tiện để chia sẻ cùng một fonts trên nhiều dự án khác nhau, các lập trình viên thường công bố các package trên [pub.dev][].
+Cách này gồm các bước như sau:
 
-  1. Add a font to a package.
-  2. Add the package and font to the app.
-  3. Use the font.
+  1. Thêm font vào gói package.
+  2. Thêm gói package và fonts vào ứng dụng.
+  3. Sử dụng fonts.
 
 {{site.alert.note}}
   Check out the [google_fonts][] package for direct access
   to almost 1000 open-sourced font families.
 {{site.alert.end}}
 
-## 1. Add a font to a package
+## 1. Thêm font vào gói package
 
-To export a font from a package, you need to import the font files into the
-`lib` folder of the package project. You can place font files directly in the
-`lib` folder or in a subdirectory, such as `lib/fonts`.
+Để có thê xuất fonts từ các gói package, bạn nên để fonts files vào thư mục `lib` của package dự án. Bạn có thể để font files vào thư mục `lib`hoặc trong một thư mục con, như là `lib/fonts`.
 
-In this example, assume you've got a Flutter library called
-`awesome_package` with fonts living in a `lib/fonts` folder.
+Ở ví dụ này, giả sử bạn có một thư viện Flutter có tên `awesome_package` có các fonts nằm trong thư mục`lib/fonts`.
 
 ```
 awesome_package/
@@ -43,27 +36,24 @@ awesome_package/
       Raleway-Italic.ttf
 ```
 
-## 2. Add the package and fonts to the app
+## 2. Thêm gói package và fonts vào ứng dụng
 
-Now you can use the fonts in the package by
-updating the `pubspec.yaml` in the *app's* root directory.
+Bây giờ bạn có thể sử dụng font trong package bằng cách cập nhật file `pubspec.yaml` trong thư mục gốc của *ứng dụng*.
 
-### Add the package to the app
+### Thêm gói package vào ứng dụng
 
 ```yaml
 dependencies:
   awesome_package: <latest_version>
 ```
 
-### Declare the font assets
+### Khai báo fonts
 
-Now that you've imported the package, tell Flutter where to
-find the fonts from the `awesome_package`.
+Sau khi đã thêm fonts vào package, bạn phải nói cho Flutter biết đường dẫn tới fonts từ bên trong `awesome_package`.
 
-To declare package fonts, prefix the path to the font with
+Để khai báo các gói fonts package, đường dẫn tới fonts được bắt đầu với
 `packages/awesome_package`.
-This tells Flutter to look in the `lib` folder
-of the package for the font.
+Để Flutter tìm fonts từ thư mục `lib` của các gói package.
 
 ```yaml
 flutter:
@@ -75,11 +65,10 @@ flutter:
           style: italic
 ```
 
-## 3. Use the font
+## 3. Sử dụng fonts
 
-Use a [`TextStyle`][] to change the appearance of text.
-To use package fonts, declare which font you'd like to use and
-which package the font belongs to.
+Dùng một [`TextStyle`][] để cho ta thấy sự thay đổi của các chữ viết.
+Khi sử dụng các gói font package, Khai báo kiểu font bạn muốn dùng và gói package chứa fonts đó.
 
 <!-- skip -->
 ```dart
@@ -92,11 +81,11 @@ Text(
 );
 ```
 
-## Complete example
+## Hoàn thành ví dụ
 
 ### Fonts
 
-The Raleway and RobotoMono fonts were downloaded from
+Hai fonts Raleway và RobotoMono sẽ được tải về từ
 [Google Fonts][].
 
 ### `pubspec.yaml`

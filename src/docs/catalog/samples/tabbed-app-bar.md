@@ -4,7 +4,7 @@ description: An example that uses a TabBar for its AppBar.
 deprecated: true
 ---
 
-An AppBar with a TabBar as its bottom widget.
+ Một AppBar với TabBar ở bên dưới cùng.
 
 <p>
   <div class="container-fluid">
@@ -23,12 +23,10 @@ An AppBar with a TabBar as its bottom widget.
   </div>
 </p>
 
-A TabBar can be used to navigate among the pages displayed in a TabBarView.
-Although a TabBar is an ordinary widget that can appear anywhere, it's most often
-included in the application's AppBar.
+Có thể dùng TabBar để di chuyển các trang hiển thị bên trong TabBarView.
+TabBar là widget có thể dùng bất cứ đâu, nhưng nó thường được sử dụng chung với AppBar.
 
-Try this app out by creating a new project with `flutter create` and
-replacing the contents of `lib/main.dart` with the following code.
+Thử tạo dự án mới với `flutter create` và thay thế nội dung của `lib/main.dart` bằng nội dung code dưới đây.
 
 ```dart
 // Copyright 2017 The Chromium Authors. All rights reserved.
