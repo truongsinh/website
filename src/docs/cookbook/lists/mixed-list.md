@@ -1,6 +1,6 @@
 ---
-title: Create lists with different types of items
-description: How to implement a list that contains different types of assets.
+title: Tạo ra danh sách với nhiều loại items
+description: Triển khai một danh sách gồm nhiều loại assets.
 prev:
   title: Create a grid list
   path: /docs/cookbook/lists/grid-lists
@@ -12,26 +12,23 @@ js:
     url: https://dartpad.dev/inject_embed.dart.js
 ---
 
-You might need to create lists that display different types of content.
-For example, you might be working on a list that shows a heading
-followed by a few items related to the heading, followed by another heading,
-and so on.
+Đôi khi bạn muốn tạo ra một danh sách có thể hiển thị nhiều loại nội dung khác
+nhau. Ví dụ, bạn muốn tạo ra một danh sách với một tiêu đề, sau đó là những items
+liên quan đến tiêu đề đó, và nối tiếp lại là một tiêu đề khác.
 
-Here's how you can create such a structure with Flutter:
+Để tạo ra được cấu trúc đó với Flutter, hãy:
 
-  1. Create a data source with different types of items.
-  2. Convert the data source into a list of widgets.
+  1. Tạo ra nguồn dữ liệu với nhiều loại items khác nhau.
+  2. Chuyển nguồn dữ liệu thành danh sách các widget.
 
-## 1. Create a data source with different types of items
+## 1. Tạo ra nguồn dữ liệu với nhiều loại items
 
-### Types of items
+### Loại items
 
-To represent different types of items in a list, define
-a class for each type of item.
+Để biểu diễn nhiều loại items trong 1 danh sách, định nghĩa 1 class cho từng loại item.
 
-In this example, create an app that shows a header followed by five
-messages. Therefore, create three classes: `ListItem`, `HeadingItem`,
-and `MessageItem`.
+Ví dụ dưới đây tạo ra một ứng dụng hiển thị một tiêu đề, theo sau là 5 tin nhắn.
+Ta sẽ tạo ra 3 class: `ListItem`, `HeadingItem`, và `MessageItem`.
 
 ```dart
 /// The base class for the different types of items the list can contain.
@@ -72,14 +69,13 @@ class MessageItem implements ListItem {
 }
 ```
 
-### Create a list of items
+### Tạo ra danh sách items
 
-Most of the time, you would fetch data from the internet or a local
-database and convert that data into a list of items.
+Phần lớn thời gian, ta sẽ fetch dữ liệu từ internet hoặc từ một cơ sở dữ liệu
+local và chuyển dữ liệu đó thành một danh sách các items.
 
-For this example, generate a list of items to work with. The list
-contains a header followed by five messages. Each message has one
-of 3 types: `ListItem`, `HeadingItem`, or `MessageItem`.
+Ví dụ dưới đây tạo ra 1 danh sách bao gồm 1 tiêu đề và 5 tin nhắn. Mỗi tin nhắn
+sẽ thuộc 1 trong 3 loại: `ListItem`, `HeadingItem`, hoặc `MessageItem`.
 
 <!-- skip -->
 ```dart
@@ -91,14 +87,12 @@ final items = List<ListItem>.generate(
 );
 ```
 
-## 2. Convert the data source into a list of widgets
+## 2. Chuyển nguồn dữ liệu thành các widget
 
-To convert each item into a widget,
-use the [`ListView.builder()`][] constructor.
+Để chuyển mỗi item thành 1 widget, hãy sử dụng constructor [`ListView.builder()`][].
 
-In general, provide a builder function that checks for what type
-of item you're dealing with, and returns the appropriate widget
-for that type of item.
+Tổng quát, hãy viết một hàm builder để kiểm tra loại item nào cần được tạo ra, và
+trả về widget tương ứng phù hợp với loại item đó.
 
 <!-- skip -->
 ```dart
@@ -118,7 +112,7 @@ ListView.builder(
 );
 ```
 
-## Interactive example
+## Ví dụ tương tác
 
 ```run-dartpad:theme-light:mode-flutter:run-true:width-100%:height-600px:split-60:ga_id-interactive_example
 import 'package:flutter/material.dart';

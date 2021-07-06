@@ -1,45 +1,43 @@
 ---
-title: Work with long lists
-description: Use ListView.builder to implement a long or infinite list.
+title: Làm việc với long lists
+description: Sử dụng ListView.builder để triển khai một danh sách dài hoặc vô tận.
 prev:
-  title: Place a floating app bar above a list
+  title: Đặt floating app bar bên trên một danh sách
   path: /docs/cookbook/lists/floating-app-bar
 next:
-  title: Report errors to a service
+  title: Báo các lỗi cho hệ thống
   path: /docs/cookbook/maintenance/error-reporting
 js:
   - defer: true
     url: https://dartpad.dev/inject_embed.dart.js
 ---
 
-The standard [`ListView`][] constructor works well
-for small lists. To work with lists that contain
-a large number of items, it's best to use the
-[`ListView.builder`][] constructor.
+Constructor tiêu chuẩn của [`ListView`][] chỉ làm việc hiệu quả với các danh
+sách nhỏ. Để làm việc với các danh sách bao gồm một số lượng lớn item, chúng ta
+nên sử dụng constructor [`ListView.builder`][].
 
-In contrast to the default `ListView` constructor, which requires
-creating all items at once, the `ListView.builder()` constructor
-creates items as they're scrolled onto the screen.
+Trái ngược với constructor mặc định của `ListView` yêu cầu tạo ra tất cả item
+cùng một lúc, constructor `ListView.builder()` tạo ra các item thì người dùng
+bắt đầu lướt đến nó (bắt đầu xuất hiện trong khung hình).
 
-## 1. Create a data source
+## 1. Tạo ra nguồn dữ liệu
 
-First, you need a data source. For example, your data source
-might be a list of messages, search results, or products in a store.
-Most of the time, this data comes from the internet or a database.
+Đầu tiên, bạn cần một nguồn dữ liệu. Ví dụ: nguồn dữ liệu có thể là danh sách
+tin nhắn, kết quả tìm kiếm, hoặc danh sách sản phẩm trong một cửa hàng. Phần lớn
+trường hợp thì dữ liệu này đén từ Internet hoặc từ cơ sở dữ liệu.
 
-For this example, generate a list of 10,000 Strings using the
-[`List.generate`][] constructor.
+Ví dụ này đã tạo ra danh sách 10,000 chuỗi sử dụng constructor [`List.generate`][].
 
 <!-- skip -->
 ```dart
 final items = List<String>.generate(10000, (i) => "Item $i");
 ```
 
-## 2. Convert the data source into widgets
+## 2. Biến dữ liệu thành các widget
 
-To display the list of strings, render each String as a widget
-using `ListView.builder()`.
-In this example, display each String on its own line.
+Để hiện thị danh sách các chuổi, render mỗi chuỗi thành 1 widget sử dụng `ListView.builder()`.
+
+Ví dụ dưới đây hiển thị mỗi chuỗi trên một hàng.
 
 <!-- skip -->
 ```dart
@@ -53,7 +51,7 @@ ListView.builder(
 );
 ```
 
-## Interactive example
+## Ví dụ tương tác
 
 ```run-dartpad:theme-light:mode-flutter:run-true:width-100%:height-600px:split-60:ga_id-interactive_example
 import 'package:flutter/foundation.dart';
